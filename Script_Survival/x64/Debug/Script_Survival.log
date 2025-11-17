@@ -1,0 +1,21 @@
+﻿  battle.c
+  field.c
+C:\Users\wjsdl\OneDrive\바탕 화면\Script_Survival-master\battle.c(88,47): error C2197: 'void set_player_hp(player_t *,int)': 호출에 인수가 너무 많습니다.
+C:\Users\wjsdl\OneDrive\바탕 화면\Script_Survival-master\battle.c(216,62): error C2197: 'void set_player_hp(player_t *,int)': 호출에 인수가 너무 많습니다.
+  game_manager.c
+  inventory.c
+  item.c
+  log.c
+  main.c
+  monster.c
+  MT19937.c
+  save_load.c
+  store.c
+  story.c
+  UI_control.c
+  UI_static.c
+  player.c
+  UI_cleaner.c
+  UI_dynamic.c
+  utils.c
+  코드를 생성하고 있습니다...
