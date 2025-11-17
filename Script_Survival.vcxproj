@@ -131,18 +131,18 @@
     <ClCompile Include="inventory.c" />
     <ClCompile Include="item.c" />
     <ClCompile Include="log.c" />
-    <ClCompile Include="main.c" />
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="monster.c" />
     <ClCompile Include="MT19937.c" />
     <ClCompile Include="save_load.c" />
     <ClCompile Include="store.c" />
     <ClCompile Include="story.c" />
     <ClCompile Include="UI_control.c" />
-    <ClCompile Include="UI_static.c" />
+    <ClCompile Include="UI_static.cpp" />
     <ClCompile Include="player.c" />
     <ClCompile Include="UI_cleaner.c" />
-    <ClCompile Include="UI_dynamic.c" />
-    <ClCompile Include="utils.c" />
+    <ClCompile Include="UI_dynamic.cpp" />
+    <ClCompile Include="utils.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="battle.h" />

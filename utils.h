@@ -28,7 +28,7 @@
 #define TRUE 1
 #define FALSE 0
 
-typedef enum color {
+enum color {
 	COLOR_BLACK,
 	COLOR_BLUE,
 	COLOR_GREEN,
@@ -45,22 +45,24 @@ typedef enum color {
 	COLOR_LIGHTMAGENTA,
 	COLOR_YELLOW,
 	COLOR_WHITE
-} color_t;
+};
 
-int  utils_min(int x, int y);
-int  utils_max(int x, int y);
+class Utils
+{
+public:
+	int  utils_min(int x, int y);
+	int  utils_max(int x, int y);
 
-void utils_gotoxy(int x, int y);
-void utils_hide_cursor(void);
-void utils_set_color(int new_color);
-void utils_swap(int* a, int* b);
-void utils_swap_double(double* a, double* b);
-void utils_set_volume_from_percentage(int percent);
-int  utils_getch(void);
-void utils_clear_input_buffer(void);
-void utils_sound_init(void);
-void utils_sound_set_enabled(bool enabled);
-bool utils_sound_is_enabled(void);
-void utils_sound_play(const wchar_t* filepath);
-//void utils_force_disable_ime(void);
-//void utils_force_english_input(void);
+	void utils_gotoxy(int x, int y);
+	void utils_hide_cursor(void);
+	void utils_set_color(int new_color);
+	void utils_swap(int* a, int* b);
+	void utils_swap_double(double* a, double* b);
+	void utils_set_volume_from_percentage(int percent);
+	int  utils_getch(void);
+	void utils_clear_input_buffer(void);
+	void utils_sound_init(void);
+	void utils_sound_set_enabled(bool enabled);
+	bool utils_sound_is_enabled(void);
+	void utils_sound_play(const wchar_t* filepath);
+};

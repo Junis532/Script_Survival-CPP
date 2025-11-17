@@ -27,7 +27,7 @@
     <ClCompile Include="log.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="main.c">
+    <ClCompile Include="main.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="monster.c">
@@ -39,10 +39,10 @@
     <ClCompile Include="UI_cleaner.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="UI_static.c">
+    <ClCompile Include="UI_static.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="utils.c">
+    <ClCompile Include="utils.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="UI_control.c">
@@ -60,7 +60,7 @@
     <ClCompile Include="MT19937.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="UI_dynamic.c">
+    <ClCompile Include="UI_dynamic.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="story.c">
