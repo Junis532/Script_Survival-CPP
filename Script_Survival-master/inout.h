@@ -1,0 +1,12 @@
+// inout.h
+#pragma once
+#include <stdio.h>
+#include <stdlib.h>
+#include <conio.h>
+#include <string.h>
+#include <stdarg.h>
+
+#include <wchar.h>
+#include <fcntl.h>
+#include <io.h>
+#include <locale.h>
