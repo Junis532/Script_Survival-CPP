@@ -1,4 +1,4 @@
-// inventory.c
+// inventory.cpp
 #define _CRT_SECURE_NO_WARNINGS
 #include "inventory.h"
 #include "item.h"

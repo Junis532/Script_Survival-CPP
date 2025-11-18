@@ -1,4 +1,4 @@
-// field.c
+// field.cpp
 #define _CRT_SECURE_NO_WARNINGS
 #include "field.h"
 #include "utils.h"

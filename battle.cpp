@@ -1,4 +1,4 @@
-// battle.c
+// battle.cpp
 #define _CRT_SECURE_NO_WARNINGS
 #include "battle.h"
 #include "log.h"

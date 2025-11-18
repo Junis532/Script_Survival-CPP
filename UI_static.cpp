@@ -1,4 +1,4 @@
-// UI_static.c
+// UI_static.cpp
 #define _CRT_SECURE_NO_WARNINGS
 #include "UI_static.h"
 #include "UI_cleaner.h"

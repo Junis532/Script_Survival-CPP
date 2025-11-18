@@ -1,4 +1,4 @@
-// game_manager.c
+// game_manager.cpp
 #define _CRT_SECURE_NO_WARNINGS
 #include "game_manager.h"
 

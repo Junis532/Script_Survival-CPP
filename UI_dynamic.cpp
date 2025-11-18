@@ -1,4 +1,4 @@
-﻿// UI_dynamic.c
+﻿// UI_dynamic.cpp
 #define _CRT_SECURE_NO_WARNINGS
 #include "UI_dynamic.h"   
 #include "item.h"

@@ -1,4 +1,4 @@
-// UI_cleaner.c
+// UI_cleaner.cpp
 #define _CRT_SECURE_NO_WARNINGS
 #include "UI_cleaner.h"
 #include "utils.h"

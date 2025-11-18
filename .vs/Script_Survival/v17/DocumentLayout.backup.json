@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\wjsdl\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\scriptsurvival\\Script_Survival-C\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{7C6AD6E5-5051-4902-8B33-020CC34ED22B}|Script_Survival.vcxproj|C:\\Users\\wjsdl\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\scriptsurvival\\Script_Survival-C\\UI_static.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7C6AD6E5-5051-4902-8B33-020CC34ED22B}|Script_Survival.vcxproj|solutionrelative:UI_static.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{7C6AD6E5-5051-4902-8B33-020CC34ED22B}|Script_Survival.vcxproj|C:\\Users\\wjsdl\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\scriptsurvival\\Script_Survival-C\\UI_info.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{7C6AD6E5-5051-4902-8B33-020CC34ED22B}|Script_Survival.vcxproj|solutionrelative:UI_info.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7C6AD6E5-5051-4902-8B33-020CC34ED22B}|Script_Survival.vcxproj|C:\\Users\\wjsdl\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\scriptsurvival\\Script_Survival-C\\UI_control.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{7C6AD6E5-5051-4902-8B33-020CC34ED22B}|Script_Survival.vcxproj|solutionrelative:UI_control.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7C6AD6E5-5051-4902-8B33-020CC34ED22B}|Script_Survival.vcxproj|C:\\Users\\wjsdl\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\scriptsurvival\\Script_Survival-C\\UI_static.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{7C6AD6E5-5051-4902-8B33-020CC34ED22B}|Script_Survival.vcxproj|solutionrelative:UI_static.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7C6AD6E5-5051-4902-8B33-020CC34ED22B}|Script_Survival.vcxproj|C:\\Users\\wjsdl\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\scriptsurvival\\Script_Survival-C\\utils.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -129,7 +129,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 13,
+          "SelectedChildIndex": 11,
           "Children": [
             {
               "$type": "Bookmark",
@@ -137,7 +137,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "UI_control.cpp",
               "DocumentMoniker": "C:\\Users\\wjsdl\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\scriptsurvival\\Script_Survival-C\\UI_control.cpp",
               "RelativeDocumentMoniker": "UI_control.cpp",
@@ -259,13 +259,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "UI_static.h",
               "DocumentMoniker": "C:\\Users\\wjsdl\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\scriptsurvival\\Script_Survival-C\\UI_static.h",
               "RelativeDocumentMoniker": "UI_static.h",
               "ToolTip": "C:\\Users\\wjsdl\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\scriptsurvival\\Script_Survival-C\\UI_static.h",
               "RelativeToolTip": "UI_static.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAHAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-11-17T14:22:04.696Z",
               "EditorCaption": ""
@@ -285,13 +285,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "UI_info.h",
               "DocumentMoniker": "C:\\Users\\wjsdl\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\scriptsurvival\\Script_Survival-C\\UI_info.h",
               "RelativeDocumentMoniker": "UI_info.h",
               "ToolTip": "C:\\Users\\wjsdl\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\scriptsurvival\\Script_Survival-C\\UI_info.h",
               "RelativeToolTip": "UI_info.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAACEAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-11-17T14:49:06.606Z",
               "EditorCaption": ""

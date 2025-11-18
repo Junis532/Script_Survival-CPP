@@ -1,4 +1,4 @@
-﻿// log.c
+﻿// log.cpp
 #define _CRT_SECURE_NO_WARNINGS
 #include "log.h"
 #include <stdarg.h>

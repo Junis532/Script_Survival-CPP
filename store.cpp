@@ -1,4 +1,4 @@
-// store.c 
+// store.cpp 
 #define _CRT_SECURE_NO_WARNINGS
 #include "store.h"
 

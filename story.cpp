@@ -1,4 +1,4 @@
-// story.c
+// story.cpp
 #define _CRT_SECURE_NO_WARNINGS
 #include "story.h"
 #include "utils.h"
