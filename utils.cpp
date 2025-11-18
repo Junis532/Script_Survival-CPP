@@ -1,4 +1,4 @@
-// utils.c
+// utils.cpp
 #define _CRT_SECURE_NO_WARNINGS
 #include "utils.h"
 #include "UI_info.h"

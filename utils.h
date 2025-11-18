@@ -69,4 +69,4 @@ public:
 	void utils_sound_play(const wchar_t* filepath);
 };
 
-extern Utils utils; // ¼±¾ð¸¸
+extern Utils utils;
