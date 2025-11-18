@@ -87,7 +87,7 @@ int Utils::utils_getch(void)
 
     int key = _getch();
     if (key == EXTENDED_KEY) key = _getch();
-    while (_kbhit()) _getch();
+    while (_kbhit()) (void)_getch();
     return key;
 }
 
@@ -97,7 +97,7 @@ void Utils::utils_clear_input_buffer(void)
     while ((ch = getchar()) != '\n' && ch != EOF) {
         // discard remaining characters
     }
-    while (_kbhit()) _getch();
+    while (_kbhit()) (void)_getch();
 }
 
 void Utils::utils_sound_init(void) {

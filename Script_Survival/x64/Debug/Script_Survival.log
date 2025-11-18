@@ -1,19 +1,2 @@
-﻿  UI_cleaner.cpp
-  UI_control.cpp
-  UI_dynamic.cpp
-  UI_static.cpp
-  battle.cpp
-  field.cpp
-  game_manager.cpp
-  inventory.cpp
-  item.cpp
-  log.cpp
-  main.cpp
-  monster.cpp
-  player.cpp
-  save_load.cpp
-  store.cpp
-  story.cpp
-  utils.cpp
-  코드를 생성하고 있습니다...
+﻿  utils.cpp
   Script_Survival.vcxproj -> C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\x64\Debug\Script_Survival.exe
