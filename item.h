@@ -100,9 +100,8 @@ typedef struct set_effect {
     int id;
 } set_effect_t;
 
-equipment_t temp_weapons[EQUIPMENTS_COUNT];
-equipment_t temp_armors[EQUIPMENTS_COUNT];
-
+extern equipment_t temp_weapons[EQUIPMENTS_COUNT];
+extern equipment_t temp_armors[EQUIPMENTS_COUNT];
 extern equipment_t weapons[RARITY_COUNT][ITEM_COUNT];
 extern equipment_t armors[RARITY_COUNT][ITEM_COUNT];
 

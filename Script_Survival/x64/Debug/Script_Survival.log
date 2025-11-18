@@ -1,105 +1,19 @@
-﻿  game_manager.cpp
+﻿  UI_cleaner.cpp
   UI_control.cpp
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_control.cpp(28,53): error C2440: '=': 'int'에서 'title_state_t'(으)로 변환할 수 없습니다.
-      C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_control.cpp(28,53):
-      열거형 형식으로 변환하려면 명시적 캐스트(static_cast, C 스타일 캐스트 또는 괄호가 있는 함수 스타일 캐스트)가 필요합니다.
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_control.cpp(31,49): error C2440: '=': 'int'에서 'title_state_t'(으)로 변환할 수 없습니다.
-      C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_control.cpp(31,49):
-      열거형 형식으로 변환하려면 명시적 캐스트(static_cast, C 스타일 캐스트 또는 괄호가 있는 함수 스타일 캐스트)가 필요합니다.
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_control.cpp(39,73): error C2440: '=': 'int'에서 'setting_state_t'(으)로 변환할 수 없습니다.
-      C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_control.cpp(39,73):
-      열거형 형식으로 변환하려면 명시적 캐스트(static_cast, C 스타일 캐스트 또는 괄호가 있는 함수 스타일 캐스트)가 필요합니다.
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_control.cpp(43,53): error C2440: '=': 'int'에서 'setting_state_t'(으)로 변환할 수 없습니다.
-      C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_control.cpp(43,53):
-      열거형 형식으로 변환하려면 명시적 캐스트(static_cast, C 스타일 캐스트 또는 괄호가 있는 함수 스타일 캐스트)가 필요합니다.
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_control.cpp(100,64): error C2440: '=': 'int'에서 'game_mode_state_t'(으)로 변환할 수 없습니다.
-      C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_control.cpp(100,64):
-      열거형 형식으로 변환하려면 명시적 캐스트(static_cast, C 스타일 캐스트 또는 괄호가 있는 함수 스타일 캐스트)가 필요합니다.
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_control.cpp(103,47): error C2440: '=': 'int'에서 'game_mode_state_t'(으)로 변환할 수 없습니다.
-      C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_control.cpp(103,47):
-      열거형 형식으로 변환하려면 명시적 캐스트(static_cast, C 스타일 캐스트 또는 괄호가 있는 함수 스타일 캐스트)가 필요합니다.
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_control.cpp(118,57): error C2440: '=': 'int'에서 'new_or_load_game_t'(으)로 변환할 수 없습니다.
-      C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_control.cpp(118,57):
-      열거형 형식으로 변환하려면 명시적 캐스트(static_cast, C 스타일 캐스트 또는 괄호가 있는 함수 스타일 캐스트)가 필요합니다.
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_control.cpp(121,53): error C2440: '=': 'int'에서 'new_or_load_game_t'(으)로 변환할 수 없습니다.
-      C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_control.cpp(121,53):
-      열거형 형식으로 변환하려면 명시적 캐스트(static_cast, C 스타일 캐스트 또는 괄호가 있는 함수 스타일 캐스트)가 필요합니다.
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_control.cpp(159,63): error C2440: '=': 'int'에서 'heal_or_store_t'(으)로 변환할 수 없습니다.
-      C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_control.cpp(159,63):
-      열거형 형식으로 변환하려면 명시적 캐스트(static_cast, C 스타일 캐스트 또는 괄호가 있는 함수 스타일 캐스트)가 필요합니다.
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_control.cpp(162,59): error C2440: '=': 'int'에서 'heal_or_store_t'(으)로 변환할 수 없습니다.
-      C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_control.cpp(162,59):
-      열거형 형식으로 변환하려면 명시적 캐스트(static_cast, C 스타일 캐스트 또는 괄호가 있는 함수 스타일 캐스트)가 필요합니다.
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_control.cpp(181,69): error C2440: '=': 'int'에서 'save_load_num_t'(으)로 변환할 수 없습니다.
-      C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_control.cpp(181,69):
-      열거형 형식으로 변환하려면 명시적 캐스트(static_cast, C 스타일 캐스트 또는 괄호가 있는 함수 스타일 캐스트)가 필요합니다.
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_control.cpp(184,53): error C2440: '=': 'int'에서 'save_load_num_t'(으)로 변환할 수 없습니다.
-      C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_control.cpp(184,53):
-      열거형 형식으로 변환하려면 명시적 캐스트(static_cast, C 스타일 캐스트 또는 괄호가 있는 함수 스타일 캐스트)가 필요합니다.
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_control.cpp(206,69): error C2440: '=': 'int'에서 'save_load_num_t'(으)로 변환할 수 없습니다.
-      C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_control.cpp(206,69):
-      열거형 형식으로 변환하려면 명시적 캐스트(static_cast, C 스타일 캐스트 또는 괄호가 있는 함수 스타일 캐스트)가 필요합니다.
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_control.cpp(209,53): error C2440: '=': 'int'에서 'save_load_num_t'(으)로 변환할 수 없습니다.
-      C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_control.cpp(209,53):
-      열거형 형식으로 변환하려면 명시적 캐스트(static_cast, C 스타일 캐스트 또는 괄호가 있는 함수 스타일 캐스트)가 필요합니다.
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_control.cpp(292,63): error C2440: '=': 'int'에서 'player_action_state_t'(으)로 변환할 수 없습니다.
-      C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_control.cpp(292,63):
-      열거형 형식으로 변환하려면 명시적 캐스트(static_cast, C 스타일 캐스트 또는 괄호가 있는 함수 스타일 캐스트)가 필요합니다.
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_control.cpp(295,59): error C2440: '=': 'int'에서 'player_action_state_t'(으)로 변환할 수 없습니다.
-      C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_control.cpp(295,59):
-      열거형 형식으로 변환하려면 명시적 캐스트(static_cast, C 스타일 캐스트 또는 괄호가 있는 함수 스타일 캐스트)가 필요합니다.
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_control.cpp(360,63): error C2440: '=': 'int'에서 'esc_menu_state_t'(으)로 변환할 수 없습니다.
-      C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_control.cpp(360,63):
-      열거형 형식으로 변환하려면 명시적 캐스트(static_cast, C 스타일 캐스트 또는 괄호가 있는 함수 스타일 캐스트)가 필요합니다.
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_control.cpp(363,59): error C2440: '=': 'int'에서 'esc_menu_state_t'(으)로 변환할 수 없습니다.
-      C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_control.cpp(363,59):
-      열거형 형식으로 변환하려면 명시적 캐스트(static_cast, C 스타일 캐스트 또는 괄호가 있는 함수 스타일 캐스트)가 필요합니다.
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_control.cpp(394,53): error C2440: '=': 'int'에서 'inventory_state_t'(으)로 변환할 수 없습니다.
-      C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_control.cpp(394,53):
-      열거형 형식으로 변환하려면 명시적 캐스트(static_cast, C 스타일 캐스트 또는 괄호가 있는 함수 스타일 캐스트)가 필요합니다.
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_control.cpp(397,49): error C2440: '=': 'int'에서 'inventory_state_t'(으)로 변환할 수 없습니다.
-      C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_control.cpp(397,49):
-      열거형 형식으로 변환하려면 명시적 캐스트(static_cast, C 스타일 캐스트 또는 괄호가 있는 함수 스타일 캐스트)가 필요합니다.
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_control.cpp(555,53): error C2440: '=': 'int'에서 'store_state_t'(으)로 변환할 수 없습니다.
-      C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_control.cpp(555,53):
-      열거형 형식으로 변환하려면 명시적 캐스트(static_cast, C 스타일 캐스트 또는 괄호가 있는 함수 스타일 캐스트)가 필요합니다.
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_control.cpp(558,49): error C2440: '=': 'int'에서 'store_state_t'(으)로 변환할 수 없습니다.
-      C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_control.cpp(558,49):
-      열거형 형식으로 변환하려면 명시적 캐스트(static_cast, C 스타일 캐스트 또는 괄호가 있는 함수 스타일 캐스트)가 필요합니다.
-  
   UI_dynamic.cpp
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_dynamic.cpp(672,22): error C2440: '=': 'void *'에서 'char *'(으)로 변환할 수 없습니다.
-      C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_dynamic.cpp(672,22):
-      'void*'에서 'void'가 아닌 포인터로 변환하려면 명시적 캐스트가 필요합니다.
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_dynamic.cpp(1376,29): error C2440: '초기화 중': 'const char [29]'에서 'char *'(으)로 변환할 수 없습니다.
-      C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_dynamic.cpp(1376,29):
-      문자열 리터럴로부터의 변환은 const 한정자가 손실됩니다(/Zc:strictStrings 참조).
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_dynamic.cpp(1397,28): error C2440: '초기화 중': 'const char [31]'에서 'char *'(으)로 변환할 수 없습니다.
-      C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_dynamic.cpp(1397,28):
-      문자열 리터럴로부터의 변환은 const 한정자가 손실됩니다(/Zc:strictStrings 참조).
-  
+  UI_static.cpp
+  battle.cpp
+  field.cpp
+  game_manager.cpp
+  inventory.cpp
+  item.cpp
+  log.cpp
+  main.cpp
+  monster.cpp
+  player.cpp
+  save_load.cpp
+  store.cpp
+  story.cpp
   utils.cpp
   코드를 생성하고 있습니다...
+  Script_Survival.vcxproj -> C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\x64\Debug\Script_Survival.exe

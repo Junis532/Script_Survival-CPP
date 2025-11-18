@@ -69,8 +69,4 @@ public:
 	void utils_sound_play(const wchar_t* filepath);
 };
 
-
-Utils::Utils()
-{
-	// 생성자 내용
-}
+extern Utils utils; // 선언만

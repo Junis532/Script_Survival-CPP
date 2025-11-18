@@ -18,25 +18,25 @@
     <ClCompile Include="battle.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="inventory.c">
+    <ClCompile Include="inventory.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="item.c">
+    <ClCompile Include="item.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="log.c">
+    <ClCompile Include="log.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="main.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="monster.c">
+    <ClCompile Include="monster.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="player.c">
+    <ClCompile Include="player.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="UI_cleaner.c">
+    <ClCompile Include="UI_cleaner.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="UI_static.cpp">
@@ -48,22 +48,22 @@
     <ClCompile Include="UI_control.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="store.c">
+    <ClCompile Include="store.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="game_manager.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="save_load.c">
+    <ClCompile Include="save_load.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="MT19937.c">
+    <ClCompile Include="MT19937.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="UI_dynamic.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="story.c">
+    <ClCompile Include="story.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="field.cpp">

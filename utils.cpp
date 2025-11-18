@@ -17,6 +17,13 @@ using namespace std;
 static bool s_sound_enabled = true;
 static int  s_sound_volume = 50;
 
+Utils utils;
+
+Utils::Utils()
+{
+    // 생성자 초기화 내용
+}
+
 int Utils::utils_min(int x, int y)
 {
     return (x < y) ? x : y;

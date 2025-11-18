@@ -33,7 +33,4 @@ public:
 
 };
 
-UIStatic::UIStatic()
-{
-	// 생성자 내용
-}
+extern UIStatic uiStatic;

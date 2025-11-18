@@ -2,6 +2,7 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include "UI_static.h"
 #include "UI_cleaner.h"
+#include "utils.h"
 
 #include <iostream>
 #include <cstdio>
@@ -10,7 +11,13 @@
 
 using namespace std;
 
-Utils utils;
+UIStatic uiStatic;
+
+UIStatic::UIStatic()
+{
+	// 생성자 내용
+}
+
 
 void UIStatic::UI_static_main_box(int color)
 {

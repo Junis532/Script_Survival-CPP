@@ -13,10 +13,6 @@
 
 #pragma comment(lib, "winmm.lib")
 
-Utils utils;
-Dynamic dynamic;
-UIStatic uiStatic;
-
 static double s_monster_tmep_evasion_rate;
 
 static bool s_check_evasion(double defender_evasion_rate)

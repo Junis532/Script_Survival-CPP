@@ -30,10 +30,6 @@ static int s_infinity_stage = 1;
 
 #define MAX_STAGE 13
 
-Utils utils;
-UIStatic uiStatic;
-Dynamic dynamic;
-
 // === 내부 함수 선언 ===
 static void state_pre_game_sequence();
 static void state_battle(bool* is_game_over);

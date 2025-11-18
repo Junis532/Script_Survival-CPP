@@ -14,7 +14,13 @@ using namespace std;
 
 #define BAR_LENGTH 50
 
-Utils utils;   // 객체 생성
+Dynamic dynamic;
+
+
+Dynamic::Dynamic()
+{
+    // 생성자 내용
+}
 
 static void s_print_diff_stat(int diff_stat, int x, int y)
 {
@@ -236,6 +242,7 @@ static void s_print_inventory_item_page(
                     utils.utils_gotoxy(79, 15);
                     printf("%s", set_effects[selected_item_index].description);
 
+                    
                     utils.utils_set_color(COLOR_DEFAULT_TEXT);
                 }
             }
@@ -647,13 +654,14 @@ bool Dynamic::UI_dynamic_confirm_player_name(const char* name)
         int key = utils.utils_getch();
 
         if (key == UP || key == DOWN) {
-            state = !state;
+            state = 1 - state; // 논리 NOT 대신 1 - state
             s_confirm_player_name_selection(state);
         }
         else if (key == ENTER) {
-            return !state;
+            return (state == 0); // Y(0)이면 true 반환
         }
     }
+
 }
 
 char* Dynamic::UI_dynamic_create_player_name(void)
@@ -663,13 +671,14 @@ char* Dynamic::UI_dynamic_create_player_name(void)
     while (1)
     {
         UI_cleaner_all_display();
-
         utils.utils_set_color(COLOR_DEFAULT_TEXT);
         UI_dynamic_player_name_input();
 
-        fflush(stdin);
+        // 입력 버퍼 비우기
+        int ch;
+        while ((ch = getchar()) != '\n' && ch != EOF) {}
 
-        name = malloc(8);
+        name = (char*)malloc(8); // void* -> char* 캐스팅
         if (!name) {
             fprintf(stderr, "메모리 할당 실패\n");
             exit(1);
@@ -680,7 +689,6 @@ char* Dynamic::UI_dynamic_create_player_name(void)
             bool has_newline = (name[len] == '\r' || name[len] == '\n');
             name[len] = '\0';
             if (!has_newline) {
-                int ch;
                 while ((ch = getchar()) != '\n' && ch != EOF) {}
             }
         }
@@ -689,16 +697,17 @@ char* Dynamic::UI_dynamic_create_player_name(void)
         }
 
         if (UI_dynamic_confirm_player_name(name)) {
-            break; // 이름이 확정되면 루프 종료
+            break; // 이름 확정
         }
         else {
-            free(name); // 이름이 확정되지 않으면 메모리 해제 후 다시 입력 받기
+            free(name); // 이름 확정 안되면 해제 후 재입력
             name = NULL;
         }
     }
 
     return name;
 }
+
 
 // =============================
 
@@ -1373,7 +1382,7 @@ void Dynamic::UI_dynamic_current_weapon_info(player_t* player)
     int start_x = 0;
     int end_x = 38;
     if (player->weapon_index == -1) {
-        char* no_weapon_msg = "현재 장착된 무기가 없습니다.";
+        const char* no_weapon_msg = "현재 장착된 무기가 없습니다."; // const 추가
         int msg_len = (int)strlen(no_weapon_msg);
         int padding = (end_x - start_x - msg_len) / 2;
         utils.utils_gotoxy(padding, 23);
@@ -1394,7 +1403,7 @@ void Dynamic::UI_dynamic_current_armor_info(player_t* player)
     int end_x = 75;
 
     if (player->armor_index == -1) {
-        char* no_armor_msg = "현재 장착된 방어구가 없습니다.";
+        const char* no_armor_msg = "현재 장착된 방어구가 없습니다."; // const 추가
         int msg_len = (int)strlen(no_armor_msg);
         int padding = (end_x - start_x - msg_len) / 2;
         utils.utils_gotoxy(padding, 23);

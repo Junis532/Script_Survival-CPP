@@ -71,9 +71,5 @@ public:
 	void  UI_dynamic_current_armor_info(player_t* player);
 };
 
-
-Dynamic::Dynamic()
-{
-	// 생성자 내용
-}
+extern Dynamic dynamic;
 

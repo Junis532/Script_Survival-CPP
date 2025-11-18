@@ -14,8 +14,6 @@ static int monster_add_attack = 100;
 static bool is_add_attack_player = true;
 static int sum_attack = 0;
 
-Utils utils;
-
 void field_effect_on(player_t* player, monster_t* monster, int type)
 {
 	log_field_effect_on();

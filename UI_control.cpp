@@ -7,8 +7,7 @@
 #include "log.h"
 #include "item.h"
 #include "story.h"
-
-Utils utils;
+#include "utils.h"
 
 void UI_control_init(UI_state_t* ui_main_state, title_state_t* ui_title_state, player_action_state_t* player_action_state)
 {
@@ -25,22 +24,23 @@ void UI_control_title(UI_state_t* ui_main_state, title_state_t* ui_title_state, 
         else if (*ui_title_state == TITLE_STATE_EXIT) exit(0);
     }
     else if (menu_key == UP) {
-        *ui_title_state = (*ui_title_state - 1 + 3) % 3;
+        *ui_title_state = (title_state_t)((*ui_title_state - 1 + 3) % 3);
     }
     else if (menu_key == DOWN) {
-        *ui_title_state = (*ui_title_state + 1) % 3;
+        *ui_title_state = (title_state_t)((*ui_title_state + 1) % 3);
     }
 }
+
 
 void UI_control_setting(UI_state_t* ui_main_state, setting_state_t* ui_setting_state, bool is_come_esc_menu, int* global_volume, int key)
 {
     switch (key) {
     case UP:
-        *ui_setting_state = (*ui_setting_state - 1 + SETTING_STATE_MAX) % SETTING_STATE_MAX;
+        *ui_setting_state = (setting_state_t)((*ui_setting_state - 1 + SETTING_STATE_MAX) % SETTING_STATE_MAX);
         break;
 
     case DOWN:
-        *ui_setting_state = (*ui_setting_state + 1) % SETTING_STATE_MAX;
+        *ui_setting_state = (setting_state_t)((*ui_setting_state + 1) % SETTING_STATE_MAX);
         break;
 
     case LEFT:
@@ -67,15 +67,16 @@ void UI_control_setting(UI_state_t* ui_main_state, setting_state_t* ui_setting_s
         }
         else if (*ui_setting_state == SETTING_STATE_BACK) {
             if (is_come_esc_menu) {
-                *ui_main_state = UI_STATE_ESC_MENU; // ESC 메뉴로 돌아가기
+                *ui_main_state = UI_STATE_ESC_MENU;
             }
             else {
-                *ui_main_state = UI_STATE_TITLE; // 타이틀 화면으로 돌아가기
+                *ui_main_state = UI_STATE_TITLE;
             }
         }
         break;
     }
 }
+
 
 // 모드 선택 화면 ↑↓ + 엔터 처리
 void UI_control_game_mode(UI_state_t* ui_main_state, game_mode_state_t* ui_mode_state,
@@ -88,55 +89,60 @@ void UI_control_game_mode(UI_state_t* ui_main_state, game_mode_state_t* ui_mode_
                 *game_mode = MODE_STATE_INFINITY;
                 *ui_main_state = UI_STATE_NEW_OR_LOAD_GAME;
             }
-            else return; // 아무것도 하지 않음
+            else return;
         }
         if (*ui_mode_state == MODE_STATE_NORMAL)
         {
             *game_mode = MODE_STATE_NORMAL;
-			*ui_main_state = UI_STATE_SELECT_HERO;
+            *ui_main_state = UI_STATE_SELECT_HERO;
         }
     }
     else if (key == UP && is_infinite_unlocked) {
-        *ui_mode_state = (*ui_mode_state - 1 + MODE_STATE_MAX) % MODE_STATE_MAX;
+        *ui_mode_state = (game_mode_state_t)((*ui_mode_state - 1 + MODE_STATE_MAX) % MODE_STATE_MAX);
     }
     else if (key == DOWN && is_infinite_unlocked) {
-        *ui_mode_state = (*ui_mode_state + 1) % MODE_STATE_MAX;
+        *ui_mode_state = (game_mode_state_t)((*ui_mode_state + 1) % MODE_STATE_MAX);
     }
 }
+
 
 void UI_control_select_new_or_load_game(UI_state_t* ui_main_state, new_or_load_game_t* new_or_load_game, int key)
 {
     if (key == ENTER) {
         if (*new_or_load_game == NEW_GAME) {
-            *ui_main_state = UI_STATE_SELECT_HERO; // 새로운 게임 시작
+            *ui_main_state = UI_STATE_SELECT_HERO;
         }
         else if (*new_or_load_game == LOAD_GAME) {
-            *ui_main_state = UI_STATE_LOAD; // 저장된 게임 불러오기
+            *ui_main_state = UI_STATE_LOAD;
         }
     }
     else if (key == UP) {
-        *new_or_load_game = (*new_or_load_game - 1 + 2) % 2;
+        *new_or_load_game = (new_or_load_game_t)((*new_or_load_game - 1 + 2) % 2);
     }
     else if (key == DOWN) {
-        *new_or_load_game = (*new_or_load_game + 1) % 2;
+        *new_or_load_game = (new_or_load_game_t)((*new_or_load_game + 1) % 2);
     }
 }
+
 
 void UI_control_select_heal_or_store(UI_state_t* ui_main_state, heal_or_store_t* heal_or_store_state, player_t* player, int key)
 {
     if (key == ENTER) {
         if (*heal_or_store_state == HEAL_OR_STORE_HEAL) {
-			int heal_point = (int)(get_player_max_hp(player) * 0.3); // 최대 체력의 30% 회복
+            int heal_point = (int)(get_player_max_hp(player) * 0.3);
             heal_point = utils.utils_min(heal_point, get_player_max_hp(player) - get_player_hp(player));
+
             set_player_hp(player, heal_point);
             utils.utils_sound_play(TEXT("SFX/SoundEffect/heal.wav"));
+
             UI_cleaner_all_display();
             log_buffer_clear();
             log_select_rest();
             log_auto_heal(player, heal_point);
             Sleep(1000);
-			log_buffer_clear();
-            *ui_main_state = UI_STATE_BATTLE; // 전투 상태로 돌아가기
+            log_buffer_clear();
+
+            *ui_main_state = UI_STATE_BATTLE;
         }
         else if (*heal_or_store_state == HEAL_OR_STORE_STORE) {
             UI_cleaner_all_display();
@@ -144,7 +150,8 @@ void UI_control_select_heal_or_store(UI_state_t* ui_main_state, heal_or_store_t*
             log_select_store();
             Sleep(1000);
             log_buffer_clear();
-            *ui_main_state = UI_STATE_STORE; // 상점 상태로 전환
+
+            *ui_main_state = UI_STATE_STORE;
         }
         else if (*heal_or_store_state == HEAL_OR_STORE_RUN) {
             UI_cleaner_all_display();
@@ -153,38 +160,38 @@ void UI_control_select_heal_or_store(UI_state_t* ui_main_state, heal_or_store_t*
             log_buffer_clear();
             player_save_legacy_data(player);
         }
-
     }
     else if (key == LEFT) {
-        *heal_or_store_state = (*heal_or_store_state - 1 + 3) % 3;
+        *heal_or_store_state = (heal_or_store_t)((*heal_or_store_state - 1 + 3) % 3);
     }
     else if (key == RIGHT) {
-        *heal_or_store_state = (*heal_or_store_state + 1) % 3;
+        *heal_or_store_state = (heal_or_store_t)((*heal_or_store_state + 1) % 3);
     }
 }
+
 
 void UI_control_load_menu(UI_state_t* ui_main_state, save_load_num_t* ui_save_load_num, int key, game_context_t* context)
 {
     if (key == ENTER) {
         if (*ui_main_state == UI_STATE_SAVE) {
-            save_slot(*ui_save_load_num, context); // 현재 게임 상태를 저장
+            save_slot(*ui_save_load_num, context);
         }
         else if (*ui_main_state == UI_STATE_LOAD) {
             if (load_slot(*ui_save_load_num, context)) {
-                context->new_or_load_game = LOAD_GAME; // 게임 불러오기 상태로 설정
-                *ui_main_state = UI_STATE_BATTLE; // 전투 상태로 전환
-                context->is_change_ui_main = true; // UI 변경 플래그 설정
+                context->new_or_load_game = LOAD_GAME;
+                *ui_main_state = UI_STATE_BATTLE;
+                context->is_change_ui_main = true;
             }
         }
     }
     else if (key == LEFT) {
-        *ui_save_load_num = (*ui_save_load_num - 1 + SAVE_LOAD_MAX) % SAVE_LOAD_MAX;
+        *ui_save_load_num = (save_load_num_t)((*ui_save_load_num - 1 + SAVE_LOAD_MAX) % SAVE_LOAD_MAX);
     }
     else if (key == RIGHT) {
-        *ui_save_load_num = (*ui_save_load_num + 1) % SAVE_LOAD_MAX;
+        *ui_save_load_num = (save_load_num_t)((*ui_save_load_num + 1) % SAVE_LOAD_MAX);
     }
     else if (key == ESC) {
-        *ui_main_state = UI_STATE_NEW_OR_LOAD_GAME; 
+        *ui_main_state = UI_STATE_NEW_OR_LOAD_GAME;
     }
 }
 
@@ -192,26 +199,27 @@ void UI_control_save_load_menu(UI_state_t* ui_main_state, save_load_num_t* ui_sa
 {
     if (key == ENTER) {
         if (*ui_main_state == UI_STATE_SAVE) {
-			save_slot(*ui_save_load_num, context); // 현재 게임 상태를 저장
+            save_slot(*ui_save_load_num, context);
         }
         else if (*ui_main_state == UI_STATE_LOAD) {
             if (load_slot(*ui_save_load_num, context)) {
-				context->new_or_load_game = LOAD_GAME; // 게임 불러오기 상태로 설정
-				*ui_main_state = UI_STATE_BATTLE; // 전투 상태로 전환
-				context->is_change_ui_main = true; // UI 변경 플래그 설정
-			}
-		}
+                context->new_or_load_game = LOAD_GAME;
+                *ui_main_state = UI_STATE_BATTLE;
+                context->is_change_ui_main = true;
+            }
+        }
     }
     else if (key == LEFT) {
-        *ui_save_load_num = (*ui_save_load_num - 1 + SAVE_LOAD_MAX) % SAVE_LOAD_MAX;
+        *ui_save_load_num = (save_load_num_t)((*ui_save_load_num - 1 + SAVE_LOAD_MAX) % SAVE_LOAD_MAX);
     }
     else if (key == RIGHT) {
-        *ui_save_load_num = (*ui_save_load_num + 1) % SAVE_LOAD_MAX;
-	}
+        *ui_save_load_num = (save_load_num_t)((*ui_save_load_num + 1) % SAVE_LOAD_MAX);
+    }
     else if (key == ESC) {
-        *ui_main_state = UI_STATE_ESC_MENU; // ESC 메뉴로 돌아가기
-	}
+        *ui_main_state = UI_STATE_ESC_MENU;
+    }
 }
+
 
 void UI_control_hero_select(UI_state_t* ui_main_state, hero_t* choice_hero, int key)
 {
@@ -289,54 +297,51 @@ player_action_state_t UI_control_player_action(player_action_state_t* player_act
         return *player_action_state; // return player_action_t
     }
     else if (menu_key == UP) {
-        *player_action_state = (*player_action_state - 1 + 3) % 3;
+        *player_action_state = (player_action_state_t)((*player_action_state - 1 + 3) % 3);
     }
     else if (menu_key == DOWN) {
-        *player_action_state = (*player_action_state + 1) % 3;
+        *player_action_state = (player_action_state_t)((*player_action_state + 1) % 3);
     }
     return PLAYER_ACTION_NONE;
 }
 
 void UI_control_esc_menu(UI_state_t* ui_main_state, esc_menu_state_t* ui_esc_menu_state, int menu_key, int gamemode)
 {
-
     if (gamemode == GAME_MODE_NORMAL) {
         if (menu_key == ENTER) {
             if (*ui_esc_menu_state == ESC_MENU_STATE_BACK) {
-                *ui_main_state = UI_STATE_BATTLE; // 전투 상태로 돌아감
+                *ui_main_state = UI_STATE_BATTLE;
             }
             else if (*ui_esc_menu_state == ESC_MENU_STATE_OPTIONS) {
                 *ui_main_state = UI_STATE_SETTING;
             }
             else if (*ui_esc_menu_state == ESC_MENU_STATE_EXIT) {
-                *ui_main_state = UI_STATE_TITLE; // 타이틀 화면으로 돌아감
+                *ui_main_state = UI_STATE_TITLE;
             }
         }
-
-        // 세이브 선택은 건너뛰게
         else if (menu_key == UP) {
-            switch(*ui_esc_menu_state) {
-                case ESC_MENU_STATE_BACK:
-                    *ui_esc_menu_state = ESC_MENU_STATE_EXIT; // EXIT로 이동
-                    break;
-                case ESC_MENU_STATE_OPTIONS:
-					*ui_esc_menu_state = ESC_MENU_STATE_BACK; // BACK으로 이동
-                    break;
-                case ESC_MENU_STATE_EXIT:
-                    *ui_esc_menu_state = ESC_MENU_STATE_OPTIONS; // OPTIONS로 이동
-                    break;
-			}
+            switch (*ui_esc_menu_state) {
+            case ESC_MENU_STATE_BACK:
+                *ui_esc_menu_state = ESC_MENU_STATE_EXIT;
+                break;
+            case ESC_MENU_STATE_OPTIONS:
+                *ui_esc_menu_state = ESC_MENU_STATE_BACK;
+                break;
+            case ESC_MENU_STATE_EXIT:
+                *ui_esc_menu_state = ESC_MENU_STATE_OPTIONS;
+                break;
+            }
         }
         else if (menu_key == DOWN) {
             switch (*ui_esc_menu_state) {
             case ESC_MENU_STATE_BACK:
-                *ui_esc_menu_state = ESC_MENU_STATE_OPTIONS; // OPTIONS로 이동
+                *ui_esc_menu_state = ESC_MENU_STATE_OPTIONS;
                 break;
             case ESC_MENU_STATE_OPTIONS:
-                *ui_esc_menu_state = ESC_MENU_STATE_EXIT; // EXIT로 이동
+                *ui_esc_menu_state = ESC_MENU_STATE_EXIT;
                 break;
             case ESC_MENU_STATE_EXIT:
-                *ui_esc_menu_state = ESC_MENU_STATE_BACK; // BACK으로 이동
+                *ui_esc_menu_state = ESC_MENU_STATE_BACK;
                 break;
             }
         }
@@ -344,27 +349,29 @@ void UI_control_esc_menu(UI_state_t* ui_main_state, esc_menu_state_t* ui_esc_men
     else if (gamemode == GAME_MODE_INFINITY) {
         if (menu_key == ENTER) {
             if (*ui_esc_menu_state == ESC_MENU_STATE_BACK) {
-                *ui_main_state = UI_STATE_BATTLE; // 전투 상태로 돌아감
+                *ui_main_state = UI_STATE_BATTLE;
             }
             else if (*ui_esc_menu_state == ESC_MENU_STATE_SAVE) {
-				*ui_main_state = UI_STATE_SAVE; // 세이브 상태로 전환
+                *ui_main_state = UI_STATE_SAVE;
             }
             else if (*ui_esc_menu_state == ESC_MENU_STATE_OPTIONS) {
                 *ui_main_state = UI_STATE_SETTING;
             }
             else if (*ui_esc_menu_state == ESC_MENU_STATE_EXIT) {
-                *ui_main_state = UI_STATE_TITLE; // 타이틀 화면으로 돌아감
+                *ui_main_state = UI_STATE_TITLE;
             }
         }
         else if (menu_key == UP) {
-            *ui_esc_menu_state = (*ui_esc_menu_state - 1 + 4) % 4;
+            *ui_esc_menu_state = (esc_menu_state_t)((*ui_esc_menu_state - 1 + 4) % 4);
         }
         else if (menu_key == DOWN) {
-            *ui_esc_menu_state = (*ui_esc_menu_state + 1) % 4;
+            *ui_esc_menu_state = (esc_menu_state_t)((*ui_esc_menu_state + 1) % 4);
         }
-	}
+    }
 }
 
+
+// 무기 장착 여부 반환 (0 변경 없음, 1 무기 변경, 2 방어구 변경)
 // 무기 장착 여부 반환 (0 변경 없음, 1 무기 변경, 2 방어구 변경)
 int UI_control_inventory(UI_state_t* ui_main_state, player_t* player, int menu_key)
 {
@@ -391,10 +398,10 @@ int UI_control_inventory(UI_state_t* ui_main_state, player_t* player, int menu_k
             }
         }
         else if (menu_key == LEFT) {
-            current_state = (current_state - 1 + 5) % 5;
+            current_state = (inventory_state_t)((current_state - 1 + 5) % 5);
         }
         else if (menu_key == RIGHT) {
-            current_state = (current_state + 1) % 5;
+            current_state = (inventory_state_t)((current_state + 1) % 5);
         }
         else if (menu_key == ESC) {
             *ui_main_state = UI_STATE_BATTLE;
@@ -407,47 +414,42 @@ int UI_control_inventory(UI_state_t* ui_main_state, player_t* player, int menu_k
                 bool is_same_item = (current_rarity == player->weapon_rarity && selected_index == player->weapon_index);
                 if (!is_same_item) {
                     use_weapon(current_rarity, selected_index, player);
-                    // 아이템 세트효과 인지 확인
                     if (player->weapon_index == player->armor_index && player->weapon_rarity == RARITY_UNIQUE && player->armor_rarity == RARITY_UNIQUE) {
                         apply_set_effects(player, selected_index);
                     }
                     else {
-						remove_set_effects(player); // 세트 효과 제거
+                        remove_set_effects(player);
                     }
-                    return 1; // 무기 변경됨
+                    return 1; // 무기 변경
                 }
             }
             else if (current_state == INVENTORY_STATE_ARMOR) {
                 bool is_same_item = (current_rarity == player->armor_rarity && selected_index == player->armor_index);
                 if (!is_same_item) {
                     use_armor(current_rarity, selected_index, player);
-                    // 아이템 세트효과 인지 확인
                     if (player->weapon_index == player->armor_index && player->weapon_rarity == RARITY_UNIQUE && player->armor_rarity == RARITY_UNIQUE) {
                         apply_set_effects(player, selected_index);
                     }
                     else {
-                        remove_set_effects(player); // 세트 효과 제거
+                        remove_set_effects(player);
                     }
-                    return 2; // 방어구 변경됨
+                    return 2; // 방어구 변경
                 }
             }
             else if (current_state == INVENTORY_STATE_HEAL_ITEM) {
                 if (use_heal_item(selected_index, player)) {
-                    return 3;
+                    return 3; // 회복 아이템 사용
                 }
-                // 아이템이 없어서 사용에 실패하면 아무것도 하지 않음
             }
-
-            
-            return 0;
+            return 0; // 변경 없음
         }
 
         if ((current_state == INVENTORY_STATE_WEAPON || current_state == INVENTORY_STATE_ARMOR) && page != NULL) {
 
             if (menu_key == 'N' || menu_key == 'n') {
                 current_rarity = RARITY_NORMAL;
-                selected_index = 0;   // 새 등급이면 첫 아이템으로
-                *page = 0;            // 첫 페이지로
+                selected_index = 0;
+                *page = 0;
             }
             else if (menu_key == 'R' || menu_key == 'r') {
                 current_rarity = RARITY_RARE;
@@ -464,7 +466,7 @@ int UI_control_inventory(UI_state_t* ui_main_state, player_t* player, int menu_k
                 selected_index = 0;
                 *page = 0;
             }
- 
+
             int total_items = rarity_item_counts[current_rarity];
             int max_index = total_items - 1;
             int items_per_page = ITEMS_PER_PAGE;
@@ -486,37 +488,18 @@ int UI_control_inventory(UI_state_t* ui_main_state, player_t* player, int menu_k
                 if (selected_index + ITEMS_PER_ROW <= max_index) selected_index += ITEMS_PER_ROW;
             }
 
-            // 경계 검사 및 페이지 재계산
-            if (selected_index < 0)          selected_index = 0;
-            if (selected_index > max_index)  selected_index = max_index;
-            if (*page < 0)                   *page = 0;
-            if (*page > max_page)            *page = max_page;
+            if (selected_index < 0) selected_index = 0;
+            if (selected_index > max_index) selected_index = max_index;
+            if (*page < 0) *page = 0;
+            if (*page > max_page) *page = max_page;
             *page = selected_index / items_per_page;
         }
         else if (current_state == INVENTORY_STATE_HEAL_ITEM) {
-            if (menu_key == ESC) {
-                focus_level = FOCUS_LEVEL_TOP;
-            }
-            else if (menu_key == UP) {
-                if (selected_index > 0) {
-                    selected_index--;
-                }
-            }
-            else if (menu_key == DOWN) {
-                if (selected_index < HEAL_ITEM_COUNT - 1) {
-                    selected_index++;
-                }
-            }
-            else if (menu_key == LEFT) {
-                if (selected_index - ITEMS_PER_ROW >= 0) {
-                    selected_index -= ITEMS_PER_ROW;
-                }
-            }
-            else if (menu_key == RIGHT) {
-                if (selected_index + ITEMS_PER_ROW < HEAL_ITEM_COUNT) {
-                    selected_index += ITEMS_PER_ROW;
-                }
-            }
+            if (menu_key == ESC) focus_level = FOCUS_LEVEL_TOP;
+            else if (menu_key == UP && selected_index > 0) selected_index--;
+            else if (menu_key == DOWN && selected_index < HEAL_ITEM_COUNT - 1) selected_index++;
+            else if (menu_key == LEFT && selected_index - ITEMS_PER_ROW >= 0) selected_index -= ITEMS_PER_ROW;
+            else if (menu_key == RIGHT && selected_index + ITEMS_PER_ROW < HEAL_ITEM_COUNT) selected_index += ITEMS_PER_ROW;
         }
     }
 
@@ -529,6 +512,7 @@ int UI_control_inventory(UI_state_t* ui_main_state, player_t* player, int menu_k
 
     return 0;
 }
+
 
 void UI_control_store(UI_state_t* ui_main_state, player_t* player, int menu_key)
 {
@@ -544,105 +528,63 @@ void UI_control_store(UI_state_t* ui_main_state, player_t* player, int menu_key)
     if (focus_level == FOCUS_LEVEL_TOP)
     {
         if (menu_key == ENTER) {
-            if (current_state == STORE_STATE_BACK) *ui_main_state = UI_STATE_BATTLE;
-            else if (current_state == STORE_STATE_WEAPON || current_state == STORE_STATE_ARMOR) focus_level = FOCUS_LEVEL_ITEM_LIST;
+            if (current_state == STORE_STATE_BACK) {
+                *ui_main_state = UI_STATE_BATTLE;
+            }
+            else if (current_state == STORE_STATE_WEAPON || current_state == STORE_STATE_ARMOR) {
+                focus_level = FOCUS_LEVEL_ITEM_LIST;
+            }
             else if (current_state == STORE_STATE_HEAL_ITEM) {
                 focus_level = FOCUS_LEVEL_ITEM_LIST;
                 selected_index = 0;
             }
         }
         else if (menu_key == LEFT) {
-            current_state = (current_state - 1 + 4) % 4;
+            current_state = (store_state_t)((current_state - 1 + 4) % 4);
         }
         else if (menu_key == RIGHT) {
-            current_state = (current_state + 1) % 4;
+            current_state = (store_state_t)((current_state + 1) % 4);
         }
     }
     else if (focus_level == FOCUS_LEVEL_ITEM_LIST)
     {
         if ((current_state == STORE_STATE_WEAPON || current_state == STORE_STATE_ARMOR) && page != NULL) {
 
-            if (menu_key == 'N' || menu_key == 'n') {
-                current_rarity = RARITY_NORMAL;
-                selected_index = 0;
-                *page = 0;
-            }
-            else if (menu_key == 'R' || menu_key == 'r') {
-                current_rarity = RARITY_RARE;
-                selected_index = 0;
-                *page = 0;
-            }
-            else if (menu_key == 'E' || menu_key == 'e') {
-                current_rarity = RARITY_EPIC;
-                selected_index = 0;
-                *page = 0;
-            }
-            else if (menu_key == 'U' || menu_key == 'u') {
-                current_rarity = RARITY_UNIQUE;
-                selected_index = 0;
-                *page = 0;
-            }
+            if (menu_key == 'N' || menu_key == 'n') { current_rarity = RARITY_NORMAL; selected_index = 0; *page = 0; }
+            else if (menu_key == 'R' || menu_key == 'r') { current_rarity = RARITY_RARE; selected_index = 0; *page = 0; }
+            else if (menu_key == 'E' || menu_key == 'e') { current_rarity = RARITY_EPIC; selected_index = 0; *page = 0; }
+            else if (menu_key == 'U' || menu_key == 'u') { current_rarity = RARITY_UNIQUE; selected_index = 0; *page = 0; }
 
             int total_items = rarity_item_counts[current_rarity];
             int max_index = total_items - 1;
             int items_per_page = ITEMS_PER_PAGE;
             int max_page = total_items / items_per_page;
 
-            // 항목 선택
-            if (menu_key == ENTER) {
-                focus_level = FOCUS_LEVEL_ITEM_BUY_SELL;
-            }
-            else if (menu_key == ESC) {
-                focus_level = FOCUS_LEVEL_TOP;
-            }
-            else if (menu_key == UP) {
-                if (selected_index > 0) {
-                    selected_index--;
-                }
-            }
-            else if (menu_key == DOWN) {
-                if (selected_index < max_index) {
-                    selected_index++;
-                }
-            }
-            else if (menu_key == LEFT) {
-                if (selected_index - ITEMS_PER_ROW >= 0) {
-                    selected_index -= ITEMS_PER_ROW;
-                }
-            }
-            else if (menu_key == RIGHT) {
-                if (selected_index + ITEMS_PER_ROW <= max_index) {
-                    selected_index += ITEMS_PER_ROW;
-                }
-            }
+            if (menu_key == ENTER) { focus_level = FOCUS_LEVEL_ITEM_BUY_SELL; }
+            else if (menu_key == ESC) { focus_level = FOCUS_LEVEL_TOP; }
+            else if (menu_key == UP && selected_index > 0) { selected_index--; }
+            else if (menu_key == DOWN && selected_index < max_index) { selected_index++; }
+            else if (menu_key == LEFT && selected_index - ITEMS_PER_ROW >= 0) { selected_index -= ITEMS_PER_ROW; }
+            else if (menu_key == RIGHT && selected_index + ITEMS_PER_ROW <= max_index) { selected_index += ITEMS_PER_ROW; }
 
-            // 페이지 보정
-            if (selected_index < 0)        selected_index = 0;
+            if (selected_index < 0) selected_index = 0;
             if (selected_index > max_index) selected_index = max_index;
-            if (*page < 0)                 *page = 0;
-            if (*page > max_page)          *page = max_page;
-
-            // page 계산 (선택 인덱스 기준)
+            if (*page < 0) *page = 0;
+            if (*page > max_page) *page = max_page;
             *page = selected_index / items_per_page;
         }
         else if (current_state == STORE_STATE_HEAL_ITEM) {
-            if (menu_key == ENTER) {
-                focus_level = FOCUS_LEVEL_ITEM_BUY_SELL;
-            }
-            else if (menu_key == ESC) {
-                focus_level = FOCUS_LEVEL_TOP;
-            }
-            else if (menu_key == UP) { if (selected_index > 0) selected_index--; }
-            else if (menu_key == DOWN) { if (selected_index < HEAL_ITEM_COUNT - 1) selected_index++; }
-            else if (menu_key == LEFT) { if (selected_index - ITEMS_PER_ROW >= 0) selected_index -= ITEMS_PER_ROW; }
-            else if (menu_key == RIGHT) { if (selected_index + ITEMS_PER_ROW < HEAL_ITEM_COUNT) selected_index += ITEMS_PER_ROW; }
+            if (menu_key == ENTER) { focus_level = FOCUS_LEVEL_ITEM_BUY_SELL; }
+            else if (menu_key == ESC) { focus_level = FOCUS_LEVEL_TOP; }
+            else if (menu_key == UP && selected_index > 0) { selected_index--; }
+            else if (menu_key == DOWN && selected_index < HEAL_ITEM_COUNT - 1) { selected_index++; }
+            else if (menu_key == LEFT && selected_index - ITEMS_PER_ROW >= 0) { selected_index -= ITEMS_PER_ROW; }
+            else if (menu_key == RIGHT && selected_index + ITEMS_PER_ROW < HEAL_ITEM_COUNT) { selected_index += ITEMS_PER_ROW; }
         }
     }
     else if (focus_level == FOCUS_LEVEL_ITEM_BUY_SELL)
     {
-        if (menu_key == ESC) {
-            focus_level = FOCUS_LEVEL_ITEM_LIST;
-        }
+        if (menu_key == ESC) { focus_level = FOCUS_LEVEL_ITEM_LIST; }
         else if (menu_key == LEFT || menu_key == RIGHT) {
             buy_sell_state = (buy_sell_state == STORE_STATE_BUY) ? STORE_STATE_SELL : STORE_STATE_BUY;
         }
@@ -655,9 +597,7 @@ void UI_control_store(UI_state_t* ui_main_state, player_t* player, int menu_key)
                         get_item(current_rarity, selected_index, ITEM_TYPE_WEAPON);
                         set_store_buy_sell_successful_state(STORE_BUY_SUCCESS);
                     }
-                    else {
-                        set_store_buy_sell_successful_state(STORE_BUY_FAIL);
-                    }
+                    else { set_store_buy_sell_successful_state(STORE_BUY_FAIL); }
                 }
                 else if (current_state == STORE_STATE_ARMOR) {
                     if (player->coin >= armors[current_rarity][selected_index].buy_price) {
@@ -665,9 +605,7 @@ void UI_control_store(UI_state_t* ui_main_state, player_t* player, int menu_key)
                         get_item(current_rarity, selected_index, ITEM_TYPE_ARMOR);
                         set_store_buy_sell_successful_state(STORE_BUY_SUCCESS);
                     }
-                    else {
-                        set_store_buy_sell_successful_state(STORE_BUY_FAIL);
-                    }
+                    else { set_store_buy_sell_successful_state(STORE_BUY_FAIL); }
                 }
                 else if (current_state == STORE_STATE_HEAL_ITEM) {
                     if (player->coin >= heal_items[selected_index].buy_price) {
@@ -675,43 +613,27 @@ void UI_control_store(UI_state_t* ui_main_state, player_t* player, int menu_key)
                         get_item(current_rarity, selected_index, ITEM_TYPE_HEAL_ITEM);
                         set_store_buy_sell_successful_state(STORE_BUY_SUCCESS);
                     }
-                    else {
-                        set_store_buy_sell_successful_state(STORE_BUY_FAIL);
-                    }
+                    else { set_store_buy_sell_successful_state(STORE_BUY_FAIL); }
                 }
             }
-            else { // STORE_STATE_SELL
+            else { // SELL
                 utils.utils_sound_play(TEXT("SFX/SoundEffect/store_sell.wav"));
-                if (current_state == STORE_STATE_WEAPON) {
-                    if (weapon_inventory[current_rarity][selected_index].count > 0) {
-                        player->coin += weapons[current_rarity][selected_index].sell_price;
-                        sell_item(current_rarity, selected_index, ITEM_TYPE_WEAPON);
-                        set_store_buy_sell_successful_state(STORE_SELL_SUCCESS);
-                    }
-                    else {
-                        set_store_buy_sell_successful_state(STORE_SELL_FAIL);
-                    }
+                if (current_state == STORE_STATE_WEAPON && weapon_inventory[current_rarity][selected_index].count > 0) {
+                    player->coin += weapons[current_rarity][selected_index].sell_price;
+                    sell_item(current_rarity, selected_index, ITEM_TYPE_WEAPON);
+                    set_store_buy_sell_successful_state(STORE_SELL_SUCCESS);
                 }
-                else if (current_state == STORE_STATE_ARMOR) {
-                    if (armor_inventory[current_rarity][selected_index].count > 0) {
-                        player->coin += armors[current_rarity][selected_index].sell_price;
-                        sell_item(current_rarity, selected_index, ITEM_TYPE_ARMOR);
-                        set_store_buy_sell_successful_state(STORE_SELL_SUCCESS);
-                    }
-                    else {
-                        set_store_buy_sell_successful_state(STORE_SELL_FAIL);
-                    }
+                else if (current_state == STORE_STATE_ARMOR && armor_inventory[current_rarity][selected_index].count > 0) {
+                    player->coin += armors[current_rarity][selected_index].sell_price;
+                    sell_item(current_rarity, selected_index, ITEM_TYPE_ARMOR);
+                    set_store_buy_sell_successful_state(STORE_SELL_SUCCESS);
                 }
-                else if (current_state == STORE_STATE_HEAL_ITEM) {
-                    if (heal_item_inventory[selected_index] > 0) {
-                        player->coin += heal_items[selected_index].sell_price;
-                        sell_item(current_rarity, selected_index, ITEM_TYPE_HEAL_ITEM);
-                        set_store_buy_sell_successful_state(STORE_SELL_SUCCESS);
-                    }
-                    else {
-                        set_store_buy_sell_successful_state(STORE_SELL_FAIL);
-                    }
+                else if (current_state == STORE_STATE_HEAL_ITEM && heal_item_inventory[selected_index] > 0) {
+                    player->coin += heal_items[selected_index].sell_price;
+                    sell_item(current_rarity, selected_index, ITEM_TYPE_HEAL_ITEM);
+                    set_store_buy_sell_successful_state(STORE_SELL_SUCCESS);
                 }
+                else { set_store_buy_sell_successful_state(STORE_SELL_FAIL); }
             }
             focus_level = FOCUS_LEVEL_ITEM_LIST;
         }
