@@ -9,9 +9,13 @@
 
 #include "UI_info.h"
 
+
+
 class UIStatic
 {
 public:
+	UIStatic();
+
 	void UI_static_main_box(int color);
 	void UI_static_title(void);
 	void UI_static_hide_title(void);
@@ -28,3 +32,8 @@ public:
 	void UI_static_shop_box(void);
 
 };
+
+UIStatic::UIStatic()
+{
+	// 생성자 내용
+}

@@ -2,7 +2,13 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include "UI_static.h"
 #include "UI_cleaner.h"
+
 #include <iostream>
+#include <cstdio>
+#include <cstdlib>
+#include <cstring>
+
+using namespace std;
 
 Utils utils;
 

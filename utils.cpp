@@ -4,6 +4,13 @@
 #include "UI_info.h"
 #include "inout.h"
 
+#include <iostream>
+#include <cstdio>
+#include <cstdlib>
+#include <cstring>
+
+using namespace std;
+
 //#include <imm.h>
 //#pragma comment(lib, "imm32.lib") 
 

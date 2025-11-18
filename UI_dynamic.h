@@ -14,6 +14,7 @@
 
 #include "save_load.h"
 
+
 typedef struct menu_list { int x; int y; const char* text; } menu_list_t;
 
 

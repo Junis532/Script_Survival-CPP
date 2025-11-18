@@ -5,6 +5,13 @@
 #include "save_load.h"
 #include "utils.h"
 
+#include <iostream>
+#include <cstdio>
+#include <cstdlib>
+#include <cstring>
+
+using namespace std;
+
 #define BAR_LENGTH 50
 
 Utils utils;   // 객체 생성

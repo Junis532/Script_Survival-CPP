@@ -5,8 +5,10 @@
 
 int main(void)
 {
+
+    Utils utils;
     // 커서 지우기
-    utils_hide_cursor();
+    utils.utils_hide_cursor();
 
     // 랜덤 시드 및 콘솔 크기 설정
     struct timespec ts;
