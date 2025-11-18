@@ -16,24 +16,24 @@ typedef enum UI_state {
 	UI_STATE_ESC_MENU,
 	UI_STATE_SAVE,
 	UI_STATE_LOAD,
-}UI_state;
+}UI_state_t;
 
 typedef enum heal_or_store {
 	HEAL_OR_STORE_HEAL = 0,
 	HEAL_OR_STORE_STORE,
 	HEAL_OR_STORE_RUN
-}heal_or_store;
+}heal_or_store_t;
 
 typedef enum title_state {
 	TITLE_STATE_START = 0,
 	TITLE_STATE_OPTIONS,
 	TITLE_STATE_EXIT
-}title_state;
+}title_state_t;
 
 typedef enum new_or_load_game {
 	NEW_GAME = 0,
 	LOAD_GAME
-}new_or_load_game;
+}new_or_load_game_t;
 
 typedef enum setting_state {
 	SETTING_STATE_SOUND_ON = 0,
@@ -47,21 +47,21 @@ typedef enum game_mode_state {
 	MODE_STATE_NORMAL = 0,
 	MODE_STATE_INFINITY,
 	MODE_STATE_MAX
-}setting_state;
+}setting_state_t;
 
 typedef enum player_action_state {
 	PLAYER_ACTION_ATTACK = 0,
 	PLAYER_ACTION_SKILL,
 	PLAYER_ACTION_INVENTORY,
 	PLAYER_ACTION_NONE
-}player_action_state;
+}player_action_state_t;
 
 typedef enum focus_level {
 	FOCUS_LEVEL_TOP = 0,
 	FOCUS_LEVEL_SUB,
 	FOCUS_LEVEL_ITEM_LIST,
 	FOCUS_LEVEL_ITEM_BUY_SELL
-}focus_level;
+}focus_level_t;
 
 typedef enum inventory_state {
 	INVENTORY_STATE_BACK = 0,
@@ -69,7 +69,7 @@ typedef enum inventory_state {
 	INVENTORY_STATE_ARMOR,
 	INVENTORY_STATE_HEAL_ITEM,
 	INVENTORY_STATE_OPTIONS
-}inventory_state;
+}inventory_state_t;
 
 typedef enum store_state {
 	STORE_STATE_BACK = 0,
@@ -78,7 +78,7 @@ typedef enum store_state {
 	STORE_STATE_HEAL_ITEM,
 	STORE_STATE_BUY,
 	STORE_STATE_SELL
-}store_state;
+}store_state_t;
 
 typedef enum store_buy_sell_state {
 	STORE_BUY_SUCCESS = 0,
@@ -86,7 +86,7 @@ typedef enum store_buy_sell_state {
 	STORE_SELL_SUCCESS,
 	STORE_SELL_FAIL,
 	STORE_BUY_SELL_NONE
-}store_buy_sell_state;
+}store_buy_sell_state_t;
 
 typedef enum upgrade_type {
 	UPGRADE_NONE = -1,
@@ -99,21 +99,21 @@ typedef enum upgrade_type {
 	UPGRADE_CRIT_DMG,
 	UPGRADE_LIFESTEAL,
 	UPGRADE_MAX
-}upgrade_type;
+}upgrade_type_t;
 
 typedef enum save_load_num {
 	SAVE_LOAD_1,
 	SAVE_LOAD_2,
 	SAVE_LOAD_3,
 	SAVE_LOAD_MAX
-}save_load_num;
+}save_load_num_t;
 
 typedef enum esc_menu_state {
 	ESC_MENU_STATE_BACK,
 	ESC_MENU_STATE_SAVE,
 	ESC_MENU_STATE_OPTIONS,
 	ESC_MENU_STATE_EXIT
-}esc_menu_state;
+}esc_menu_state_t;
 
 #define UP 72
 #define DOWN 80

@@ -3,6 +3,8 @@
 #include "utils.h"
 #include "game_manager.h"
 
+using namespace std;
+
 int main(void)
 {
 

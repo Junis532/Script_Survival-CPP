@@ -14,13 +14,27 @@
 
 #include "save_load.h"
 
+//
+//typedef struct menu_list
+//{ 
+//	int x; 
+//	int y; 
+//	const char* text; 
+//} menu_list_t;
 
-typedef struct menu_list { int x; int y; const char* text; } menu_list_t;
-
+class  menu_list
+{
+public:
+	int x;
+	int y;
+	const char* text;
+};
 
 class Dynamic
 {
 public:
+	Dynamic();
+
 	// 사용자 이름 입력 관련 함수
 	void  UI_dynamic_player_name_input(void);
 	bool  UI_dynamic_confirm_player_name(const char* name);
@@ -56,4 +70,10 @@ public:
 	void  UI_dynamic_current_weapon_info(player_t* player);
 	void  UI_dynamic_current_armor_info(player_t* player);
 };
+
+
+Dynamic::Dynamic()
+{
+	// 생성자 내용
+}
 
