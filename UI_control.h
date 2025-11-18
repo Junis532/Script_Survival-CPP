@@ -12,7 +12,7 @@
 #include "UI_info.h"
 #include "game_manager.h"
 
-void UI_control_init(UI_state_t* ui_main_state, title_state_t* ui_title_state, player_action_t* ui_battle_state);
+void UI_control_init(UI_state_t* ui_main_state, title_state_t* ui_title_state, player_action_state_t* ui_battle_state);
 void UI_control_title(UI_state_t* ui_main_state, title_state_t* ui_title_state, int menu_key);
 void UI_control_setting(UI_state_t* ui_main_state, setting_state_t* ui_setting_state, bool is_come_esc_menu, int* global_volume, int key);
 
@@ -33,7 +33,7 @@ void UI_control_generate_upgrade_choices(player_t* player, upgrade_type_t out_ch
 void UI_control_handle_upgrade_selection(UI_state_t* ui_main_state, player_t* player,
 	const upgrade_type_t choices[], int* selection, int key);
 
-player_action_t UI_control_player_action(player_action_t* ui_battle_state, int menu_key);
+player_action_state_t UI_control_player_action(player_action_state_t* ui_battle_state, int menu_key);
 
 void UI_control_esc_menu(UI_state_t* ui_main_state, esc_menu_state_t* ui_esc_menu_state, int menu_key, int gamemode);
 

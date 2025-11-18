@@ -41,13 +41,13 @@ typedef enum setting_state {
 	SETTING_STATE_VOLUME,
 	SETTING_STATE_BACK,
 	SETTING_STATE_MAX
-};
+}setting_state_t;
 
 typedef enum game_mode_state {
 	MODE_STATE_NORMAL = 0,
 	MODE_STATE_INFINITY,
 	MODE_STATE_MAX
-}setting_state_t;
+}game_mode_state_t;
 
 typedef enum player_action_state {
 	PLAYER_ACTION_ATTACK = 0,

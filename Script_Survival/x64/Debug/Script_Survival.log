@@ -1,781 +1,105 @@
-﻿  battle.c
-  field.c
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\utils.h(50,7): error C2061: 구문 오류: 식별자 'Utils'
-  (소스 파일 'battle.c'을(를) 컴파일하는 중)
+﻿  game_manager.cpp
+  UI_control.cpp
+C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_control.cpp(28,53): error C2440: '=': 'int'에서 'title_state_t'(으)로 변환할 수 없습니다.
+      C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_control.cpp(28,53):
+      열거형 형식으로 변환하려면 명시적 캐스트(static_cast, C 스타일 캐스트 또는 괄호가 있는 함수 스타일 캐스트)가 필요합니다.
+  
+C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_control.cpp(31,49): error C2440: '=': 'int'에서 'title_state_t'(으)로 변환할 수 없습니다.
+      C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_control.cpp(31,49):
+      열거형 형식으로 변환하려면 명시적 캐스트(static_cast, C 스타일 캐스트 또는 괄호가 있는 함수 스타일 캐스트)가 필요합니다.
+  
+C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_control.cpp(39,73): error C2440: '=': 'int'에서 'setting_state_t'(으)로 변환할 수 없습니다.
+      C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_control.cpp(39,73):
+      열거형 형식으로 변환하려면 명시적 캐스트(static_cast, C 스타일 캐스트 또는 괄호가 있는 함수 스타일 캐스트)가 필요합니다.
+  
+C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_control.cpp(43,53): error C2440: '=': 'int'에서 'setting_state_t'(으)로 변환할 수 없습니다.
+      C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_control.cpp(43,53):
+      열거형 형식으로 변환하려면 명시적 캐스트(static_cast, C 스타일 캐스트 또는 괄호가 있는 함수 스타일 캐스트)가 필요합니다.
+  
+C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_control.cpp(100,64): error C2440: '=': 'int'에서 'game_mode_state_t'(으)로 변환할 수 없습니다.
+      C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_control.cpp(100,64):
+      열거형 형식으로 변환하려면 명시적 캐스트(static_cast, C 스타일 캐스트 또는 괄호가 있는 함수 스타일 캐스트)가 필요합니다.
+  
+C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_control.cpp(103,47): error C2440: '=': 'int'에서 'game_mode_state_t'(으)로 변환할 수 없습니다.
+      C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_control.cpp(103,47):
+      열거형 형식으로 변환하려면 명시적 캐스트(static_cast, C 스타일 캐스트 또는 괄호가 있는 함수 스타일 캐스트)가 필요합니다.
+  
+C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_control.cpp(118,57): error C2440: '=': 'int'에서 'new_or_load_game_t'(으)로 변환할 수 없습니다.
+      C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_control.cpp(118,57):
+      열거형 형식으로 변환하려면 명시적 캐스트(static_cast, C 스타일 캐스트 또는 괄호가 있는 함수 스타일 캐스트)가 필요합니다.
+  
+C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_control.cpp(121,53): error C2440: '=': 'int'에서 'new_or_load_game_t'(으)로 변환할 수 없습니다.
+      C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_control.cpp(121,53):
+      열거형 형식으로 변환하려면 명시적 캐스트(static_cast, C 스타일 캐스트 또는 괄호가 있는 함수 스타일 캐스트)가 필요합니다.
+  
+C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_control.cpp(159,63): error C2440: '=': 'int'에서 'heal_or_store_t'(으)로 변환할 수 없습니다.
+      C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_control.cpp(159,63):
+      열거형 형식으로 변환하려면 명시적 캐스트(static_cast, C 스타일 캐스트 또는 괄호가 있는 함수 스타일 캐스트)가 필요합니다.
+  
+C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_control.cpp(162,59): error C2440: '=': 'int'에서 'heal_or_store_t'(으)로 변환할 수 없습니다.
+      C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_control.cpp(162,59):
+      열거형 형식으로 변환하려면 명시적 캐스트(static_cast, C 스타일 캐스트 또는 괄호가 있는 함수 스타일 캐스트)가 필요합니다.
+  
+C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_control.cpp(181,69): error C2440: '=': 'int'에서 'save_load_num_t'(으)로 변환할 수 없습니다.
+      C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_control.cpp(181,69):
+      열거형 형식으로 변환하려면 명시적 캐스트(static_cast, C 스타일 캐스트 또는 괄호가 있는 함수 스타일 캐스트)가 필요합니다.
+  
+C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_control.cpp(184,53): error C2440: '=': 'int'에서 'save_load_num_t'(으)로 변환할 수 없습니다.
+      C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_control.cpp(184,53):
+      열거형 형식으로 변환하려면 명시적 캐스트(static_cast, C 스타일 캐스트 또는 괄호가 있는 함수 스타일 캐스트)가 필요합니다.
+  
+C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_control.cpp(206,69): error C2440: '=': 'int'에서 'save_load_num_t'(으)로 변환할 수 없습니다.
+      C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_control.cpp(206,69):
+      열거형 형식으로 변환하려면 명시적 캐스트(static_cast, C 스타일 캐스트 또는 괄호가 있는 함수 스타일 캐스트)가 필요합니다.
+  
+C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_control.cpp(209,53): error C2440: '=': 'int'에서 'save_load_num_t'(으)로 변환할 수 없습니다.
+      C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_control.cpp(209,53):
+      열거형 형식으로 변환하려면 명시적 캐스트(static_cast, C 스타일 캐스트 또는 괄호가 있는 함수 스타일 캐스트)가 필요합니다.
+  
+C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_control.cpp(292,63): error C2440: '=': 'int'에서 'player_action_state_t'(으)로 변환할 수 없습니다.
+      C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_control.cpp(292,63):
+      열거형 형식으로 변환하려면 명시적 캐스트(static_cast, C 스타일 캐스트 또는 괄호가 있는 함수 스타일 캐스트)가 필요합니다.
+  
+C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_control.cpp(295,59): error C2440: '=': 'int'에서 'player_action_state_t'(으)로 변환할 수 없습니다.
+      C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_control.cpp(295,59):
+      열거형 형식으로 변환하려면 명시적 캐스트(static_cast, C 스타일 캐스트 또는 괄호가 있는 함수 스타일 캐스트)가 필요합니다.
+  
+C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_control.cpp(360,63): error C2440: '=': 'int'에서 'esc_menu_state_t'(으)로 변환할 수 없습니다.
+      C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_control.cpp(360,63):
+      열거형 형식으로 변환하려면 명시적 캐스트(static_cast, C 스타일 캐스트 또는 괄호가 있는 함수 스타일 캐스트)가 필요합니다.
+  
+C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_control.cpp(363,59): error C2440: '=': 'int'에서 'esc_menu_state_t'(으)로 변환할 수 없습니다.
+      C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_control.cpp(363,59):
+      열거형 형식으로 변환하려면 명시적 캐스트(static_cast, C 스타일 캐스트 또는 괄호가 있는 함수 스타일 캐스트)가 필요합니다.
+  
+C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_control.cpp(394,53): error C2440: '=': 'int'에서 'inventory_state_t'(으)로 변환할 수 없습니다.
+      C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_control.cpp(394,53):
+      열거형 형식으로 변환하려면 명시적 캐스트(static_cast, C 스타일 캐스트 또는 괄호가 있는 함수 스타일 캐스트)가 필요합니다.
+  
+C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_control.cpp(397,49): error C2440: '=': 'int'에서 'inventory_state_t'(으)로 변환할 수 없습니다.
+      C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_control.cpp(397,49):
+      열거형 형식으로 변환하려면 명시적 캐스트(static_cast, C 스타일 캐스트 또는 괄호가 있는 함수 스타일 캐스트)가 필요합니다.
+  
+C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_control.cpp(555,53): error C2440: '=': 'int'에서 'store_state_t'(으)로 변환할 수 없습니다.
+      C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_control.cpp(555,53):
+      열거형 형식으로 변환하려면 명시적 캐스트(static_cast, C 스타일 캐스트 또는 괄호가 있는 함수 스타일 캐스트)가 필요합니다.
+  
+C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_control.cpp(558,49): error C2440: '=': 'int'에서 'store_state_t'(으)로 변환할 수 없습니다.
+      C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_control.cpp(558,49):
+      열거형 형식으로 변환하려면 명시적 캐스트(static_cast, C 스타일 캐스트 또는 괄호가 있는 함수 스타일 캐스트)가 필요합니다.
+  
+  UI_dynamic.cpp
+C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_dynamic.cpp(672,22): error C2440: '=': 'void *'에서 'char *'(으)로 변환할 수 없습니다.
+      C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_dynamic.cpp(672,22):
+      'void*'에서 'void'가 아닌 포인터로 변환하려면 명시적 캐스트가 필요합니다.
+  
+C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_dynamic.cpp(1376,29): error C2440: '초기화 중': 'const char [29]'에서 'char *'(으)로 변환할 수 없습니다.
+      C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_dynamic.cpp(1376,29):
+      문자열 리터럴로부터의 변환은 const 한정자가 손실됩니다(/Zc:strictStrings 참조).
+  
+C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_dynamic.cpp(1397,28): error C2440: '초기화 중': 'const char [31]'에서 'char *'(으)로 변환할 수 없습니다.
+      C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_dynamic.cpp(1397,28):
+      문자열 리터럴로부터의 변환은 const 한정자가 손실됩니다(/Zc:strictStrings 참조).
   
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\utils.h(50,7): error C2059: 구문 오류: ';'
-  (소스 파일 'battle.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\utils.h(51,1): error C2449: 파일 범위에 '{'가 있습니다. 함수 헤더가 없는 것 같습니다.
-  (소스 파일 'battle.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\utils.h(68,1): error C2059: 구문 오류: '}'
-  (소스 파일 'battle.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_static.h(12,7): error C2061: 구문 오류: 식별자 'UIStatic'
-  (소스 파일 'battle.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_static.h(12,7): error C2059: 구문 오류: ';'
-  (소스 파일 'battle.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_static.h(13,1): error C2449: 파일 범위에 '{'가 있습니다. 함수 헤더가 없는 것 같습니다.
-  (소스 파일 'battle.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_static.h(30,1): error C2059: 구문 오류: '}'
-  (소스 파일 'battle.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\battle.c(81,9): warning C4013: 'utils_sound_play'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\battle.c(87,26): warning C4013: 'utils_min'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\battle.c(204,13): warning C4013: 'UI_static_main_box'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\utils.h(50,7): error C2061: 구문 오류: 식별자 'Utils'
-  (소스 파일 'field.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\utils.h(50,7): error C2059: 구문 오류: ';'
-  (소스 파일 'field.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\utils.h(51,1): error C2449: 파일 범위에 '{'가 있습니다. 함수 헤더가 없는 것 같습니다.
-  (소스 파일 'field.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\utils.h(68,1): error C2059: 구문 오류: '}'
-  (소스 파일 'field.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\field.c(22,3): warning C4013: 'utils_swap_double'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
-  game_manager.c
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\utils.h(50,7): error C2061: 구문 오류: 식별자 'Utils'
-  (소스 파일 'game_manager.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\utils.h(50,7): error C2059: 구문 오류: ';'
-  (소스 파일 'game_manager.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\utils.h(51,1): error C2449: 파일 범위에 '{'가 있습니다. 함수 헤더가 없는 것 같습니다.
-  (소스 파일 'game_manager.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\utils.h(68,1): error C2059: 구문 오류: '}'
-  (소스 파일 'game_manager.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(115,68): error C2143: 구문 오류: ')'이(가) '*' 앞에 없습니다.
-  (소스 파일 'game_manager.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(115,60): error C2081: 'player_t': 정식 매개 변수 목록에 있는 이름이 잘못되었습니다.
-  (소스 파일 'game_manager.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(115,68): error C2143: 구문 오류: '{'이(가) '*' 앞에 없습니다.
-  (소스 파일 'game_manager.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(115,76): error C2059: 구문 오류: ')'
-  (소스 파일 'game_manager.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(116,67): error C2143: 구문 오류: ')'이(가) '*' 앞에 없습니다.
-  (소스 파일 'game_manager.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(116,59): error C2081: 'player_t': 정식 매개 변수 목록에 있는 이름이 잘못되었습니다.
-  (소스 파일 'game_manager.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(116,67): error C2143: 구문 오류: '{'이(가) '*' 앞에 없습니다.
-  (소스 파일 'game_manager.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(116,75): error C2059: 구문 오류: ')'
-  (소스 파일 'game_manager.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(117,44): error C2143: 구문 오류: ')'이(가) '*' 앞에 없습니다.
-  (소스 파일 'game_manager.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(117,36): error C2081: 'player_t': 정식 매개 변수 목록에 있는 이름이 잘못되었습니다.
-  (소스 파일 'game_manager.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(117,44): error C2143: 구문 오류: '{'이(가) '*' 앞에 없습니다.
-  (소스 파일 'game_manager.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(117,52): error C2059: 구문 오류: ')'
-  (소스 파일 'game_manager.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(119,32): error C2143: 구문 오류: ')'이(가) '*' 앞에 없습니다.
-  (소스 파일 'game_manager.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(119,32): error C2143: 구문 오류: '{'이(가) '*' 앞에 없습니다.
-  (소스 파일 'game_manager.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(119,42): error C2059: 구문 오류: '형식'
-  (소스 파일 'game_manager.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(119,60): error C2059: 구문 오류: ')'
-  (소스 파일 'game_manager.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(121,33): error C2143: 구문 오류: ')'이(가) '*' 앞에 없습니다.
-  (소스 파일 'game_manager.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(121,33): error C2143: 구문 오류: '{'이(가) '*' 앞에 없습니다.
-  (소스 파일 'game_manager.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(121,41): error C2059: 구문 오류: ')'
-  (소스 파일 'game_manager.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_static.h(12,7): error C2061: 구문 오류: 식별자 'UIStatic'
-  (소스 파일 'game_manager.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_static.h(12,7): error C2059: 구문 오류: ';'
-  (소스 파일 'game_manager.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_static.h(13,1): error C2449: 파일 범위에 '{'가 있습니다. 함수 헤더가 없는 것 같습니다.
-  (소스 파일 'game_manager.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_static.h(30,1): error C2059: 구문 오류: '}'
-  (소스 파일 'game_manager.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\save_load.h(14,42): error C2143: 구문 오류: ')'이(가) '*' 앞에 없습니다.
-  (소스 파일 'game_manager.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\save_load.h(14,42): error C2143: 구문 오류: '{'이(가) '*' 앞에 없습니다.
-  (소스 파일 'game_manager.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\save_load.h(14,49): error C2059: 구문 오류: ')'
-  (소스 파일 'game_manager.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\game_manager.c(81,5): warning C4013: 'utils_sound_init'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\game_manager.c(155,5): warning C4013: 'utils_gotoxy'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\game_manager.c(169,13): warning C4013: 'UI_static_main_box'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\game_manager.c(172,21): warning C4013: 'UI_static_hide_title'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\game_manager.c(174,21): warning C4013: 'UI_static_title'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\game_manager.c(177,17): warning C4013: 'UI_static_setting_menu'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\game_manager.c(186,23): warning C4013: 'utils_getch'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\game_manager.c(203,72): warning C4013: 'UI_static_select_game_mode'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\game_manager.c(225,74): warning C4013: 'UI_static_save_load_box'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\game_manager.c(237,44): warning C4013: 'UI_static_hero_select_box'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\game_manager.c(246,66): warning C4013: 'utils_set_color'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\game_manager.c(246,103): warning C4013: 'UI_static_battle_box'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\game_manager.c(346,66): warning C4013: 'UI_static_select_heal_or_store_box'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\game_manager.c(360,66): warning C4013: 'UI_static_inventory_box'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\game_manager.c(376,66): warning C4013: 'UI_static_shop_box'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\game_manager.c(429,74): warning C4013: 'UI_static_infinite_upgrade_box'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
-  inventory.c
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\utils.h(50,7): error C2061: 구문 오류: 식별자 'Utils'
-  (소스 파일 'inventory.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\utils.h(50,7): error C2059: 구문 오류: ';'
-  (소스 파일 'inventory.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\utils.h(51,1): error C2449: 파일 범위에 '{'가 있습니다. 함수 헤더가 없는 것 같습니다.
-  (소스 파일 'inventory.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\utils.h(68,1): error C2059: 구문 오류: '}'
-  (소스 파일 'inventory.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(115,68): error C2143: 구문 오류: ')'이(가) '*' 앞에 없습니다.
-  (소스 파일 'inventory.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(115,60): error C2081: 'player_t': 정식 매개 변수 목록에 있는 이름이 잘못되었습니다.
-  (소스 파일 'inventory.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(115,68): error C2143: 구문 오류: '{'이(가) '*' 앞에 없습니다.
-  (소스 파일 'inventory.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(115,76): error C2059: 구문 오류: ')'
-  (소스 파일 'inventory.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(116,67): error C2143: 구문 오류: ')'이(가) '*' 앞에 없습니다.
-  (소스 파일 'inventory.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(116,59): error C2081: 'player_t': 정식 매개 변수 목록에 있는 이름이 잘못되었습니다.
-  (소스 파일 'inventory.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(116,67): error C2143: 구문 오류: '{'이(가) '*' 앞에 없습니다.
-  (소스 파일 'inventory.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(116,75): error C2059: 구문 오류: ')'
-  (소스 파일 'inventory.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(117,44): error C2143: 구문 오류: ')'이(가) '*' 앞에 없습니다.
-  (소스 파일 'inventory.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(117,36): error C2081: 'player_t': 정식 매개 변수 목록에 있는 이름이 잘못되었습니다.
-  (소스 파일 'inventory.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(117,44): error C2143: 구문 오류: '{'이(가) '*' 앞에 없습니다.
-  (소스 파일 'inventory.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(117,52): error C2059: 구문 오류: ')'
-  (소스 파일 'inventory.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(119,32): error C2143: 구문 오류: ')'이(가) '*' 앞에 없습니다.
-  (소스 파일 'inventory.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(119,32): error C2143: 구문 오류: '{'이(가) '*' 앞에 없습니다.
-  (소스 파일 'inventory.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(119,42): error C2059: 구문 오류: '형식'
-  (소스 파일 'inventory.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(119,60): error C2059: 구문 오류: ')'
-  (소스 파일 'inventory.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(121,33): error C2143: 구문 오류: ')'이(가) '*' 앞에 없습니다.
-  (소스 파일 'inventory.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(121,33): error C2143: 구문 오류: '{'이(가) '*' 앞에 없습니다.
-  (소스 파일 'inventory.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(121,41): error C2059: 구문 오류: ')'
-  (소스 파일 'inventory.c'을(를) 컴파일하는 중)
-  
-  item.c
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\utils.h(50,7): error C2061: 구문 오류: 식별자 'Utils'
-  (소스 파일 'item.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\utils.h(50,7): error C2059: 구문 오류: ';'
-  (소스 파일 'item.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\utils.h(51,1): error C2449: 파일 범위에 '{'가 있습니다. 함수 헤더가 없는 것 같습니다.
-  (소스 파일 'item.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\utils.h(68,1): error C2059: 구문 오류: '}'
-  (소스 파일 'item.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(115,68): error C2143: 구문 오류: ')'이(가) '*' 앞에 없습니다.
-  (소스 파일 'item.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(115,60): error C2081: 'player_t': 정식 매개 변수 목록에 있는 이름이 잘못되었습니다.
-  (소스 파일 'item.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(115,68): error C2143: 구문 오류: '{'이(가) '*' 앞에 없습니다.
-  (소스 파일 'item.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(115,76): error C2059: 구문 오류: ')'
-  (소스 파일 'item.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(116,67): error C2143: 구문 오류: ')'이(가) '*' 앞에 없습니다.
-  (소스 파일 'item.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(116,59): error C2081: 'player_t': 정식 매개 변수 목록에 있는 이름이 잘못되었습니다.
-  (소스 파일 'item.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(116,67): error C2143: 구문 오류: '{'이(가) '*' 앞에 없습니다.
-  (소스 파일 'item.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(116,75): error C2059: 구문 오류: ')'
-  (소스 파일 'item.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(117,44): error C2143: 구문 오류: ')'이(가) '*' 앞에 없습니다.
-  (소스 파일 'item.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(117,36): error C2081: 'player_t': 정식 매개 변수 목록에 있는 이름이 잘못되었습니다.
-  (소스 파일 'item.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(117,44): error C2143: 구문 오류: '{'이(가) '*' 앞에 없습니다.
-  (소스 파일 'item.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(117,52): error C2059: 구문 오류: ')'
-  (소스 파일 'item.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(119,32): error C2143: 구문 오류: ')'이(가) '*' 앞에 없습니다.
-  (소스 파일 'item.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(119,32): error C2143: 구문 오류: '{'이(가) '*' 앞에 없습니다.
-  (소스 파일 'item.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(119,42): error C2059: 구문 오류: '형식'
-  (소스 파일 'item.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(119,60): error C2059: 구문 오류: ')'
-  (소스 파일 'item.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(121,33): error C2143: 구문 오류: ')'이(가) '*' 앞에 없습니다.
-  (소스 파일 'item.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(121,33): error C2143: 구문 오류: '{'이(가) '*' 앞에 없습니다.
-  (소스 파일 'item.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(121,41): error C2059: 구문 오류: ')'
-  (소스 파일 'item.c'을(를) 컴파일하는 중)
-  
-  log.c
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\utils.h(50,7): error C2061: 구문 오류: 식별자 'Utils'
-  (소스 파일 'log.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\utils.h(50,7): error C2059: 구문 오류: ';'
-  (소스 파일 'log.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\utils.h(51,1): error C2449: 파일 범위에 '{'가 있습니다. 함수 헤더가 없는 것 같습니다.
-  (소스 파일 'log.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\utils.h(68,1): error C2059: 구문 오류: '}'
-  (소스 파일 'log.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(115,68): error C2143: 구문 오류: ')'이(가) '*' 앞에 없습니다.
-  (소스 파일 'log.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(115,60): error C2081: 'player_t': 정식 매개 변수 목록에 있는 이름이 잘못되었습니다.
-  (소스 파일 'log.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(115,68): error C2143: 구문 오류: '{'이(가) '*' 앞에 없습니다.
-  (소스 파일 'log.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(115,76): error C2059: 구문 오류: ')'
-  (소스 파일 'log.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(116,67): error C2143: 구문 오류: ')'이(가) '*' 앞에 없습니다.
-  (소스 파일 'log.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(116,59): error C2081: 'player_t': 정식 매개 변수 목록에 있는 이름이 잘못되었습니다.
-  (소스 파일 'log.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(116,67): error C2143: 구문 오류: '{'이(가) '*' 앞에 없습니다.
-  (소스 파일 'log.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(116,75): error C2059: 구문 오류: ')'
-  (소스 파일 'log.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(117,44): error C2143: 구문 오류: ')'이(가) '*' 앞에 없습니다.
-  (소스 파일 'log.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(117,36): error C2081: 'player_t': 정식 매개 변수 목록에 있는 이름이 잘못되었습니다.
-  (소스 파일 'log.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(117,44): error C2143: 구문 오류: '{'이(가) '*' 앞에 없습니다.
-  (소스 파일 'log.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(117,52): error C2059: 구문 오류: ')'
-  (소스 파일 'log.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(119,32): error C2143: 구문 오류: ')'이(가) '*' 앞에 없습니다.
-  (소스 파일 'log.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(119,32): error C2143: 구문 오류: '{'이(가) '*' 앞에 없습니다.
-  (소스 파일 'log.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(119,42): error C2059: 구문 오류: '형식'
-  (소스 파일 'log.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(119,60): error C2059: 구문 오류: ')'
-  (소스 파일 'log.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(121,33): error C2143: 구문 오류: ')'이(가) '*' 앞에 없습니다.
-  (소스 파일 'log.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(121,33): error C2143: 구문 오류: '{'이(가) '*' 앞에 없습니다.
-  (소스 파일 'log.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(121,41): error C2059: 구문 오류: ')'
-  (소스 파일 'log.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\log.c(28,9): warning C4013: 'utils_gotoxy'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\log.c(33,21): warning C4013: 'utils_set_color'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
-  main.c
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\utils.h(50,7): error C2061: 구문 오류: 식별자 'Utils'
-  (소스 파일 'main.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\utils.h(50,7): error C2059: 구문 오류: ';'
-  (소스 파일 'main.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\utils.h(51,1): error C2449: 파일 범위에 '{'가 있습니다. 함수 헤더가 없는 것 같습니다.
-  (소스 파일 'main.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\utils.h(68,1): error C2059: 구문 오류: '}'
-  (소스 파일 'main.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\main.c(9,5): warning C4013: 'utils_hide_cursor'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
-  monster.c
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\utils.h(50,7): error C2061: 구문 오류: 식별자 'Utils'
-  (소스 파일 'monster.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\utils.h(50,7): error C2059: 구문 오류: ';'
-  (소스 파일 'monster.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\utils.h(51,1): error C2449: 파일 범위에 '{'가 있습니다. 함수 헤더가 없는 것 같습니다.
-  (소스 파일 'monster.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\utils.h(68,1): error C2059: 구문 오류: '}'
-  (소스 파일 'monster.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(115,68): error C2143: 구문 오류: ')'이(가) '*' 앞에 없습니다.
-  (소스 파일 'monster.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(115,60): error C2081: 'player_t': 정식 매개 변수 목록에 있는 이름이 잘못되었습니다.
-  (소스 파일 'monster.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(115,68): error C2143: 구문 오류: '{'이(가) '*' 앞에 없습니다.
-  (소스 파일 'monster.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(115,76): error C2059: 구문 오류: ')'
-  (소스 파일 'monster.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(116,67): error C2143: 구문 오류: ')'이(가) '*' 앞에 없습니다.
-  (소스 파일 'monster.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(116,59): error C2081: 'player_t': 정식 매개 변수 목록에 있는 이름이 잘못되었습니다.
-  (소스 파일 'monster.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(116,67): error C2143: 구문 오류: '{'이(가) '*' 앞에 없습니다.
-  (소스 파일 'monster.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(116,75): error C2059: 구문 오류: ')'
-  (소스 파일 'monster.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(117,44): error C2143: 구문 오류: ')'이(가) '*' 앞에 없습니다.
-  (소스 파일 'monster.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(117,36): error C2081: 'player_t': 정식 매개 변수 목록에 있는 이름이 잘못되었습니다.
-  (소스 파일 'monster.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(117,44): error C2143: 구문 오류: '{'이(가) '*' 앞에 없습니다.
-  (소스 파일 'monster.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(117,52): error C2059: 구문 오류: ')'
-  (소스 파일 'monster.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(119,32): error C2143: 구문 오류: ')'이(가) '*' 앞에 없습니다.
-  (소스 파일 'monster.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(119,32): error C2143: 구문 오류: '{'이(가) '*' 앞에 없습니다.
-  (소스 파일 'monster.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(119,42): error C2059: 구문 오류: '형식'
-  (소스 파일 'monster.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(119,60): error C2059: 구문 오류: ')'
-  (소스 파일 'monster.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(121,33): error C2143: 구문 오류: ')'이(가) '*' 앞에 없습니다.
-  (소스 파일 'monster.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(121,33): error C2143: 구문 오류: '{'이(가) '*' 앞에 없습니다.
-  (소스 파일 'monster.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(121,41): error C2059: 구문 오류: ')'
-  (소스 파일 'monster.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\monster.c(247,5): warning C4013: 'utils_set_color'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
-  save_load.c
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\utils.h(50,7): error C2061: 구문 오류: 식별자 'Utils'
-  (소스 파일 'save_load.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\utils.h(50,7): error C2059: 구문 오류: ';'
-  (소스 파일 'save_load.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\utils.h(51,1): error C2449: 파일 범위에 '{'가 있습니다. 함수 헤더가 없는 것 같습니다.
-  (소스 파일 'save_load.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\utils.h(68,1): error C2059: 구문 오류: '}'
-  (소스 파일 'save_load.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(115,68): error C2143: 구문 오류: ')'이(가) '*' 앞에 없습니다.
-  (소스 파일 'save_load.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(115,60): error C2081: 'player_t': 정식 매개 변수 목록에 있는 이름이 잘못되었습니다.
-  (소스 파일 'save_load.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(115,68): error C2143: 구문 오류: '{'이(가) '*' 앞에 없습니다.
-  (소스 파일 'save_load.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(115,76): error C2059: 구문 오류: ')'
-  (소스 파일 'save_load.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(116,67): error C2143: 구문 오류: ')'이(가) '*' 앞에 없습니다.
-  (소스 파일 'save_load.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(116,59): error C2081: 'player_t': 정식 매개 변수 목록에 있는 이름이 잘못되었습니다.
-  (소스 파일 'save_load.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(116,67): error C2143: 구문 오류: '{'이(가) '*' 앞에 없습니다.
-  (소스 파일 'save_load.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(116,75): error C2059: 구문 오류: ')'
-  (소스 파일 'save_load.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(117,44): error C2143: 구문 오류: ')'이(가) '*' 앞에 없습니다.
-  (소스 파일 'save_load.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(117,36): error C2081: 'player_t': 정식 매개 변수 목록에 있는 이름이 잘못되었습니다.
-  (소스 파일 'save_load.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(117,44): error C2143: 구문 오류: '{'이(가) '*' 앞에 없습니다.
-  (소스 파일 'save_load.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(117,52): error C2059: 구문 오류: ')'
-  (소스 파일 'save_load.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(119,32): error C2143: 구문 오류: ')'이(가) '*' 앞에 없습니다.
-  (소스 파일 'save_load.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(119,32): error C2143: 구문 오류: '{'이(가) '*' 앞에 없습니다.
-  (소스 파일 'save_load.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(119,42): error C2059: 구문 오류: '형식'
-  (소스 파일 'save_load.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(119,60): error C2059: 구문 오류: ')'
-  (소스 파일 'save_load.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(121,33): error C2143: 구문 오류: ')'이(가) '*' 앞에 없습니다.
-  (소스 파일 'save_load.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(121,33): error C2143: 구문 오류: '{'이(가) '*' 앞에 없습니다.
-  (소스 파일 'save_load.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(121,41): error C2059: 구문 오류: ')'
-  (소스 파일 'save_load.c'을(를) 컴파일하는 중)
-  
-  store.c
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\utils.h(50,7): error C2061: 구문 오류: 식별자 'Utils'
-  (소스 파일 'store.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\utils.h(50,7): error C2059: 구문 오류: ';'
-  (소스 파일 'store.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\utils.h(51,1): error C2449: 파일 범위에 '{'가 있습니다. 함수 헤더가 없는 것 같습니다.
-  (소스 파일 'store.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\utils.h(68,1): error C2059: 구문 오류: '}'
-  (소스 파일 'store.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(115,68): error C2143: 구문 오류: ')'이(가) '*' 앞에 없습니다.
-  (소스 파일 'store.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(115,60): error C2081: 'player_t': 정식 매개 변수 목록에 있는 이름이 잘못되었습니다.
-  (소스 파일 'store.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(115,68): error C2143: 구문 오류: '{'이(가) '*' 앞에 없습니다.
-  (소스 파일 'store.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(115,76): error C2059: 구문 오류: ')'
-  (소스 파일 'store.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(116,67): error C2143: 구문 오류: ')'이(가) '*' 앞에 없습니다.
-  (소스 파일 'store.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(116,59): error C2081: 'player_t': 정식 매개 변수 목록에 있는 이름이 잘못되었습니다.
-  (소스 파일 'store.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(116,67): error C2143: 구문 오류: '{'이(가) '*' 앞에 없습니다.
-  (소스 파일 'store.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(116,75): error C2059: 구문 오류: ')'
-  (소스 파일 'store.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(117,44): error C2143: 구문 오류: ')'이(가) '*' 앞에 없습니다.
-  (소스 파일 'store.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(117,36): error C2081: 'player_t': 정식 매개 변수 목록에 있는 이름이 잘못되었습니다.
-  (소스 파일 'store.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(117,44): error C2143: 구문 오류: '{'이(가) '*' 앞에 없습니다.
-  (소스 파일 'store.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(117,52): error C2059: 구문 오류: ')'
-  (소스 파일 'store.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(119,32): error C2143: 구문 오류: ')'이(가) '*' 앞에 없습니다.
-  (소스 파일 'store.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(119,32): error C2143: 구문 오류: '{'이(가) '*' 앞에 없습니다.
-  (소스 파일 'store.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(119,42): error C2059: 구문 오류: '형식'
-  (소스 파일 'store.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(119,60): error C2059: 구문 오류: ')'
-  (소스 파일 'store.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(121,33): error C2143: 구문 오류: ')'이(가) '*' 앞에 없습니다.
-  (소스 파일 'store.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(121,33): error C2143: 구문 오류: '{'이(가) '*' 앞에 없습니다.
-  (소스 파일 'store.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(121,41): error C2059: 구문 오류: ')'
-  (소스 파일 'store.c'을(를) 컴파일하는 중)
-  
-  story.c
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\utils.h(50,7): error C2061: 구문 오류: 식별자 'Utils'
-  (소스 파일 'story.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\utils.h(50,7): error C2059: 구문 오류: ';'
-  (소스 파일 'story.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\utils.h(51,1): error C2449: 파일 범위에 '{'가 있습니다. 함수 헤더가 없는 것 같습니다.
-  (소스 파일 'story.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\utils.h(68,1): error C2059: 구문 오류: '}'
-  (소스 파일 'story.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\story.c(35,5): warning C4013: 'utils_set_color'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\story.c(36,5): warning C4013: 'utils_gotoxy'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\story.c(44,13): warning C4013: 'utils_getch'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
-  UI_control.c
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\utils.h(50,7): error C2061: 구문 오류: 식별자 'Utils'
-  (소스 파일 'UI_control.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\utils.h(50,7): error C2059: 구문 오류: ';'
-  (소스 파일 'UI_control.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\utils.h(51,1): error C2449: 파일 범위에 '{'가 있습니다. 함수 헤더가 없는 것 같습니다.
-  (소스 파일 'UI_control.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\utils.h(68,1): error C2059: 구문 오류: '}'
-  (소스 파일 'UI_control.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(115,68): error C2143: 구문 오류: ')'이(가) '*' 앞에 없습니다.
-  (소스 파일 'UI_control.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(115,60): error C2081: 'player_t': 정식 매개 변수 목록에 있는 이름이 잘못되었습니다.
-  (소스 파일 'UI_control.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(115,68): error C2143: 구문 오류: '{'이(가) '*' 앞에 없습니다.
-  (소스 파일 'UI_control.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(115,76): error C2059: 구문 오류: ')'
-  (소스 파일 'UI_control.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(116,67): error C2143: 구문 오류: ')'이(가) '*' 앞에 없습니다.
-  (소스 파일 'UI_control.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(116,59): error C2081: 'player_t': 정식 매개 변수 목록에 있는 이름이 잘못되었습니다.
-  (소스 파일 'UI_control.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(116,67): error C2143: 구문 오류: '{'이(가) '*' 앞에 없습니다.
-  (소스 파일 'UI_control.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(116,75): error C2059: 구문 오류: ')'
-  (소스 파일 'UI_control.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(117,44): error C2143: 구문 오류: ')'이(가) '*' 앞에 없습니다.
-  (소스 파일 'UI_control.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(117,36): error C2081: 'player_t': 정식 매개 변수 목록에 있는 이름이 잘못되었습니다.
-  (소스 파일 'UI_control.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(117,44): error C2143: 구문 오류: '{'이(가) '*' 앞에 없습니다.
-  (소스 파일 'UI_control.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(117,52): error C2059: 구문 오류: ')'
-  (소스 파일 'UI_control.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(119,32): error C2143: 구문 오류: ')'이(가) '*' 앞에 없습니다.
-  (소스 파일 'UI_control.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(119,32): error C2143: 구문 오류: '{'이(가) '*' 앞에 없습니다.
-  (소스 파일 'UI_control.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(119,42): error C2059: 구문 오류: '형식'
-  (소스 파일 'UI_control.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(119,60): error C2059: 구문 오류: ')'
-  (소스 파일 'UI_control.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(121,33): error C2143: 구문 오류: ')'이(가) '*' 앞에 없습니다.
-  (소스 파일 'UI_control.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(121,33): error C2143: 구문 오류: '{'이(가) '*' 앞에 없습니다.
-  (소스 파일 'UI_control.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(121,41): error C2059: 구문 오류: ')'
-  (소스 파일 'UI_control.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_static.h(12,7): error C2061: 구문 오류: 식별자 'UIStatic'
-  (소스 파일 'UI_control.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_static.h(12,7): error C2059: 구문 오류: ';'
-  (소스 파일 'UI_control.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_static.h(13,1): error C2449: 파일 범위에 '{'가 있습니다. 함수 헤더가 없는 것 같습니다.
-  (소스 파일 'UI_control.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_static.h(30,1): error C2059: 구문 오류: '}'
-  (소스 파일 'UI_control.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_control.c(48,9): warning C4013: 'utils_set_volume_from_percentage'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_control.c(59,13): warning C4013: 'utils_sound_set_enabled'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_control.c(60,13): warning C4013: 'utils_sound_play'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_control.c(129,26): warning C4013: 'utils_min'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_control.c(132,13): warning C4013: 'UI_cleaner_all_display'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_control.c(408,21): warning C4013: 'use_weapon'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_control.c(411,25): warning C4013: 'apply_set_effects'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_control.c(414,7): warning C4013: 'remove_set_effects'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_control.c(422,21): warning C4013: 'use_armor'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_control.c(434,21): warning C4013: 'use_heal_item'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
-  player.c
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\utils.h(50,7): error C2061: 구문 오류: 식별자 'Utils'
-  (소스 파일 'player.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\utils.h(50,7): error C2059: 구문 오류: ';'
-  (소스 파일 'player.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\utils.h(51,1): error C2449: 파일 범위에 '{'가 있습니다. 함수 헤더가 없는 것 같습니다.
-  (소스 파일 'player.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\utils.h(68,1): error C2059: 구문 오류: '}'
-  (소스 파일 'player.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(115,68): error C2143: 구문 오류: ')'이(가) '*' 앞에 없습니다.
-  (소스 파일 'player.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(115,60): error C2081: 'player_t': 정식 매개 변수 목록에 있는 이름이 잘못되었습니다.
-  (소스 파일 'player.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(115,68): error C2143: 구문 오류: '{'이(가) '*' 앞에 없습니다.
-  (소스 파일 'player.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(115,76): error C2059: 구문 오류: ')'
-  (소스 파일 'player.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(116,67): error C2143: 구문 오류: ')'이(가) '*' 앞에 없습니다.
-  (소스 파일 'player.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(116,59): error C2081: 'player_t': 정식 매개 변수 목록에 있는 이름이 잘못되었습니다.
-  (소스 파일 'player.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(116,67): error C2143: 구문 오류: '{'이(가) '*' 앞에 없습니다.
-  (소스 파일 'player.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(116,75): error C2059: 구문 오류: ')'
-  (소스 파일 'player.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(117,44): error C2143: 구문 오류: ')'이(가) '*' 앞에 없습니다.
-  (소스 파일 'player.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(117,36): error C2081: 'player_t': 정식 매개 변수 목록에 있는 이름이 잘못되었습니다.
-  (소스 파일 'player.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(117,44): error C2143: 구문 오류: '{'이(가) '*' 앞에 없습니다.
-  (소스 파일 'player.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(117,52): error C2059: 구문 오류: ')'
-  (소스 파일 'player.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(119,32): error C2143: 구문 오류: ')'이(가) '*' 앞에 없습니다.
-  (소스 파일 'player.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(119,32): error C2143: 구문 오류: '{'이(가) '*' 앞에 없습니다.
-  (소스 파일 'player.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(119,42): error C2059: 구문 오류: '형식'
-  (소스 파일 'player.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(119,60): error C2059: 구문 오류: ')'
-  (소스 파일 'player.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(121,33): error C2143: 구문 오류: ')'이(가) '*' 앞에 없습니다.
-  (소스 파일 'player.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(121,33): error C2143: 구문 오류: '{'이(가) '*' 앞에 없습니다.
-  (소스 파일 'player.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\item.h(121,41): error C2059: 구문 오류: ')'
-  (소스 파일 'player.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\player.c(87,2): warning C4013: 'use_weapon'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\player.c(88,2): warning C4013: 'use_armor'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
-  UI_cleaner.c
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\utils.h(50,7): error C2061: 구문 오류: 식별자 'Utils'
-  (소스 파일 'UI_cleaner.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\utils.h(50,7): error C2059: 구문 오류: ';'
-  (소스 파일 'UI_cleaner.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\utils.h(51,1): error C2449: 파일 범위에 '{'가 있습니다. 함수 헤더가 없는 것 같습니다.
-  (소스 파일 'UI_cleaner.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\utils.h(68,1): error C2059: 구문 오류: '}'
-  (소스 파일 'UI_cleaner.c'을(를) 컴파일하는 중)
-  
-C:\Users\wjsdl\OneDrive\바탕 화면\scriptsurvival\Script_Survival-C\UI_cleaner.c(9,4): warning C4013: 'utils_gotoxy'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+  utils.cpp
   코드를 생성하고 있습니다...

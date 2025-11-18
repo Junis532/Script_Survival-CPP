@@ -789,7 +789,7 @@ void Dynamic::UI_dynamin_esc_menu(esc_menu_state_t* selected, int gamemode)
         if (*selected == i) {
             utils.utils_set_color(COLOR_SELECT_MENU);
             printf("%s", options[i]);
-            utils_set_color(COLOR_DEFAULT);
+            utils.utils_set_color(COLOR_DEFAULT);
         }
         else
         {
@@ -876,12 +876,12 @@ void Dynamic::UI_dynamic_select_new_or_load_game(new_or_load_game_t* selected)
     utils.utils_set_color(COLOR_DEFAULT);
     for (int i = 0; i < 2; i++) {
         int mx = (WIDTH - (int)strlen(modes[i])) / 2;
-        utils_gotoxy(mx, 15 + i * 2);
+        utils.utils_gotoxy(mx, 15 + i * 2);
 
         if (*selected == i) {
-            utils_set_color(COLOR_SELECT_MENU);
+            utils.utils_set_color(COLOR_SELECT_MENU);
             printf("%s", modes[i]);
-            utils_set_color(COLOR_DEFAULT);
+            utils.utils_set_color(COLOR_DEFAULT);
         }
         else
         {
@@ -995,7 +995,7 @@ void Dynamic::UI_dynamic_player_action_selection(int player_action_state)
         if (player_action_state == i) {
             utils.utils_set_color(COLOR_SELECT_MENU);
             printf("%s", menu[i]);
-            utils_set_color(COLOR_DEFAULT);
+            utils.utils_set_color(COLOR_DEFAULT);
         }
         else
         {
@@ -1105,7 +1105,7 @@ void Dynamic::UI_dynamic_monster_info(monster_t* monster, int current_stage)
     printf("몬스터 : ");
     utils.utils_set_color(COLOR_LIGHTRED);
     printf("%s", monster->name);
-    utils_set_color(COLOR_DEFAULT_TEXT);
+    utils.utils_set_color(COLOR_DEFAULT_TEXT);
 }
 
 void Dynamic::UI_dynamic_monster_flash_effect(monster_t* monster)
@@ -1155,13 +1155,13 @@ void Dynamic::UI_dynamic_select_heal_or_store(heal_or_store_t* selected, player_
             utils.utils_set_color(COLOR_SELECT_MENU);
         }
         else {
-            utils_set_color(COLOR_DEFAULT);
+            utils.utils_set_color(COLOR_DEFAULT);
         }
 
         utils.utils_gotoxy(start_x + (box_width - (int)strlen(menu[i])) / 2, content_y);
         printf("%s", menu[i]);
 
-        utils_gotoxy(start_x + (box_width - (int)strlen(menu_desc[i])) / 2, content_y + 3);
+        utils.utils_gotoxy(start_x + (box_width - (int)strlen(menu_desc[i])) / 2, content_y + 3);
         printf("%s", menu_desc[i]);
 
         if (i == 1) {
@@ -1174,7 +1174,7 @@ void Dynamic::UI_dynamic_select_heal_or_store(heal_or_store_t* selected, player_
             // 설명 아래로 2칸 내려서 찍어볼게요 (content_y+5)
             int coin_y = content_y + 8;
 
-            utils_gotoxy(coin_x, coin_y);
+            utils.utils_gotoxy(coin_x, coin_y);
             printf("%s", coin_buf);
         }
     }
@@ -1218,7 +1218,7 @@ void Dynamic::UI_dynamic_action_order(player_t* player, monster_t* monster, int 
             utils.utils_set_color(COLOR_LIGHTGREEN);
             printf("[  필드  ]");
 			f_av += f_base_av;
-            utils_set_color(COLOR_DEFAULT_TEXT);
+            utils.utils_set_color(COLOR_DEFAULT_TEXT);
         }
         y++;
     }

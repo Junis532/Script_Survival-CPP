@@ -18,7 +18,7 @@ typedef struct game_context {
     title_state_t ui_title_state;
     setting_state_t ui_setting_state;
     game_mode_state_t ui_mode_state;
-    player_action_t player_action_state;
+    player_action_state_t player_action_state;
 	esc_menu_state_t ui_esc_menu_state;
 	save_load_num_t save_load_num;
 	new_or_load_game_t new_or_load_game;

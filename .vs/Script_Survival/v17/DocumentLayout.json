@@ -3,40 +3,80 @@
   "WorkspaceRootPath": "C:\\Users\\wjsdl\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\scriptsurvival\\Script_Survival-C\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7C6AD6E5-5051-4902-8B33-020CC34ED22B}|Script_Survival.vcxproj|C:\\Users\\wjsdl\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\scriptsurvival\\Script_Survival-C\\utils.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{7C6AD6E5-5051-4902-8B33-020CC34ED22B}|Script_Survival.vcxproj|solutionrelative:utils.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7C6AD6E5-5051-4902-8B33-020CC34ED22B}|Script_Survival.vcxproj|C:\\Users\\wjsdl\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\scriptsurvival\\Script_Survival-C\\UI_static.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{7C6AD6E5-5051-4902-8B33-020CC34ED22B}|Script_Survival.vcxproj|solutionrelative:UI_static.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7C6AD6E5-5051-4902-8B33-020CC34ED22B}|Script_Survival.vcxproj|C:\\Users\\wjsdl\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\scriptsurvival\\Script_Survival-C\\UI_info.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{7C6AD6E5-5051-4902-8B33-020CC34ED22B}|Script_Survival.vcxproj|solutionrelative:UI_info.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7C6AD6E5-5051-4902-8B33-020CC34ED22B}|Script_Survival.vcxproj|C:\\Users\\wjsdl\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\scriptsurvival\\Script_Survival-C\\UI_dynamic.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{7C6AD6E5-5051-4902-8B33-020CC34ED22B}|Script_Survival.vcxproj|solutionrelative:UI_dynamic.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{7C6AD6E5-5051-4902-8B33-020CC34ED22B}|Script_Survival.vcxproj|C:\\Users\\wjsdl\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\scriptsurvival\\Script_Survival-C\\game_manager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7C6AD6E5-5051-4902-8B33-020CC34ED22B}|Script_Survival.vcxproj|solutionrelative:game_manager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7C6AD6E5-5051-4902-8B33-020CC34ED22B}|Script_Survival.vcxproj|C:\\Users\\wjsdl\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\scriptsurvival\\Script_Survival-C\\UI_static.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{7C6AD6E5-5051-4902-8B33-020CC34ED22B}|Script_Survival.vcxproj|solutionrelative:UI_static.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{7C6AD6E5-5051-4902-8B33-020CC34ED22B}|Script_Survival.vcxproj|C:\\Users\\wjsdl\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\scriptsurvival\\Script_Survival-C\\game_manager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7C6AD6E5-5051-4902-8B33-020CC34ED22B}|Script_Survival.vcxproj|solutionrelative:game_manager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C6AD6E5-5051-4902-8B33-020CC34ED22B}|Script_Survival.vcxproj|C:\\Users\\wjsdl\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\scriptsurvival\\Script_Survival-C\\UI_control.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7C6AD6E5-5051-4902-8B33-020CC34ED22B}|Script_Survival.vcxproj|solutionrelative:UI_control.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{7C6AD6E5-5051-4902-8B33-020CC34ED22B}|Script_Survival.vcxproj|C:\\Users\\wjsdl\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\scriptsurvival\\Script_Survival-C\\UI_dynamic.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{7C6AD6E5-5051-4902-8B33-020CC34ED22B}|Script_Survival.vcxproj|solutionrelative:UI_dynamic.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7C6AD6E5-5051-4902-8B33-020CC34ED22B}|Script_Survival.vcxproj|C:\\Users\\wjsdl\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\scriptsurvival\\Script_Survival-C\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{7C6AD6E5-5051-4902-8B33-020CC34ED22B}|Script_Survival.vcxproj|solutionrelative:main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{7C6AD6E5-5051-4902-8B33-020CC34ED22B}|Script_Survival.vcxproj|C:\\Users\\wjsdl\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\scriptsurvival\\Script_Survival-C\\UI_dynamic.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7C6AD6E5-5051-4902-8B33-020CC34ED22B}|Script_Survival.vcxproj|solutionrelative:UI_dynamic.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C6AD6E5-5051-4902-8B33-020CC34ED22B}|Script_Survival.vcxproj|C:\\Users\\wjsdl\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\scriptsurvival\\Script_Survival-C\\UI_info.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7C6AD6E5-5051-4902-8B33-020CC34ED22B}|Script_Survival.vcxproj|solutionrelative:UI_info.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C6AD6E5-5051-4902-8B33-020CC34ED22B}|Script_Survival.vcxproj|C:\\Users\\wjsdl\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\scriptsurvival\\Script_Survival-C\\battle.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7C6AD6E5-5051-4902-8B33-020CC34ED22B}|Script_Survival.vcxproj|solutionrelative:battle.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C6AD6E5-5051-4902-8B33-020CC34ED22B}|Script_Survival.vcxproj|C:\\Users\\wjsdl\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\scriptsurvival\\Script_Survival-C\\UI_static.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7C6AD6E5-5051-4902-8B33-020CC34ED22B}|Script_Survival.vcxproj|solutionrelative:UI_static.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C6AD6E5-5051-4902-8B33-020CC34ED22B}|Script_Survival.vcxproj|C:\\Users\\wjsdl\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\scriptsurvival\\Script_Survival-C\\utils.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7C6AD6E5-5051-4902-8B33-020CC34ED22B}|Script_Survival.vcxproj|solutionrelative:utils.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7C6AD6E5-5051-4902-8B33-020CC34ED22B}|Script_Survival.vcxproj|C:\\Users\\wjsdl\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\scriptsurvival\\Script_Survival-C\\utils.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{7C6AD6E5-5051-4902-8B33-020CC34ED22B}|Script_Survival.vcxproj|solutionrelative:utils.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7C6AD6E5-5051-4902-8B33-020CC34ED22B}|Script_Survival.vcxproj|C:\\Users\\wjsdl\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\scriptsurvival\\Script_Survival-C\\battle.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{7C6AD6E5-5051-4902-8B33-020CC34ED22B}|Script_Survival.vcxproj|solutionrelative:battle.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{7C6AD6E5-5051-4902-8B33-020CC34ED22B}|Script_Survival.vcxproj|C:\\Users\\wjsdl\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\scriptsurvival\\Script_Survival-C\\field.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7C6AD6E5-5051-4902-8B33-020CC34ED22B}|Script_Survival.vcxproj|solutionrelative:field.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C6AD6E5-5051-4902-8B33-020CC34ED22B}|Script_Survival.vcxproj|C:\\Users\\wjsdl\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\scriptsurvival\\Script_Survival-C\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7C6AD6E5-5051-4902-8B33-020CC34ED22B}|Script_Survival.vcxproj|solutionrelative:main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C6AD6E5-5051-4902-8B33-020CC34ED22B}|Script_Survival.vcxproj|C:\\Users\\wjsdl\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\scriptsurvival\\Script_Survival-C\\UI_cleaner.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7C6AD6E5-5051-4902-8B33-020CC34ED22B}|Script_Survival.vcxproj|solutionrelative:UI_cleaner.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C6AD6E5-5051-4902-8B33-020CC34ED22B}|Script_Survival.vcxproj|C:\\Users\\wjsdl\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\scriptsurvival\\Script_Survival-C\\monster.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7C6AD6E5-5051-4902-8B33-020CC34ED22B}|Script_Survival.vcxproj|solutionrelative:monster.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C6AD6E5-5051-4902-8B33-020CC34ED22B}|Script_Survival.vcxproj|C:\\Users\\wjsdl\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\scriptsurvival\\Script_Survival-C\\story.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7C6AD6E5-5051-4902-8B33-020CC34ED22B}|Script_Survival.vcxproj|solutionrelative:story.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C6AD6E5-5051-4902-8B33-020CC34ED22B}|Script_Survival.vcxproj|C:\\Users\\wjsdl\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\scriptsurvival\\Script_Survival-C\\MT19937.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7C6AD6E5-5051-4902-8B33-020CC34ED22B}|Script_Survival.vcxproj|solutionrelative:MT19937.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C6AD6E5-5051-4902-8B33-020CC34ED22B}|Script_Survival.vcxproj|C:\\Users\\wjsdl\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\scriptsurvival\\Script_Survival-C\\save_load.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7C6AD6E5-5051-4902-8B33-020CC34ED22B}|Script_Survival.vcxproj|solutionrelative:save_load.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C6AD6E5-5051-4902-8B33-020CC34ED22B}|Script_Survival.vcxproj|C:\\Users\\wjsdl\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\scriptsurvival\\Script_Survival-C\\UI_control.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7C6AD6E5-5051-4902-8B33-020CC34ED22B}|Script_Survival.vcxproj|solutionrelative:UI_control.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7C6AD6E5-5051-4902-8B33-020CC34ED22B}|Script_Survival.vcxproj|C:\\Users\\wjsdl\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\scriptsurvival\\Script_Survival-C\\battle.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -49,22 +89,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{7C6AD6E5-5051-4902-8B33-020CC34ED22B}|Script_Survival.vcxproj|C:\\Users\\wjsdl\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\scriptsurvival\\Script_Survival-C\\inventory.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{7C6AD6E5-5051-4902-8B33-020CC34ED22B}|Script_Survival.vcxproj|solutionrelative:inventory.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7C6AD6E5-5051-4902-8B33-020CC34ED22B}|Script_Survival.vcxproj|C:\\Users\\wjsdl\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\scriptsurvival\\Script_Survival-C\\UI_cleaner.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{7C6AD6E5-5051-4902-8B33-020CC34ED22B}|Script_Survival.vcxproj|solutionrelative:UI_cleaner.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7C6AD6E5-5051-4902-8B33-020CC34ED22B}|Script_Survival.vcxproj|C:\\Users\\wjsdl\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\scriptsurvival\\Script_Survival-C\\story.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{7C6AD6E5-5051-4902-8B33-020CC34ED22B}|Script_Survival.vcxproj|solutionrelative:story.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7C6AD6E5-5051-4902-8B33-020CC34ED22B}|Script_Survival.vcxproj|C:\\Users\\wjsdl\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\scriptsurvival\\Script_Survival-C\\monster.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{7C6AD6E5-5051-4902-8B33-020CC34ED22B}|Script_Survival.vcxproj|solutionrelative:monster.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7C6AD6E5-5051-4902-8B33-020CC34ED22B}|Script_Survival.vcxproj|C:\\Users\\wjsdl\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\scriptsurvival\\Script_Survival-C\\MT19937.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{7C6AD6E5-5051-4902-8B33-020CC34ED22B}|Script_Survival.vcxproj|solutionrelative:MT19937.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -74,7 +98,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 13,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -82,55 +106,44 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "battle.h",
-              "DocumentMoniker": "C:\\Users\\wjsdl\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\scriptsurvival\\Script_Survival-C\\battle.h",
-              "RelativeDocumentMoniker": "battle.h",
-              "ToolTip": "C:\\Users\\wjsdl\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\scriptsurvival\\Script_Survival-C\\battle.h",
-              "RelativeToolTip": "battle.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAABKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-11-17T17:48:58.65Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "player.h",
-              "DocumentMoniker": "C:\\Users\\wjsdl\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\scriptsurvival\\Script_Survival-C\\player.h",
-              "RelativeDocumentMoniker": "player.h",
-              "ToolTip": "C:\\Users\\wjsdl\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\scriptsurvival\\Script_Survival-C\\player.h",
-              "RelativeToolTip": "player.h",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAAAA4AAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-11-17T16:38:47.778Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "battle.c",
-              "DocumentMoniker": "C:\\Users\\wjsdl\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\scriptsurvival\\Script_Survival-C\\battle.c",
-              "RelativeDocumentMoniker": "battle.c",
-              "ToolTip": "C:\\Users\\wjsdl\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\scriptsurvival\\Script_Survival-C\\battle.c",
-              "RelativeToolTip": "battle.c",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAAB8AAAACAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "Title": "UI_static.h",
+              "DocumentMoniker": "C:\\Users\\wjsdl\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\scriptsurvival\\Script_Survival-C\\UI_static.h",
+              "RelativeDocumentMoniker": "UI_static.h",
+              "ToolTip": "C:\\Users\\wjsdl\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\scriptsurvival\\Script_Survival-C\\UI_static.h",
+              "RelativeToolTip": "UI_static.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-11-17T14:22:04.696Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "battle.cpp",
+              "DocumentMoniker": "C:\\Users\\wjsdl\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\scriptsurvival\\Script_Survival-C\\battle.cpp",
+              "RelativeDocumentMoniker": "battle.cpp",
+              "ToolTip": "C:\\Users\\wjsdl\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\scriptsurvival\\Script_Survival-C\\battle.cpp",
+              "RelativeToolTip": "battle.cpp",
+              "ViewState": "AgIAAG8AAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-11-17T16:40:26.496Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "inventory.h",
-              "DocumentMoniker": "C:\\Users\\wjsdl\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\scriptsurvival\\Script_Survival-C\\inventory.h",
-              "RelativeDocumentMoniker": "inventory.h",
-              "ToolTip": "C:\\Users\\wjsdl\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\scriptsurvival\\Script_Survival-C\\inventory.h",
-              "RelativeToolTip": "inventory.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-11-17T15:28:55.825Z"
+              "DocumentIndex": 0,
+              "Title": "game_manager.cpp",
+              "DocumentMoniker": "C:\\Users\\wjsdl\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\scriptsurvival\\Script_Survival-C\\game_manager.cpp",
+              "RelativeDocumentMoniker": "game_manager.cpp",
+              "ToolTip": "C:\\Users\\wjsdl\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\scriptsurvival\\Script_Survival-C\\game_manager.cpp",
+              "RelativeToolTip": "game_manager.cpp",
+              "ViewState": "AgIAACgAAAAAAAAAAAASwEkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-11-18T13:54:40.358Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 12,
               "Title": "main.cpp",
               "DocumentMoniker": "C:\\Users\\wjsdl\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\scriptsurvival\\Script_Survival-C\\main.cpp",
               "RelativeDocumentMoniker": "main.cpp",
@@ -138,72 +151,7 @@
               "RelativeToolTip": "main.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-11-17T15:27:31.644Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "UI_info.h",
-              "DocumentMoniker": "C:\\Users\\wjsdl\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\scriptsurvival\\Script_Survival-C\\UI_info.h",
-              "RelativeDocumentMoniker": "UI_info.h",
-              "ToolTip": "C:\\Users\\wjsdl\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\scriptsurvival\\Script_Survival-C\\UI_info.h",
-              "RelativeToolTip": "UI_info.h",
-              "ViewState": "AgIAAF0AAAAAAAAAAAAAAHMAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-11-17T14:49:06.606Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "UI_dynamic.h",
-              "DocumentMoniker": "C:\\Users\\wjsdl\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\scriptsurvival\\Script_Survival-C\\UI_dynamic.h",
-              "RelativeDocumentMoniker": "UI_dynamic.h",
-              "ToolTip": "C:\\Users\\wjsdl\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\scriptsurvival\\Script_Survival-C\\UI_dynamic.h",
-              "RelativeToolTip": "UI_dynamic.h",
-              "ViewState": "AgIAABsAAAAAAAAAAAAAAC8AAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-11-17T14:49:05.883Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "UI_static.cpp",
-              "DocumentMoniker": "C:\\Users\\wjsdl\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\scriptsurvival\\Script_Survival-C\\UI_static.cpp",
-              "RelativeDocumentMoniker": "UI_static.cpp",
-              "ToolTip": "C:\\Users\\wjsdl\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\scriptsurvival\\Script_Survival-C\\UI_static.cpp",
-              "RelativeToolTip": "UI_static.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-11-17T14:26:21.786Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UI_static.h",
-              "DocumentMoniker": "C:\\Users\\wjsdl\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\scriptsurvival\\Script_Survival-C\\UI_static.h",
-              "RelativeDocumentMoniker": "UI_static.h",
-              "ToolTip": "C:\\Users\\wjsdl\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\scriptsurvival\\Script_Survival-C\\UI_static.h",
-              "RelativeToolTip": "UI_static.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-11-17T14:22:04.696Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "MT19937.c",
-              "DocumentMoniker": "C:\\Users\\wjsdl\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\scriptsurvival\\Script_Survival-C\\MT19937.c",
-              "RelativeDocumentMoniker": "MT19937.c",
-              "ToolTip": "C:\\Users\\wjsdl\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\scriptsurvival\\Script_Survival-C\\MT19937.c",
-              "RelativeToolTip": "MT19937.c",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
-              "WhenOpened": "2025-11-17T14:20:52.423Z"
+              "WhenOpened": "2025-11-17T15:27:31.644Z"
             },
             {
               "$type": "Document",
@@ -219,65 +167,209 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "UI_dynamic.cpp",
-              "DocumentMoniker": "C:\\Users\\wjsdl\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\scriptsurvival\\Script_Survival-C\\UI_dynamic.cpp",
-              "RelativeDocumentMoniker": "UI_dynamic.cpp",
-              "ToolTip": "C:\\Users\\wjsdl\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\scriptsurvival\\Script_Survival-C\\UI_dynamic.cpp",
-              "RelativeToolTip": "UI_dynamic.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-11-17T14:18:26.268Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "utils.h",
-              "DocumentMoniker": "C:\\Users\\wjsdl\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\scriptsurvival\\Script_Survival-C\\utils.h",
-              "RelativeDocumentMoniker": "utils.h",
-              "ToolTip": "C:\\Users\\wjsdl\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\scriptsurvival\\Script_Survival-C\\utils.h",
-              "RelativeToolTip": "utils.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-11-17T14:14:54.81Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "utils.cpp",
-              "DocumentMoniker": "C:\\Users\\wjsdl\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\scriptsurvival\\Script_Survival-C\\utils.cpp",
-              "RelativeDocumentMoniker": "utils.cpp",
-              "ToolTip": "C:\\Users\\wjsdl\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\scriptsurvival\\Script_Survival-C\\utils.cpp",
-              "RelativeToolTip": "utils.cpp",
-              "ViewState": "AgIAAFcAAAAAAAAAAAAAAAsAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-11-17T14:14:43.228Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "UI_cleaner.c",
               "DocumentMoniker": "C:\\Users\\wjsdl\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\scriptsurvival\\Script_Survival-C\\UI_cleaner.c",
               "RelativeDocumentMoniker": "UI_cleaner.c",
               "ToolTip": "C:\\Users\\wjsdl\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\scriptsurvival\\Script_Survival-C\\UI_cleaner.c",
               "RelativeToolTip": "UI_cleaner.c",
-              "ViewState": "AgIAAFoAAAAAAAAAAAAgwG8AAAAOAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAACgAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
               "WhenOpened": "2025-11-17T14:14:25.991Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 9,
+              "Title": "utils.h",
+              "DocumentMoniker": "C:\\Users\\wjsdl\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\scriptsurvival\\Script_Survival-C\\utils.h",
+              "RelativeDocumentMoniker": "utils.h",
+              "ToolTip": "C:\\Users\\wjsdl\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\scriptsurvival\\Script_Survival-C\\utils.h",
+              "RelativeToolTip": "utils.h",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAADUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-11-17T14:14:54.81Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "utils.cpp",
+              "DocumentMoniker": "C:\\Users\\wjsdl\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\scriptsurvival\\Script_Survival-C\\utils.cpp",
+              "RelativeDocumentMoniker": "utils.cpp",
+              "ToolTip": "C:\\Users\\wjsdl\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\scriptsurvival\\Script_Survival-C\\utils.cpp",
+              "RelativeToolTip": "utils.cpp",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAqwEwAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-11-17T14:14:43.228Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UI_control.cpp",
+              "DocumentMoniker": "C:\\Users\\wjsdl\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\scriptsurvival\\Script_Survival-C\\UI_control.cpp",
+              "RelativeDocumentMoniker": "UI_control.cpp",
+              "ToolTip": "C:\\Users\\wjsdl\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\scriptsurvival\\Script_Survival-C\\UI_control.cpp",
+              "RelativeToolTip": "UI_control.cpp",
+              "ViewState": "AgIAAGAAAAAAAAAAAAASwHgAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-11-18T13:54:50.892Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UI_static.cpp",
+              "DocumentMoniker": "C:\\Users\\wjsdl\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\scriptsurvival\\Script_Survival-C\\UI_static.cpp",
+              "RelativeDocumentMoniker": "UI_static.cpp",
+              "ToolTip": "C:\\Users\\wjsdl\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\scriptsurvival\\Script_Survival-C\\UI_static.cpp",
+              "RelativeToolTip": "UI_static.cpp",
+              "ViewState": "AgIAAGkAAAAAAAAAAAAAAB4BAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-11-17T14:26:21.786Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UI_dynamic.cpp",
+              "DocumentMoniker": "C:\\Users\\wjsdl\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\scriptsurvival\\Script_Survival-C\\UI_dynamic.cpp",
+              "RelativeDocumentMoniker": "UI_dynamic.cpp",
+              "ToolTip": "C:\\Users\\wjsdl\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\scriptsurvival\\Script_Survival-C\\UI_dynamic.cpp",
+              "RelativeToolTip": "UI_dynamic.cpp",
+              "ViewState": "AgIAAIcCAAAAAAAAAAASwJQCAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-11-17T14:18:26.268Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UI_info.h",
+              "DocumentMoniker": "C:\\Users\\wjsdl\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\scriptsurvival\\Script_Survival-C\\UI_info.h",
+              "RelativeDocumentMoniker": "UI_info.h",
+              "ToolTip": "C:\\Users\\wjsdl\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\scriptsurvival\\Script_Survival-C\\UI_info.h",
+              "RelativeToolTip": "UI_info.h",
+              "ViewState": "AgIAAFoAAAAAAAAAAAAswGoAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-11-17T14:49:06.606Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "game_manager.h",
+              "DocumentMoniker": "C:\\Users\\wjsdl\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\scriptsurvival\\Script_Survival-C\\game_manager.h",
+              "RelativeDocumentMoniker": "game_manager.h",
+              "ToolTip": "C:\\Users\\wjsdl\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\scriptsurvival\\Script_Survival-C\\game_manager.h",
+              "RelativeToolTip": "game_manager.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-11-18T13:54:45.543Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UI_dynamic.h",
+              "DocumentMoniker": "C:\\Users\\wjsdl\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\scriptsurvival\\Script_Survival-C\\UI_dynamic.h",
+              "RelativeDocumentMoniker": "UI_dynamic.h",
+              "ToolTip": "C:\\Users\\wjsdl\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\scriptsurvival\\Script_Survival-C\\UI_dynamic.h",
+              "RelativeToolTip": "UI_dynamic.h",
+              "ViewState": "AgIAABEAAAAAAAAAAAAWwCMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-11-17T14:49:05.883Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "field.cpp",
+              "DocumentMoniker": "C:\\Users\\wjsdl\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\scriptsurvival\\Script_Survival-C\\field.cpp",
+              "RelativeDocumentMoniker": "field.cpp",
+              "ToolTip": "C:\\Users\\wjsdl\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\scriptsurvival\\Script_Survival-C\\field.cpp",
+              "RelativeToolTip": "field.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-11-18T15:35:24.098Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
               "Title": "story.c",
               "DocumentMoniker": "C:\\Users\\wjsdl\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\scriptsurvival\\Script_Survival-C\\story.c",
               "RelativeDocumentMoniker": "story.c",
               "ToolTip": "C:\\Users\\wjsdl\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\scriptsurvival\\Script_Survival-C\\story.c",
               "RelativeToolTip": "story.c",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
               "WhenOpened": "2025-11-17T14:14:24.582Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "MT19937.c",
+              "DocumentMoniker": "C:\\Users\\wjsdl\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\scriptsurvival\\Script_Survival-C\\MT19937.c",
+              "RelativeDocumentMoniker": "MT19937.c",
+              "ToolTip": "C:\\Users\\wjsdl\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\scriptsurvival\\Script_Survival-C\\MT19937.c",
+              "RelativeToolTip": "MT19937.c",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2025-11-17T14:20:52.423Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "save_load.h",
+              "DocumentMoniker": "C:\\Users\\wjsdl\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\scriptsurvival\\Script_Survival-C\\save_load.h",
+              "RelativeDocumentMoniker": "save_load.h",
+              "ToolTip": "C:\\Users\\wjsdl\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\scriptsurvival\\Script_Survival-C\\save_load.h",
+              "RelativeToolTip": "save_load.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-11-18T14:30:06.822Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "UI_control.h",
+              "DocumentMoniker": "C:\\Users\\wjsdl\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\scriptsurvival\\Script_Survival-C\\UI_control.h",
+              "RelativeDocumentMoniker": "UI_control.h",
+              "ToolTip": "C:\\Users\\wjsdl\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\scriptsurvival\\Script_Survival-C\\UI_control.h",
+              "RelativeToolTip": "UI_control.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-11-18T14:28:31.34Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "battle.h",
+              "DocumentMoniker": "C:\\Users\\wjsdl\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\scriptsurvival\\Script_Survival-C\\battle.h",
+              "RelativeDocumentMoniker": "battle.h",
+              "ToolTip": "C:\\Users\\wjsdl\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\scriptsurvival\\Script_Survival-C\\battle.h",
+              "RelativeToolTip": "battle.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-11-17T17:48:58.65Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "inventory.h",
+              "DocumentMoniker": "C:\\Users\\wjsdl\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\scriptsurvival\\Script_Survival-C\\inventory.h",
+              "RelativeDocumentMoniker": "inventory.h",
+              "ToolTip": "C:\\Users\\wjsdl\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\scriptsurvival\\Script_Survival-C\\inventory.h",
+              "RelativeToolTip": "inventory.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-11-17T15:28:55.825Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "player.h",
+              "DocumentMoniker": "C:\\Users\\wjsdl\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\scriptsurvival\\Script_Survival-C\\player.h",
+              "RelativeDocumentMoniker": "player.h",
+              "ToolTip": "C:\\Users\\wjsdl\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\scriptsurvival\\Script_Survival-C\\player.h",
+              "RelativeToolTip": "player.h",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAAA4AAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-11-17T16:38:47.778Z"
             }
           ]
         }

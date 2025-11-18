@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="battle.c">
+    <ClCompile Include="battle.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="inventory.c">
@@ -45,13 +45,13 @@
     <ClCompile Include="utils.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="UI_control.c">
+    <ClCompile Include="UI_control.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="store.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="game_manager.c">
+    <ClCompile Include="game_manager.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="save_load.c">
@@ -66,7 +66,7 @@
     <ClCompile Include="story.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="field.c">
+    <ClCompile Include="field.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

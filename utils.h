@@ -28,7 +28,7 @@
 #define TRUE 1
 #define FALSE 0
 
-enum color {
+typedef enum color {
 	COLOR_BLACK,
 	COLOR_BLUE,
 	COLOR_GREEN,
@@ -45,11 +45,13 @@ enum color {
 	COLOR_LIGHTMAGENTA,
 	COLOR_YELLOW,
 	COLOR_WHITE
-};
+} color_t;
 
 class Utils
 {
 public:
+	Utils();
+
 	int  utils_min(int x, int y);
 	int  utils_max(int x, int y);
 
@@ -66,3 +68,9 @@ public:
 	bool utils_sound_is_enabled(void);
 	void utils_sound_play(const wchar_t* filepath);
 };
+
+
+Utils::Utils()
+{
+	// 생성자 내용
+}

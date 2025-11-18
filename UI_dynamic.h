@@ -14,21 +14,21 @@
 
 #include "save_load.h"
 
-//
-//typedef struct menu_list
-//{ 
-//	int x; 
-//	int y; 
-//	const char* text; 
-//} menu_list_t;
 
-class  menu_list
-{
-public:
-	int x;
-	int y;
-	const char* text;
-};
+typedef struct menu_list
+{ 
+	int x; 
+	int y; 
+	const char* text; 
+} menu_list_t;
+
+//class menu_list
+//{
+//public:
+//	int x;
+//	int y;
+//	const char* text;
+//};
 
 class Dynamic
 {
