@@ -28,7 +28,7 @@
 #define TRUE 1
 #define FALSE 0
 
-typedef enum color {
+enum color_t {
 	COLOR_BLACK,
 	COLOR_BLUE,
 	COLOR_GREEN,
@@ -45,7 +45,7 @@ typedef enum color {
 	COLOR_LIGHTMAGENTA,
 	COLOR_YELLOW,
 	COLOR_WHITE
-} color_t;
+};
 
 class Utils
 {
