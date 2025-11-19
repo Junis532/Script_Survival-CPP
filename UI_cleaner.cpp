@@ -3,7 +3,16 @@
 #include "UI_cleaner.h"
 #include "utils.h"
 
-void UI_cleaner_all_display(void)
+using namespace std;
+
+Cleaner cleaner;
+
+Cleaner::Cleaner()
+{
+
+}
+
+void Cleaner::UI_cleaner_all_display(void)
 {
 	for (int y = 1; y < HEIGHT - 1; y++) {
 		for (int x = 1; x < WIDTH - 1; x++) {
@@ -12,7 +21,7 @@ void UI_cleaner_all_display(void)
 	}
 }
 
-void UI_cleaner_monster_display(void)
+void Cleaner::UI_cleaner_monster_display(void)
 {
 	int monster_display_max_y = 18;
 	int moster_display_max_x = 150;
@@ -23,7 +32,7 @@ void UI_cleaner_monster_display(void)
 	}
 }
 
-void UI_cleaner_player_stats_display(void) {
+void Cleaner::UI_cleaner_player_stats_display(void) {
 	int start_x = 112;
 	int start_y = 21;
 
@@ -34,7 +43,7 @@ void UI_cleaner_player_stats_display(void) {
 	}
 }
 
-void UI_cleaner_inventory_item_list(void)
+void Cleaner::UI_cleaner_inventory_item_list(void)
 {
 	for (int y = 5; y < 18; y++) {
 		for (int x = 10; x < 75; x++) {
@@ -43,7 +52,7 @@ void UI_cleaner_inventory_item_list(void)
 	}
 }
 
-void UI_cleaner_inventory_item_description(void)
+void Cleaner::UI_cleaner_inventory_item_description(void)
 {
 	for (int y = 5; y < 18; y++) {
 		for (int x = 76; x < WIDTH - 1; x++) {
@@ -52,7 +61,7 @@ void UI_cleaner_inventory_item_description(void)
 	}
 }
 
-void UI_cleaner_sub_menu(void)
+void Cleaner::UI_cleaner_sub_menu(void)
 {
 	for (int y = 5; y < 18; y++) {
 		for (int x = 1; x < 10; x++) {
@@ -61,7 +70,7 @@ void UI_cleaner_sub_menu(void)
 	}
 }
 
-void UI_cleaner_stat_bonus_display(void)
+void Cleaner::UI_cleaner_stat_bonus_display(void)
 {
 	int start_x = 78;
 	int start_y = 21;
@@ -75,7 +84,7 @@ void UI_cleaner_stat_bonus_display(void)
 	}
 }
 
-void UI_cleaner_player_info(void)
+void Cleaner::UI_cleaner_player_info(void)
 {
 	for (int y = 22; y < HEIGHT - 1; y++) {
 		for (int x = 120; x < WIDTH - 1; x++) {
@@ -84,7 +93,7 @@ void UI_cleaner_player_info(void)
 	}
 }
 
-void UI_cleaner_current_weapon_box(void)
+void Cleaner::UI_cleaner_current_weapon_box(void)
 {
 	for (int y = 21; y < HEIGHT - 1; y++)
 	{
@@ -95,7 +104,7 @@ void UI_cleaner_current_weapon_box(void)
 	}
 }
 
-void UI_cleaner_current_armor_box(void)
+void Cleaner::UI_cleaner_current_armor_box(void)
 {
 	for (int y = 21; y < HEIGHT - 1; y++)
 	{
@@ -106,7 +115,7 @@ void UI_cleaner_current_armor_box(void)
 	}
 }
 
-void UI_cleaner_buy_sell_box(void)
+void Cleaner::UI_cleaner_buy_sell_box(void)
 {
 	for (int x = 1; x < 37; ++x)
 	{

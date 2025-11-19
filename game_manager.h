@@ -5,7 +5,7 @@
 #include "UI_info.h"
 
 // 게임의 모든 데이터와 상태를 담는 통합 구조체
-typedef struct game_context {
+struct game_context_t {
     // --- 핵심 데이터 ---
     player_t player;
     monster_t monster;
@@ -35,10 +35,22 @@ typedef struct game_context {
     int field_type;
     int field_turn;
 	bool is_field_effect_on;
+};
 
-} game_context_t;
+class GameManager
+{
+private:
+    static GameManager* instance; // 싱글톤 인스턴스
+    GameManager();                // private 생성자
 
-// --- 게임 매니저 공개 함수 ---
-void GameManager_Init();     // 게임 초기화
-void GameManager_Run();      // 게임 실행
-void GameManager_Shutdown(); // 게임 종료
+public:
+    ~GameManager() {}
+
+    game_context_t context;       // 게임 상태는 멤버로 유지
+
+    static GameManager* GetInstance();
+
+    void Init();
+    void Run();
+    void Shutdown();
+};

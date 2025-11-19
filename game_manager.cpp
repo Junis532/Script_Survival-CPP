@@ -30,6 +30,7 @@ static int s_infinity_stage = 1;
 
 #define MAX_STAGE 13
 
+
 // === 내부 함수 선언 ===
 static void state_pre_game_sequence();
 static void state_battle(bool* is_game_over);
@@ -48,7 +49,25 @@ static void scale_monster_for_infinite_mode(monster_t* monster, int stage);
 
 static bool is_come_esc_menu = false;   
 
-void GameManager_Init() {
+// 싱글톤 인스턴스 초기화
+GameManager* GameManager::instance = nullptr;
+
+// 생성자 정의
+GameManager::GameManager()
+{
+
+}
+
+// GetInstance 정의
+GameManager* GameManager::GetInstance()
+{
+    if (instance == nullptr) {
+        instance = new GameManager();
+    }
+    return instance;
+}
+
+void GameManager::Init() {
     g_context.game_mode = MODE_STATE_NORMAL;
     g_context.currentStage = 0;
     g_context.choice_hero = HERO_BREAKER;
@@ -70,9 +89,9 @@ void GameManager_Init() {
 }
 
 
-void GameManager_Run() {
-    GameManager_Init();
-    story_init();
+void GameManager::Run() {
+    Init();
+    story.story_init();
     state_pre_game_sequence();
     
     item_init();
@@ -84,10 +103,10 @@ void GameManager_Run() {
         if (g_context.game_mode == MODE_STATE_INFINITY) inventory_unlock_all_items();
         else inventory_init();
         player_init(&g_context.player, player_name, g_context.choice_hero);
-        UI_cleaner_all_display();
+        cleaner.UI_cleaner_all_display();
 
         if (g_context.game_mode == MODE_STATE_NORMAL) {
-            story_play("PROLOGUE", log_prologue);
+            story.story_play("PROLOGUE", log_prologue);
 
             free(player_name);
             if (!monster_init(&g_context.monster, g_context.currentStage)) {
@@ -98,7 +117,7 @@ void GameManager_Run() {
             
         else if (g_context.game_mode == MODE_STATE_INFINITY)
         {
-            story_play("INFINITY", log_infinite_mode_start);
+            story.story_play("INFINITY", log_infinite_mode_start);
 
             free(player_name);
             if (!monster_init(&g_context.monster, 13)) {
@@ -137,20 +156,20 @@ void GameManager_Run() {
     }
 
     if (g_context.ui_main_state == UI_STATE_TITLE) {
-        UI_cleaner_all_display();
-        GameManager_Run();
+        cleaner.UI_cleaner_all_display();
+        Run();
 	}
 
     if (g_context.game_mode == MODE_STATE_NORMAL && g_context.currentStage == 13) {
-        story_play("CHAPTER4", log_chapter_4);
+        story.story_play("CHAPTER4", log_chapter_4);
         save_clear_status(true);
     }
 
-    GameManager_Shutdown();
+    Shutdown();
 }
 
-void GameManager_Shutdown() {
-    UI_cleaner_all_display();
+void GameManager::Shutdown() {
+    cleaner.UI_cleaner_all_display();
     utils.utils_gotoxy(60, 14);
     printf("--- GAME OVER ---\n");
     Sleep(1000);
@@ -164,7 +183,7 @@ static void state_pre_game_sequence()
     while (g_context.ui_main_state == UI_STATE_TITLE || g_context.ui_main_state == UI_STATE_SETTING)
     {
         if (g_context.is_change_ui_main) {
-            UI_cleaner_all_display();
+            cleaner.UI_cleaner_all_display();
             uiStatic.UI_static_main_box(COLOR_WHITE);
             if (g_context.ui_main_state == UI_STATE_TITLE) {
                 if (g_context.is_normal_mode_cleared)
@@ -199,7 +218,7 @@ static void state_pre_game_sequence()
     // --- 2. 게임 모드 선택 루프 ---
     while (g_context.ui_main_state == UI_STATE_SELECT_GAME_MODE) {
         if (g_context.is_change_ui_main) {
-            UI_cleaner_all_display(); uiStatic.UI_static_main_box(COLOR_WHITE); uiStatic.UI_static_select_game_mode(); g_context.is_change_ui_main = false;
+            cleaner.UI_cleaner_all_display(); uiStatic.UI_static_main_box(COLOR_WHITE); uiStatic.UI_static_select_game_mode(); g_context.is_change_ui_main = false;
         }
         dynamic.UI_dynamic_select_game_mode(g_context.ui_mode_state, g_context.is_normal_mode_cleared);
         int key = utils.utils_getch();
@@ -210,7 +229,7 @@ static void state_pre_game_sequence()
     while (g_context.ui_main_state == UI_STATE_NEW_OR_LOAD_GAME || g_context.ui_main_state == UI_STATE_LOAD) {
         if (g_context.ui_main_state == UI_STATE_NEW_OR_LOAD_GAME) {
             if (g_context.is_change_ui_main) {
-                UI_cleaner_all_display(); g_context.is_change_ui_main = false;
+                cleaner.UI_cleaner_all_display(); g_context.is_change_ui_main = false;
             }
             dynamic.UI_dynamic_select_new_or_load_game(&g_context.new_or_load_game);
             int key = utils.utils_getch();
@@ -221,7 +240,7 @@ static void state_pre_game_sequence()
         }
 
         if (g_context.ui_main_state == UI_STATE_LOAD) {
-            if (g_context.is_change_ui_main) { UI_cleaner_all_display(); uiStatic.UI_static_save_load_box(); g_context.is_change_ui_main = false; }
+            if (g_context.is_change_ui_main) { cleaner.UI_cleaner_all_display(); uiStatic.UI_static_save_load_box(); g_context.is_change_ui_main = false; }
             dynamic.UI_dynamic_save_load_menu(&g_context.save_load_num);
             int key = utils.utils_getch();
             UI_control_load_menu(&g_context.ui_main_state, &g_context.save_load_num, key, &g_context);
@@ -242,7 +261,7 @@ static void state_pre_game_sequence()
 }
 
 static void state_battle(bool* is_game_over) {
-    if (g_context.is_change_ui_main) { UI_cleaner_all_display(); utils.utils_set_color(COLOR_DEFAULT_TEXT); uiStatic.UI_static_battle_box(); g_context.is_change_ui_main = false; }
+    if (g_context.is_change_ui_main) { cleaner.UI_cleaner_all_display(); utils.utils_set_color(COLOR_DEFAULT_TEXT); uiStatic.UI_static_battle_box(); g_context.is_change_ui_main = false; }
     dynamic.UI_dynamic_monster_info(&g_context.monster, g_context.currentStage);
     dynamic.UI_dynamic_player_info(&g_context.player);
     dynamic.UI_dynamic_action_order(&g_context.player, &g_context.monster, g_context.field_action_value, g_context.field_speed);
@@ -283,8 +302,8 @@ static void state_battle(bool* is_game_over) {
             if (g_context.game_mode != GAME_MODE_INFINITY) // 무한 모드에선 아이템 드랍 필요 없음
                 monster_item_drop(&g_context.player, g_context.currentStage);
             handle_next_stage(is_game_over); 
-            if (g_context.currentStage == 4 && g_context.game_mode == GAME_MODE_NORMAL) story_play("CHAPTER2", log_chapter_2);
-            else if (g_context.currentStage == 8 && g_context.game_mode == GAME_MODE_NORMAL) story_play("CHAPTER3", log_chapter_3);
+            if (g_context.currentStage == 4 && g_context.game_mode == GAME_MODE_NORMAL) story.story_play("CHAPTER2", log_chapter_2);
+            else if (g_context.currentStage == 8 && g_context.game_mode == GAME_MODE_NORMAL) story.story_play("CHAPTER3", log_chapter_3);
             if (g_context.game_mode != GAME_MODE_INFINITY)
                 g_context.ui_main_state = UI_STATE_SELECT_HEAL_OR_STORE; // 다음 단계 넘어가기 전 회복 또는 상점 선택 창
         }
@@ -319,7 +338,7 @@ static void state_battle(bool* is_game_over) {
         g_context.is_field_effect_on = true;
         field_effect_on(&g_context.player, &g_context.monster, g_context.field_type);
 
-        UI_cleaner_player_info();
+        cleaner.UI_cleaner_player_info();
 
         if (get_player_hp(&g_context.player) <= 0) {
             *is_game_over = true;
@@ -330,8 +349,8 @@ static void state_battle(bool* is_game_over) {
             if (g_context.game_mode != GAME_MODE_INFINITY) // 무한 모드에선 아이템 드랍 필요 없음
                 monster_item_drop(&g_context.player, g_context.currentStage);
             handle_next_stage(is_game_over);
-            if (g_context.currentStage == 4 && g_context.game_mode == GAME_MODE_NORMAL) story_play("CHAPTER2", log_chapter_2);
-            else if (g_context.currentStage == 8 && g_context.game_mode == GAME_MODE_NORMAL) story_play("CHAPTER3", log_chapter_3);
+            if (g_context.currentStage == 4 && g_context.game_mode == GAME_MODE_NORMAL) story.story_play("CHAPTER2", log_chapter_2);
+            else if (g_context.currentStage == 8 && g_context.game_mode == GAME_MODE_NORMAL) story.story_play("CHAPTER3", log_chapter_3);
             if (g_context.game_mode != GAME_MODE_INFINITY)
                 g_context.ui_main_state = UI_STATE_SELECT_HEAL_OR_STORE; // 다음 단계 넘어가기 전 회복 또는 상점 선택 창
             return;
@@ -342,21 +361,22 @@ static void state_battle(bool* is_game_over) {
 }
 
 static void state_select_heal_or_store() {
-    if (g_context.is_change_ui_main) { UI_cleaner_all_display(); uiStatic.UI_static_select_heal_or_store_box(); g_context.heal_or_store_state = HEAL_OR_STORE_HEAL;  g_context.is_change_ui_main = false; }
+    if (g_context.is_change_ui_main) { cleaner.UI_cleaner_all_display(); uiStatic.UI_static_select_heal_or_store_box(); g_context.heal_or_store_state = HEAL_OR_STORE_HEAL;  g_context.is_change_ui_main = false; }
     while (g_context.ui_main_state == UI_STATE_SELECT_HEAL_OR_STORE) {
         dynamic.UI_dynamic_select_heal_or_store(&g_context.heal_or_store_state, &g_context.player);
         int key = utils.utils_getch();
         UI_control_select_heal_or_store(&g_context.ui_main_state, &g_context.heal_or_store_state, &g_context.player, key);
         if (g_context.player.run == true) {
-            UI_cleaner_all_display();
-            GameManager_Shutdown();
+            cleaner.UI_cleaner_all_display();
+            GameManager::GetInstance()->Shutdown();
+
         }
         if (g_context.ui_main_state != UI_STATE_SELECT_HEAL_OR_STORE) g_context.is_change_ui_main = true;
     }
 }
 
 static void state_inventory() {
-    if (g_context.is_change_ui_main) { UI_cleaner_all_display(); uiStatic.UI_static_inventory_box(); g_context.is_change_ui_main = false; set_inventory_state(INVENTORY_STATE_WEAPON); set_inventory_rarity_type(RARITY_NORMAL); set_inventory_selected_index(0); }
+    if (g_context.is_change_ui_main) { cleaner.UI_cleaner_all_display(); uiStatic.UI_static_inventory_box(); g_context.is_change_ui_main = false; set_inventory_state(INVENTORY_STATE_WEAPON); set_inventory_rarity_type(RARITY_NORMAL); set_inventory_selected_index(0); }
 
     while (g_context.ui_main_state == UI_STATE_INVENTORY) {
         dynamic.UI_dynamic_current_weapon_info(&g_context.player);
@@ -364,15 +384,15 @@ static void state_inventory() {
         dynamic.UI_dynamic_inventory_info(&g_context.player);
         int key = utils.utils_getch();
         int change = UI_control_inventory(&g_context.ui_main_state, &g_context.player, key);
-        if (change == 1) { UI_cleaner_current_weapon_box(); UI_cleaner_player_info(); }
-        else if (change == 2) { UI_cleaner_current_armor_box(); UI_cleaner_player_info(); }
-        else if (change == 3) { UI_cleaner_player_info(); dynamic.UI_dynamic_player_info(&g_context.player); }
+        if (change == 1) { cleaner.UI_cleaner_current_weapon_box(); cleaner.UI_cleaner_player_info(); }
+        else if (change == 2) { cleaner.UI_cleaner_current_armor_box(); cleaner.UI_cleaner_player_info(); }
+        else if (change == 3) { cleaner.UI_cleaner_player_info(); dynamic.UI_dynamic_player_info(&g_context.player); }
     }
     g_context.is_change_ui_main = true;
 }
 
 static void state_store() {
-    if (g_context.is_change_ui_main) { UI_cleaner_all_display(); uiStatic.UI_static_shop_box(); g_context.is_change_ui_main = false; set_store_state(STORE_STATE_WEAPON); set_store_rarity_type(RARITY_NORMAL); set_store_selected_index(0); }
+    if (g_context.is_change_ui_main) { cleaner.UI_cleaner_all_display(); uiStatic.UI_static_shop_box(); g_context.is_change_ui_main = false; set_store_state(STORE_STATE_WEAPON); set_store_rarity_type(RARITY_NORMAL); set_store_selected_index(0); }
     while (g_context.ui_main_state == UI_STATE_STORE) {
         dynamic.UI_dynamic_store_info(&g_context.player);
         if (get_store_buy_sell_successful_state() != STORE_BUY_SELL_NONE) set_store_buy_sell_successful_state(STORE_BUY_SELL_NONE);
@@ -383,7 +403,7 @@ static void state_store() {
 }
 
 static void state_esc_menu() {
-    if (g_context.is_change_ui_main) { UI_cleaner_all_display(); g_context.is_change_ui_main = false; }
+    if (g_context.is_change_ui_main) { cleaner.UI_cleaner_all_display(); g_context.is_change_ui_main = false; }
     while (g_context.ui_main_state == UI_STATE_ESC_MENU) {
         dynamic.UI_dynamin_esc_menu(&g_context.ui_esc_menu_state, g_context.game_mode);
         int key = utils.utils_getch();
@@ -393,7 +413,7 @@ static void state_esc_menu() {
 }
 
 static void state_save() {
-    if (g_context.is_change_ui_main) { UI_cleaner_all_display(); uiStatic.UI_static_save_load_box(); g_context.is_change_ui_main = false; }
+    if (g_context.is_change_ui_main) { cleaner.UI_cleaner_all_display(); uiStatic.UI_static_save_load_box(); g_context.is_change_ui_main = false; }
     while (g_context.ui_main_state == UI_STATE_SAVE) {
         dynamic.UI_dynamic_save_load_menu(&g_context.save_load_num);
         int key = utils.utils_getch();
@@ -404,7 +424,7 @@ static void state_save() {
 
 
 static void state_setting_menu() {
-    if (g_context.is_change_ui_main) { UI_cleaner_all_display(); uiStatic.UI_static_setting_menu(); g_context.is_change_ui_main = false; }
+    if (g_context.is_change_ui_main) { cleaner.UI_cleaner_all_display(); uiStatic.UI_static_setting_menu(); g_context.is_change_ui_main = false; }
     while (g_context.ui_main_state == UI_STATE_SETTING) {
         dynamic.UI_dynamic_setting_menu(g_context.ui_setting_state, &g_context.global_volume);
         int key = utils.utils_getch();
@@ -425,14 +445,14 @@ static void handle_next_stage(bool* is_game_over) {
         g_context.is_change_ui_main = true;
 
         while (g_context.ui_main_state == UI_STATE_INFINITE_UPGRADE) {
-            if (g_context.is_change_ui_main) { UI_cleaner_all_display(); uiStatic.UI_static_infinite_upgrade_box(); g_context.is_change_ui_main = false; }
+            if (g_context.is_change_ui_main) { cleaner.UI_cleaner_all_display(); uiStatic.UI_static_infinite_upgrade_box(); g_context.is_change_ui_main = false; }
             dynamic.UI_dynamic_infinite_upgrade(&g_context.player, choices, g_context.upgrade_selection);
             int key = utils.utils_getch();
             UI_control_handle_upgrade_selection(&g_context.ui_main_state, &g_context.player, choices, &g_context.upgrade_selection, key);
         }
     }
 
-    UI_cleaner_all_display();
+    cleaner.UI_cleaner_all_display();
     if (g_context.game_mode == GAME_MODE_NORMAL) {
         if (g_context.currentStage >= MAX_STAGE) { *is_game_over = true; return; }
         monster_init(&g_context.monster, g_context.currentStage);

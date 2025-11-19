@@ -15,7 +15,6 @@ UIStatic uiStatic;
 
 UIStatic::UIStatic()
 {
-	// 생성자 내용
 }
 
 
@@ -108,7 +107,7 @@ void UIStatic::UI_static_select_game_mode(void)
 
 void UIStatic::UI_static_hero_select_box(void)
 {
-	UI_cleaner_all_display();
+	cleaner.UI_cleaner_all_display();
 	UI_static_main_box(COLOR_WHITE);
 
 	const char* title = "=== 영웅을 선택하세요 ===";

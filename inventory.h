@@ -2,12 +2,12 @@
 #pragma once
 #include "inout.h"
 #include "utils.h"
-
+#include "UI_info.h"
 #include "item.h"
 
 typedef struct player player_t;
 
-#include "UI_info.h"
+
 
 typedef struct pair {
 	int is_was_having;

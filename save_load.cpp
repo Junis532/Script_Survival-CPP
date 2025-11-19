@@ -9,7 +9,14 @@
 #include "inventory.h"
 #include "item.h"
 
-void load_save_slot_info(save_slot_info_t* slots)
+Save save;
+
+Save::Save()
+{
+
+}
+
+void Save::load_save_slot_info(save_slot_info_t* slots)
 {
     for (int i = 0; i < 3; i++) {
         char filename[64];
@@ -30,7 +37,7 @@ void load_save_slot_info(save_slot_info_t* slots)
     }
 }
 
-void save_slot(int slot, const game_context_t* context)
+void Save::save_slot(int slot, const game_context_t* context)
 {
     char filename[64];
     snprintf(filename, sizeof(filename), "save/save%d.dat", slot);
@@ -48,7 +55,7 @@ void save_slot(int slot, const game_context_t* context)
     fclose(file);
 }
 
-bool load_slot(int slot, game_context_t* context)
+bool Save::load_slot(int slot, game_context_t* context)
 {
     char filename[64];
     snprintf(filename, sizeof(filename), "save/save%d.dat", slot);

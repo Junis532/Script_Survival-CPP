@@ -13,8 +13,15 @@
 static char* seen_list[MAX_STORIES];
 static int  seen_count = 0;
 
+Story story;
+
+Story::Story()
+{
+
+}
+
 // 스토리 함수 포인터 래퍼
-void story_play(const char* storyId, void (*storyFunc)(void)) {
+void Story::story_play(const char* storyId, void (*storyFunc)(void)) {
     bool seen = story_has_seen(storyId);
 
     if (!seen) {
@@ -44,13 +51,13 @@ void story_play(const char* storyId, void (*storyFunc)(void)) {
         c = utils.utils_getch();
         if (c == 'y' || c == 'Y' || c == 'ㅛ') {
             // 스킵
-            UI_cleaner_all_display();
+            cleaner.UI_cleaner_all_display();
             log_buffer_clear();
             break;
         }
         else if (c == 'n' || c == 'N' || c == 'ㅜ') {
             // 재생
-            UI_cleaner_all_display();
+            cleaner.UI_cleaner_all_display();
             storyFunc();
             break;
         }
@@ -59,7 +66,7 @@ void story_play(const char* storyId, void (*storyFunc)(void)) {
     // ──────────────────────────────────────────────
 }
 
-void story_init(void) {
+void Story::story_init(void) {
     FILE* f = fopen(STORY_FILE, "r");
     if (!f) return;
     char buf[64];
@@ -71,14 +78,14 @@ void story_init(void) {
     fclose(f);
 }
 
-bool story_has_seen(const char* id) {
+bool Story::story_has_seen(const char* id) {
     for (int i = 0; i < seen_count; i++)
         if (strcmp(seen_list[i], id) == 0)
             return true;
     return false;
 }
 
-void story_mark_seen(const char* id) {
+void Story::story_mark_seen(const char* id) {
     if (story_has_seen(id)) return;
     if (seen_count < MAX_STORIES) {
         seen_list[seen_count++] = _strdup(id);

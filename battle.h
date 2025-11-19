@@ -7,11 +7,11 @@
 
 #include "UI_info.h"
 
-typedef enum battle_result {
+enum battle_result_t {
     BATTLE_RESULT_ONGOING,
     BATTLE_RESULT_PLAYER_WIN,
     BATTLE_RESULT_MONSTER_WIN
-} battle_result_t;
+};
 
 // 각 턴을 처리하는 함수들을 분리하여 선언
 battle_result_t player_turn_process(player_t* player, monster_t* monster, player_action_state_t action);

@@ -5,11 +5,11 @@
 #include "item.h"
 #include "inventory.h"
 
-typedef enum hero {
+enum hero_t {
 	HERO_BREAKER = 0,
 	HERO_COUNTER,
 	HERO_BERSERKER
-} hero_t;
+};
 
 typedef struct legacy_data {
 	int weapon_index;

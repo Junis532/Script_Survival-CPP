@@ -21,7 +21,7 @@ Utils utils;
 
 Utils::Utils()
 {
-    // 생성자 초기화 내용
+
 }
 
 int Utils::utils_min(int x, int y)

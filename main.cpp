@@ -29,7 +29,9 @@ int main(void)
     COORD bufferSize = { 177, 300 };
     SetConsoleScreenBufferSize(hOut, bufferSize);
 
-    GameManager_Run();
+    GameManager::GetInstance()->Init();
+    GameManager::GetInstance()->Run();
+    GameManager::GetInstance()->Shutdown();
 
     return 0;
 }

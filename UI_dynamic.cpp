@@ -4,6 +4,7 @@
 #include "item.h"
 #include "save_load.h"
 #include "utils.h"
+#include "UI_cleaner.h"
 
 #include <iostream>
 #include <cstdio>
@@ -15,7 +16,6 @@ using namespace std;
 #define BAR_LENGTH 50
 
 Dynamic dynamic;
-
 
 Dynamic::Dynamic()
 {
@@ -42,7 +42,7 @@ static void s_print_stat_bonus(
     equipment_t selected_item = current_equipment_list[rarity][index];
     equipment_t* current_equipped_item = NULL;
 
-    UI_cleaner_stat_bonus_display();
+    cleaner.UI_cleaner_stat_bonus_display();
 
     if (type == 0) { // 무기
         if (player->weapon_index != -1) {
@@ -217,7 +217,7 @@ static void s_print_inventory_item_page(
         // 선택된 아이템 강조 및 설명 표시
         if (focus_level == FOCUS_LEVEL_ITEM_LIST && i == selected_item_index) {
             utils.utils_set_color(COLOR_SELECT_MENU);
-            UI_cleaner_inventory_item_description();
+            cleaner.UI_cleaner_inventory_item_description();
             utils.utils_gotoxy(79, 6);
 
             if (!inventory[current_rarity][i].is_was_having) {
@@ -279,7 +279,7 @@ static void s_print_heal_item_list(player_t* player, focus_level_t focus_level, 
         if (focus_level == FOCUS_LEVEL_ITEM_LIST && i == selected_item_index) {
             utils.utils_set_color(COLOR_SELECT_MENU);
 
-            UI_cleaner_inventory_item_description();
+            cleaner.UI_cleaner_inventory_item_description();
             utils.utils_gotoxy(79, 6);
             utils.utils_set_color(COLOR_DEFAULT_TEXT);
             printf("%s", heal_items[i].description);
@@ -416,7 +416,7 @@ static void s_print_store_item_page(
 
         // 설명 및 구매/판매 메뉴 출력
         if ((focus_level == FOCUS_LEVEL_ITEM_LIST || focus_level == FOCUS_LEVEL_ITEM_BUY_SELL) && i == selected_item_index) {
-            UI_cleaner_inventory_item_description();
+            cleaner.UI_cleaner_inventory_item_description();
             utils.utils_gotoxy(79, 6);
             utils.utils_set_color(COLOR_DEFAULT_TEXT);
             printf("%s", current_equipment_list[current_rarity][i].description);
@@ -490,7 +490,7 @@ static void s_print_store_heal_item_page(
         int y = 6 + (local_index_on_page % ITEMS_PER_ROW) * 4;
 
         if ((focus_level == FOCUS_LEVEL_ITEM_LIST || focus_level == FOCUS_LEVEL_ITEM_BUY_SELL) && i == selected_item_index) {
-            UI_cleaner_inventory_item_description();
+            cleaner.UI_cleaner_inventory_item_description();
             utils.utils_gotoxy(79, 6);
             utils.utils_set_color(COLOR_DEFAULT_TEXT);
             printf("%s", heal_items[i].description);
@@ -612,12 +612,14 @@ void Dynamic::UI_dynamic_player_name_input(void)
     printf("%s", prompt);
 
     utils.utils_gotoxy(start_x + 1, start_y + 1);
+
+
 }
 
 // 입력한 이름으로 할껀지 다시 물어보는 함수
 bool Dynamic::UI_dynamic_confirm_player_name(const char* name)
 {
-    UI_cleaner_all_display();
+    cleaner.UI_cleaner_all_display();
 
     const int box_width = 28;
     const int box_height = 3;
@@ -670,7 +672,7 @@ char* Dynamic::UI_dynamic_create_player_name(void)
 
     while (1)
     {
-        UI_cleaner_all_display();
+        cleaner.UI_cleaner_all_display();
         utils.utils_set_color(COLOR_DEFAULT_TEXT);
         UI_dynamic_player_name_input();
 
@@ -815,7 +817,7 @@ void Dynamic::UI_dynamic_save_load_menu(save_load_num_t* selected)
     int padding = (WIDTH - (box_width * 3)) / 4;
 
     save_slot_info_t slots[3];
-    load_save_slot_info(slots);
+    save.load_save_slot_info(slots);
 
     for (int i = 0; i < 3; i++) {
         int start_x = padding + (i * (box_width + padding));
@@ -1267,8 +1269,8 @@ void Dynamic::UI_dynamic_inventory_info(player_t* player)
         printf("%s", top_items[i].text);
     }
 
-    UI_cleaner_inventory_item_list();
-    UI_cleaner_inventory_item_description();
+    cleaner.UI_cleaner_inventory_item_list();
+    cleaner.UI_cleaner_inventory_item_description();
 
     if (current_inventory_state == INVENTORY_STATE_WEAPON) {
         s_print_sub_menu_box(sub_menu, focus_level, current_rarity);
@@ -1279,11 +1281,11 @@ void Dynamic::UI_dynamic_inventory_info(player_t* player)
         s_print_inventory_item_page(armors, armor_inventory, current_rarity, player, focus_level, selected_item_index, armor_page, 1);
     }
     else if (current_inventory_state == INVENTORY_STATE_HEAL_ITEM) {
-        UI_cleaner_sub_menu();
+        cleaner.UI_cleaner_sub_menu();
         s_print_heal_item_list(player, focus_level, selected_item_index);
     }
     else {
-        UI_cleaner_sub_menu();
+        cleaner.UI_cleaner_sub_menu();
         s_print_option(player);       
     }
 
@@ -1327,35 +1329,35 @@ void Dynamic::UI_dynamic_store_info(player_t* player)
 
     utils.utils_set_color(COLOR_SELECT_MENU);
     if (buy_sell_successful == STORE_BUY_SUCCESS) {
-        UI_cleaner_current_weapon_box();
+        cleaner.UI_cleaner_current_weapon_box();
         utils.utils_gotoxy(10, 23);
         printf("아이템 구매 성공!");
     }
     else if (buy_sell_successful == STORE_SELL_SUCCESS) {
-        UI_cleaner_current_armor_box();
+        cleaner.UI_cleaner_current_armor_box();
         utils.utils_gotoxy(48, 23);
         printf("아이템 판매 성공!");
     }
     else if (buy_sell_successful == STORE_BUY_FAIL) {
-        UI_cleaner_current_weapon_box();
+        cleaner.UI_cleaner_current_weapon_box();
         utils.utils_gotoxy(10, 23);
         printf("아이템 구매 실패!");
     }
     else if (buy_sell_successful == STORE_SELL_FAIL) {
-        UI_cleaner_current_armor_box();
+        cleaner.UI_cleaner_current_armor_box();
         utils.utils_gotoxy(48, 23);
         printf("아이템 판매 실패!");
     }
 
     if (buy_sell_successful != STORE_BUY_SELL_NONE) {
         Sleep(1000);
-        UI_cleaner_current_weapon_box();
-        UI_cleaner_current_armor_box();
+        cleaner.UI_cleaner_current_weapon_box();
+        cleaner.UI_cleaner_current_armor_box();
     }
 
-    UI_cleaner_inventory_item_list();
-    UI_cleaner_inventory_item_description();
-    UI_cleaner_buy_sell_box();
+    cleaner.UI_cleaner_inventory_item_list();
+    cleaner.UI_cleaner_inventory_item_description();
+    cleaner.UI_cleaner_buy_sell_box();
 
     if (current_store_state == STORE_STATE_WEAPON) {
         s_print_sub_menu_box(sub_menu, focus_level, current_rarity);
@@ -1366,11 +1368,11 @@ void Dynamic::UI_dynamic_store_info(player_t* player)
         s_print_store_item_page(armors, armor_inventory, current_rarity, player, focus_level, selected_item_index, buy_sell_state, armor_page, 1);
     }
     else if (current_store_state == STORE_STATE_HEAL_ITEM) {
-        UI_cleaner_sub_menu();
+        cleaner.UI_cleaner_sub_menu();
         s_print_store_heal_item_page(player, focus_level, selected_item_index, buy_sell_state);
     }
     else {
-        UI_cleaner_sub_menu();
+        cleaner.UI_cleaner_sub_menu();
     }
     utils.utils_set_color(COLOR_DEFAULT_TEXT);
 }

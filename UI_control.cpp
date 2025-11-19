@@ -135,7 +135,7 @@ void UI_control_select_heal_or_store(UI_state_t* ui_main_state, heal_or_store_t*
             set_player_hp(player, heal_point);
             utils.utils_sound_play(TEXT("SFX/SoundEffect/heal.wav"));
 
-            UI_cleaner_all_display();
+            cleaner.UI_cleaner_all_display();
             log_buffer_clear();
             log_select_rest();
             log_auto_heal(player, heal_point);
@@ -145,7 +145,7 @@ void UI_control_select_heal_or_store(UI_state_t* ui_main_state, heal_or_store_t*
             *ui_main_state = UI_STATE_BATTLE;
         }
         else if (*heal_or_store_state == HEAL_OR_STORE_STORE) {
-            UI_cleaner_all_display();
+            cleaner.UI_cleaner_all_display();
             log_buffer_clear();
             log_select_store();
             Sleep(1000);
@@ -154,9 +154,9 @@ void UI_control_select_heal_or_store(UI_state_t* ui_main_state, heal_or_store_t*
             *ui_main_state = UI_STATE_STORE;
         }
         else if (*heal_or_store_state == HEAL_OR_STORE_RUN) {
-            UI_cleaner_all_display();
+            cleaner.UI_cleaner_all_display();
             log_buffer_clear();
-            story_play("RUN", log_run);
+            story.story_play("RUN", log_run);
             log_buffer_clear();
             player_save_legacy_data(player);
         }
@@ -174,10 +174,10 @@ void UI_control_load_menu(UI_state_t* ui_main_state, save_load_num_t* ui_save_lo
 {
     if (key == ENTER) {
         if (*ui_main_state == UI_STATE_SAVE) {
-            save_slot(*ui_save_load_num, context);
+            save.save_slot(*ui_save_load_num, context);
         }
         else if (*ui_main_state == UI_STATE_LOAD) {
-            if (load_slot(*ui_save_load_num, context)) {
+            if (save.load_slot(*ui_save_load_num, context)) {
                 context->new_or_load_game = LOAD_GAME;
                 *ui_main_state = UI_STATE_BATTLE;
                 context->is_change_ui_main = true;
@@ -199,10 +199,10 @@ void UI_control_save_load_menu(UI_state_t* ui_main_state, save_load_num_t* ui_sa
 {
     if (key == ENTER) {
         if (*ui_main_state == UI_STATE_SAVE) {
-            save_slot(*ui_save_load_num, context);
+            save.save_slot(*ui_save_load_num, context);
         }
         else if (*ui_main_state == UI_STATE_LOAD) {
-            if (load_slot(*ui_save_load_num, context)) {
+            if (save.load_slot(*ui_save_load_num, context)) {
                 context->new_or_load_game = LOAD_GAME;
                 *ui_main_state = UI_STATE_BATTLE;
                 context->is_change_ui_main = true;
