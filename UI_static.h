@@ -15,6 +15,7 @@ class UIStatic
 {
 public:
 	UIStatic();
+	~UIStatic();
 
 	void UI_static_main_box(int color);
 	void UI_static_title(void);

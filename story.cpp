@@ -20,6 +20,11 @@ Story::Story()
 
 }
 
+Story::~Story()
+{
+
+}
+
 // 스토리 함수 포인터 래퍼
 void Story::story_play(const char* storyId, void (*storyFunc)(void)) {
     bool seen = story_has_seen(storyId);
@@ -52,7 +57,7 @@ void Story::story_play(const char* storyId, void (*storyFunc)(void)) {
         if (c == 'y' || c == 'Y' || c == 'ㅛ') {
             // 스킵
             cleaner.UI_cleaner_all_display();
-            log_buffer_clear();
+            logg.log_buffer_clear();
             break;
         }
         else if (c == 'n' || c == 'N' || c == 'ㅜ') {

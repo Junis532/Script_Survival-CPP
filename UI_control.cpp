@@ -136,28 +136,28 @@ void UI_control_select_heal_or_store(UI_state_t* ui_main_state, heal_or_store_t*
             utils.utils_sound_play(TEXT("SFX/SoundEffect/heal.wav"));
 
             cleaner.UI_cleaner_all_display();
-            log_buffer_clear();
-            log_select_rest();
-            log_auto_heal(player, heal_point);
+            logg.log_buffer_clear();
+            logg.log_select_rest();
+            logg.log_auto_heal(player, heal_point);
             Sleep(1000);
-            log_buffer_clear();
+            logg.log_buffer_clear();
 
             *ui_main_state = UI_STATE_BATTLE;
         }
         else if (*heal_or_store_state == HEAL_OR_STORE_STORE) {
             cleaner.UI_cleaner_all_display();
-            log_buffer_clear();
-            log_select_store();
+            logg.log_buffer_clear();
+            logg.log_select_store();
             Sleep(1000);
-            log_buffer_clear();
+            logg.log_buffer_clear();
 
             *ui_main_state = UI_STATE_STORE;
         }
         else if (*heal_or_store_state == HEAL_OR_STORE_RUN) {
             cleaner.UI_cleaner_all_display();
-            log_buffer_clear();
-            story.story_play("RUN", log_run);
-            log_buffer_clear();
+            logg.log_buffer_clear();
+            story.story_play("RUN", Log::log_run);
+            logg.log_buffer_clear();
             player_save_legacy_data(player);
         }
     }
@@ -370,8 +370,6 @@ void UI_control_esc_menu(UI_state_t* ui_main_state, esc_menu_state_t* ui_esc_men
     }
 }
 
-
-// 무기 장착 여부 반환 (0 변경 없음, 1 무기 변경, 2 방어구 변경)
 // 무기 장착 여부 반환 (0 변경 없음, 1 무기 변경, 2 방어구 변경)
 int UI_control_inventory(UI_state_t* ui_main_state, player_t* player, int menu_key)
 {

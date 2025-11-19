@@ -40,7 +40,7 @@ static void s_battle_logic(player_t* player, monster_t* monster, bool is_use_ski
     bool monster_evaded = s_check_evasion(monster->evasion_rate);
 
     if (monster_evaded) {
-        log_evaded(monster->name, player->name);
+        logg.log_evaded(monster->name, player->name);
     }
     else {
         double attack_power = (double)get_player_attack(player);
@@ -72,10 +72,10 @@ static void s_battle_logic(player_t* player, monster_t* monster, bool is_use_ski
         }
 
         if (player->choice_hero == HERO_COUNTER && is_use_skill) {
-            log_player_counter_success(player, monster, final_damage, skill_break_damge, is_critical);
+            logg.log_player_counter_success(player, monster, final_damage, skill_break_damge, is_critical);
         }
         else {
-            log_player_attack(player, monster, final_damage, skill_break_damge, is_critical, break_extra_damage_dealt);
+            logg.log_player_attack(player, monster, final_damage, skill_break_damge, is_critical, break_extra_damage_dealt);
         }
 
         utils. utils_sound_play(TEXT("SFX/SoundEffect/player_attack.wav"));
@@ -87,7 +87,7 @@ static void s_battle_logic(player_t* player, monster_t* monster, bool is_use_ski
             heal_point = utils.utils_min(heal_point, get_player_max_hp(player) - get_player_hp(player));
             set_player_hp(player, heal_point);
 
-            log_life_steal(player, heal_point);
+            logg.log_life_steal(player, heal_point);
             dynamic.UI_dynamic_player_info(player);
         }
 
@@ -99,7 +99,7 @@ static void s_battle_logic(player_t* player, monster_t* monster, bool is_use_ski
                 s_monster_tmep_evasion_rate = monster->evasion_rate;
                 monster->evasion_rate = 0.0;
                 monster->stun_turns = get_player_stun_duration(player);
-                log_monster_groggy(monster->name);
+                logg.log_monster_groggy(monster->name);
             }
         }
     }
@@ -107,16 +107,16 @@ static void s_battle_logic(player_t* player, monster_t* monster, bool is_use_ski
 
 battle_result_t player_turn_process(player_t* player, monster_t* monster, player_action_state_t action)
 {
-    log_buffer_clear();
+    logg.log_buffer_clear();
 
     if (action == PLAYER_ACTION_SKILL) {
-        log_skill_used(player, (int)(player->self_damage * get_player_hp(player)));
+        logg.log_skill_used(player, (int)(player->self_damage * get_player_hp(player)));
         if (player->choice_hero == HERO_BREAKER) {
             s_battle_logic(player, monster, true);
         }
         else if (player->choice_hero == HERO_COUNTER) {
             player->is_counter = true;
-            log_player_counter_ready(player);
+            logg.log_player_counter_ready(player);
         }
         else if (player->choice_hero == HERO_BERSERKER) {
             set_player_hp(player, (int)(player->self_damage * get_player_hp(player)));
@@ -136,7 +136,7 @@ battle_result_t player_turn_process(player_t* player, monster_t* monster, player
 battle_result_t monster_turn_process(monster_t* monster, player_t* player, bool skill_turn, int current_stage)
 {
     if (monster->stun_turns > 0) {
-        log_monster_stunned(monster->name);
+        logg.log_monster_stunned(monster->name);
         monster->stun_turns--;
 
         if (monster->stun_turns == 0) {
@@ -144,7 +144,7 @@ battle_result_t monster_turn_process(monster_t* monster, player_t* player, bool 
             monster->evasion_rate = s_monster_tmep_evasion_rate;
             s_monster_tmep_evasion_rate = 0.0;
             monster->current_toughness = monster->max_toughness;
-            log_monster_recovers(monster->name);
+            logg.log_monster_recovers(monster->name);
         }
         Sleep(1000);
         return BATTLE_RESULT_ONGOING;
@@ -158,7 +158,7 @@ battle_result_t monster_turn_process(monster_t* monster, player_t* player, bool 
     }
 
     if (current_stage == 12 && monster->current_hp <= monster->max_hp / 2 && !monster->used_skill) {
-        log_fianl_monster_use_skill(monster);
+        logg.log_fianl_monster_use_skill(monster);
         utils.utils_sound_play(TEXT("SFX/SoundEffect/roar.wav"));
         for (int i = 0; i < 10; i++) {      
             final_monster_skill(monster, player, 300);
@@ -166,7 +166,7 @@ battle_result_t monster_turn_process(monster_t* monster, player_t* player, bool 
             Sleep(300);
         }
 		monster->current_hp += monster->max_hp / 30; // 몬스터가 체력 회복
-        log_final_monster_after_skill(monster);
+        logg.log_final_monster_after_skill(monster);
         monster->used_skill = true;
     }
     bool player_evaded = s_check_evasion(get_player_evasion_rate(player));
@@ -176,7 +176,7 @@ battle_result_t monster_turn_process(monster_t* monster, player_t* player, bool 
     }
 
     if (player_evaded) {
-        log_evaded(player->name, monster->name);
+        logg.log_evaded(player->name, monster->name);
     }
     else {
         int final_damage = 0;
@@ -191,10 +191,10 @@ battle_result_t monster_turn_process(monster_t* monster, player_t* player, bool 
 
         s_apply_damage(monster_damage, damage_multiplier, get_player_defense_rate(player), 0.0, &final_damage);
         set_player_hp(player, final_damage);
-        log_monster_attack(player, monster, final_damage);
+        logg.log_monster_attack(player, monster, final_damage);
 
         if (used_reduction) {
-            log_damage_reduction_effect_used();
+            logg.log_damage_reduction_effect_used();
         }
 
         utils.utils_sound_play(TEXT("SFX/SoundEffect/monster_attack.wav"));
@@ -211,7 +211,7 @@ battle_result_t monster_turn_process(monster_t* monster, player_t* player, bool 
     Sleep(1000);
     if (get_player_hp(player) <= 0) {
         if (player->set_effect_id == SET_EFFECT_NONE && player->dead_count == 1) {
-			log_dead_effect_used();
+            logg.log_dead_effect_used();
 			player->dead_count = 0; // 이 상태에서 죽으면 1회 사망 횟수 사라짐
             set_player_hp(player, get_player_max_hp(player)); // 플레이어가 죽었을 때 최대체력으로 초기화
             set_player_attack(player, 500, 0);

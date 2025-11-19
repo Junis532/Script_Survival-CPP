@@ -65,12 +65,12 @@ static inline void try_drop_equipment(player_t* player,
     if (equipment_type == 0) {
         weapon_inventory[rarity][idx].is_was_having = TRUE;
         weapon_inventory[rarity][idx].count++;
-        log_drop_item(player, weapons, rarity, idx);
+        logg.log_drop_item(player, weapons, rarity, idx);
     }
     else {
         armor_inventory[rarity][idx].is_was_having = TRUE;
         armor_inventory[rarity][idx].count++;
-        log_drop_item(player, armors, rarity, idx);
+        logg.log_drop_item(player, armors, rarity, idx);
     }
 }
 
@@ -246,7 +246,7 @@ void monster_skill(monster_t* monster, int type) {
     }
 
     utils.utils_set_color(COLOR_RED);
-    log_monster_use_skill(monster, type);
+    logg.log_monster_use_skill(monster, type);
     utils.utils_set_color(COLOR_DEFAULT_TEXT);
 }
 
@@ -254,7 +254,7 @@ void final_monster_skill(monster_t* monster, player_t* player, int damage)
 {
     set_player_hp(player, -damage);
     utils.utils_set_color(COLOR_RED);
-    log_roar_damage(player, damage);
+    logg.log_roar_damage(player, damage);
     utils.utils_set_color(COLOR_DEFAULT_TEXT);
 }
 
@@ -306,5 +306,5 @@ void monster_item_drop(player_t* player, int index)
 
     int money = curved_money_drop(index, money_exp);
     player->coin += money;
-    log_drop_coin(player, money);
+    logg.log_drop_coin(player, money);
 }

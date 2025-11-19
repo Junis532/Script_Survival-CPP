@@ -6,6 +6,7 @@ class Story
 {
 public:
 	Story();
+	~Story();
 
 	void story_play(const char* storyId, void(*storyFunc)(void));
 

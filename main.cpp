@@ -7,8 +7,6 @@ using namespace std;
 
 int main(void)
 {
-
-    Utils utils;
     // 커서 지우기
     utils.utils_hide_cursor();
 

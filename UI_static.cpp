@@ -17,6 +17,9 @@ UIStatic::UIStatic()
 {
 }
 
+UIStatic::~UIStatic()
+{
+}
 
 void UIStatic::UI_static_main_box(int color)
 {

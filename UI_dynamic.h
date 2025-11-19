@@ -25,7 +25,7 @@ class Dynamic
 {
 public:
 	Dynamic();
-
+	~Dynamic();
 	// 사용자 이름 입력 관련 함수
 	void  UI_dynamic_player_name_input(void);
 	bool  UI_dynamic_confirm_player_name(const char* name);

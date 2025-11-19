@@ -1,17 +1,17 @@
 // pair.h
 #pragma once
 
-typedef struct pairDouble {
+struct pairDouble_t {
 	double x;
 	double y;
-} pairDouble_t;
+};
 
-typedef struct pairChar {
+struct pairChar_t {
 	char x;
 	char y;
-} pairChar_t;	
+};	
 
-typedef struct pair_int {
+struct pair_int_t {
 	int x;
 	int y;
-} pair_int_t;
+};

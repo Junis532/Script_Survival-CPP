@@ -5,10 +5,19 @@
 #include "utils.h"
 
 // 로그 메시지와 치명타 여부를 함께 저장하는 구조체
-typedef struct log_entry {
+struct log_entry_t {
     char* text;
     bool is_critical;
-} log_entry_t;
+};
+
+Log logg;
+
+Log::Log()
+{
+}
+Log::~Log()
+{
+}
 
 static log_entry_t s_log_buffer[LOG_MAX_LINES] = { { NULL, false } };
 static int s_current_line_index = 0;
@@ -92,7 +101,7 @@ static void s_log_add_message(bool is_critical, const char* fmt, ...)
 }
 
 
-void log_buffer_clear(void) {
+void Log::log_buffer_clear(void) {
     for (int i = 0; i < LOG_MAX_LINES; i++) {
         if (s_log_buffer[i].text) {
             free(s_log_buffer[i].text);
@@ -106,11 +115,11 @@ void log_buffer_clear(void) {
 }
 
 // [수정] 모든 로그 함수들이 is_critical=false 로 s_log_add_message를 호출하도록 수정
-void log_player_counter_ready(player_t* player) {
+void Log::log_player_counter_ready(player_t* player) {
     s_log_add_message(false, "%s이(가) 반격을 준비합니다.", player->name);
 }
 
-void log_player_counter_success(player_t* player, monster_t* monster, int final_damage, int break_damage, bool is_critical) {
+void Log::log_player_counter_success(player_t* player, monster_t* monster, int final_damage, int break_damage, bool is_critical) {
     char extra_damage_str[20] = "";
 
     // [수정] "[치명타!]" 텍스트 생성 로직 삭제
@@ -118,7 +127,7 @@ void log_player_counter_success(player_t* player, monster_t* monster, int final_
         player->name, monster->name, final_damage, extra_damage_str);
 }
 
-void log_player_attack(player_t* player, monster_t* monster, int damage, int break_damage, bool is_critical, int break_extra_damage_dealt) {
+void Log::log_player_attack(player_t* player, monster_t* monster, int damage, int break_damage, bool is_critical, int break_extra_damage_dealt) {
     char extra_damage_str[20] = "";
     if (break_extra_damage_dealt > 0) {
         snprintf(extra_damage_str, sizeof(extra_damage_str), " (+%d)", break_extra_damage_dealt);
@@ -129,15 +138,15 @@ void log_player_attack(player_t* player, monster_t* monster, int damage, int bre
         player->name, monster->name, damage, extra_damage_str);
 }
 
-void log_monster_attack(player_t* player, monster_t* monster, int damage) {
+void Log::log_monster_attack(player_t* player, monster_t* monster, int damage) {
     s_log_add_message(false, "%s이(가) %s에게 %d의 피해를 입혔습니다.", monster->name, player->name, damage);
 }
 
-void log_evaded(const char* defender_name, const char* attacker_name) {
+void Log::log_evaded(const char* defender_name, const char* attacker_name) {
     s_log_add_message(false, "%s이(가) %s의 공격을 회피했습니다!", defender_name, attacker_name);
 }
 
-void log_skill_used(player_t* player, int self_damage) {
+void Log::log_skill_used(player_t* player, int self_damage) {
     if (player->choice_hero == HERO_BERSERKER) {
         s_log_add_message(false, "%s이(가) 스킬을 사용했습니다!", player->name);
 		s_log_add_message(false, "자신에게 %d의 피해를 입히고, 가하는 피해가 증가합니다.", self_damage);
@@ -151,108 +160,108 @@ void log_skill_used(player_t* player, int self_damage) {
     }
 }
 
-void log_life_steal(player_t* player, int heal_point) {
+void Log::log_life_steal(player_t* player, int heal_point) {
     s_log_add_message(false, "%s이(가) %d의 생명력을 흡수했습니다.", player->name, heal_point);
 }
 
-void log_monster_groggy(const char* monster_name) {
+void Log::log_monster_groggy(const char* monster_name) {
     s_log_add_message(false, "%s의 강인도가 모두 파괴되어 그로기 상태에 빠집니다!", monster_name);
 }
 
-void log_monster_stunned(const char* monster_name) {
+void Log::log_monster_stunned(const char* monster_name) {
     s_log_add_message(false, "%s은(는) 기절해서 움직일 수 없습니다.", monster_name);
 }
 
-void log_monster_recovers(const char* monster_name) {
+void Log::log_monster_recovers(const char* monster_name) {
     s_log_add_message(false, "%s이(가) 기절에서 회복하며 자세를 가다듬습니다.", monster_name);
 }
 
-void log_auto_heal(player_t* player, int heal_point)
+void Log::log_auto_heal(player_t* player, int heal_point)
 {
     s_log_add_message(false, "%s이(가) %d 만큼 체력을 회복했습니다.", player->name, heal_point);
 }
 
-void log_drop_item(player_t* player, equipment_t item[][ITEM_COUNT], int rarity, int index)
+void Log::log_drop_item(player_t* player, equipment_t item[][ITEM_COUNT], int rarity, int index)
 {
 
     s_log_add_message(false, "%s이(가) %s을(를) 획득했습니다! (%C)", player->name, item[rarity][index].name, rarity_name[rarity]);
 }
 
-void log_drop_coin(player_t* player, int coin)
+void Log::log_drop_coin(player_t* player, int coin)
 {
     s_log_add_message(false, "%s이(가) %d 코인을 획득했습니다.", player->name, coin);
 }
 
-void log_goto_store(void)
+void Log::log_goto_store(void)
 {
 	s_log_add_message(false, "상점으로 이동합니다.");
 }
 
-void log_dead_effect_used(void)
+void Log::log_dead_effect_used(void)
 {
     s_log_add_message(false, "[응징자의 가시] 세트 효과 발동");
     s_log_add_message(false, "최대 체력을 회복하고 공격력이 증가합니다.");
 }
 
-void log_damage_reduction_effect_used(void)
+void Log::log_damage_reduction_effect_used(void)
 {
     s_log_add_message(false, "[광전사] 세트 효과 발동");
     s_log_add_message(false, "받는 피해가 30% 감소합니다.");
 }
 
-void log_field_effect_on(void)
+void Log::log_field_effect_on(void)
 {
     s_log_add_message(false, "필드 효과가 발동됩니다.");
 }
 
-void log_field_effect_off(void)
+void Log::log_field_effect_off(void)
 {
     s_log_add_message(false, "필드 효과가 사라졌습니다.");
 }
 
-void log_field_effect_swap_action_value(void) 
+void Log::log_field_effect_swap_action_value(void)
 {
 	s_log_add_message(false, "플레이어와 몬스터의 행동 서열이 서로 바뀝니다.");
 }
 
-void log_field_effect_player_damage(player_t* player, int damage)
+void Log::log_field_effect_player_damage(player_t* player, int damage)
 {
     s_log_add_message(false, "%s이(가) %d의 피해를 입었습니다.", player->name, damage);
 }
 
-void log_field_effect_monster_damage(monster_t* monster, int damage)
+void Log::log_field_effect_monster_damage(monster_t* monster, int damage)
 {
     s_log_add_message(false, "%s이(가) %d의 피해를 입었습니다.", monster, damage);
 }
 
-void log_field_effect_zero_evasion(void)
+void Log::log_field_effect_zero_evasion(void)
 {
     s_log_add_message(false, "1턴동안 플레이어와 몬스터의 회피율이 0으로 설정됩니다.");
 }
 
-void log_field_effect_attack_increase(void)
+void Log::log_field_effect_attack_increase(void)
 {
     s_log_add_message(false, "1턴동안 플레이어와 몬스터의 공격력이 증가합니다.");
 }
 
-void log_field_effect_heal(void)
+void Log::log_field_effect_heal(void)
 {
     s_log_add_message(false, "플레이어와 몬스터가 체력을 회복합니다.");
 }
 
-void log_field_effect_blood_for_power(const char* name, int sum_attack)
+void Log::log_field_effect_blood_for_power(const char* name, int sum_attack)
 {
     s_log_add_message(false, "플레이어와 몬스터의 체력을 감소시키고");
     s_log_add_message(false, "%s가 그 값 만큼 공격력을 증가시킵니다. (+%d)", name, sum_attack);
 }
 
-void log_field_effect_power_attack(const char* name)
+void Log::log_field_effect_power_attack(const char* name)
 {
     s_log_add_message(false, "%s이(가) 강력한 데미지를 받았습니다.", name);
 }
 
 
-void log_run(void)
+void Log::log_run(void)
 {
     s_log_add_message(false, "[전장에서 도망쳤습니다..]");
     Sleep(500);
@@ -291,7 +300,7 @@ void log_run(void)
     s_log_add_message(false, "찬란했던 당신의 이야기는 여기서 끝이 났습니다.");
 }
 
-void log_legacy(void)
+void Log::log_legacy(void)
 {
     // 전 영웅의 유산이 되살아납니다...
     s_log_add_message(false, "[전 영웅의 유산이 깨어납니다...]");
@@ -331,13 +340,13 @@ void log_legacy(void)
     s_log_add_message(false, "이제 새로운 전설이 당신의 손끝에서 다시 시작됩니다.");
     Sleep(1500);
 }
-void log_prologue(void)
+void Log::log_prologue(void)
 {
     // 화면을 비우고, 타이틀을 잠시 보여줍니다.
-    log_buffer_clear();
+    logg.log_buffer_clear();
     s_log_add_message(true, "[제 1장: 잿빛 하늘 아래]");
     Sleep(2000);
-    log_buffer_clear();
+    logg.log_buffer_clear();
 
     // 평화로운 시절에 대한 묘사
     s_log_add_message(false, "오랜 평화가 잠든 왕국, ");
@@ -419,13 +428,13 @@ void log_prologue(void)
 }
 
 
-void log_chapter_2(void)
+void Log::log_chapter_2(void)
 {
     // 4스테이지 클리어 후, 중반부 돌입
-    log_buffer_clear();
+    logg.log_buffer_clear();
     s_log_add_message(true, "[제 2장: 균열의 속삭임]");
     Sleep(2000);
-    log_buffer_clear();
+    logg.log_buffer_clear();
 
     // 변화하는 전장과 몬스터
     s_log_add_message(false, "네 개의 관문을 지나며, ");
@@ -464,13 +473,13 @@ void log_chapter_2(void)
     Sleep(2500);
 }
 
-void log_chapter_3(void)
+void Log::log_chapter_3(void)
 {
     // 8스테이지 클리어 후, 후반부 돌입
-    log_buffer_clear();
+    logg.log_buffer_clear();
     s_log_add_message(true, "[제 3장: 잿빛 서약]");
     Sleep(2000);
-    log_buffer_clear();
+    logg.log_buffer_clear();
 
     // 용의 둥지에 가까워진 풍경
     s_log_add_message(false, "여덟 개의 관문이 당신의 등 뒤에서 닫혔습니다.");
@@ -509,13 +518,13 @@ void log_chapter_3(void)
     Sleep(2500);
 }
 
-void log_chapter_4(void)
+void Log::log_chapter_4(void)
 {
     // 최종 보스 클리어 후, 엔딩
-    log_buffer_clear();
+    logg.log_buffer_clear();
     s_log_add_message(true, "[최종장: 영원한 속죄]");
     Sleep(2500);
-    log_buffer_clear();
+    logg.log_buffer_clear();
 
     // 용의 소멸과 진실
     s_log_add_message(false, "마침내 당신의 칼날이 용의 심장을 꿰뚫었습니다.");
@@ -579,7 +588,7 @@ void log_chapter_4(void)
     Sleep(3000);
 }
 
-void log_monster_use_skill(monster_t* monster, int type)
+void Log::log_monster_use_skill(monster_t* monster, int type)
 {
     s_log_add_message(false, "%s이(가) 스킬을 사용했습니다.", monster->name);
     if (type == 0) {
@@ -593,41 +602,41 @@ void log_monster_use_skill(monster_t* monster, int type)
     }
 }
 
-void log_fianl_monster_use_skill(monster_t* monster)
+void Log::log_fianl_monster_use_skill(monster_t* monster)
 {
     s_log_add_message(false, "%s이(가) 포효합니다.", monster->name);
 }
 
-void log_roar_damage(player_t* player, int damage)
+void Log::log_roar_damage(player_t* player, int damage)
 {
     s_log_add_message(false, "%s의 체력이 %d감소합니다.", player->name, damage);
 }
 
-void log_final_monster_after_skill(monster_t* monster)
+void Log::log_final_monster_after_skill(monster_t* monster)
 {
     s_log_add_message(false, "%s가 체력을 회복합니다.", monster->name);
 }
 
-void log_select_rest(void)
+void Log::log_select_rest(void)
 {
     s_log_add_message(false, "왕의 축복이 당신의 여정에 함께합니다.");
     Sleep(1000);
     s_log_add_message(false, "지친 몸을 추스리고 다시 나아가십시오.");
 }
 
-void log_select_store(void)
+void Log::log_select_store(void)
 {
     s_log_add_message(false, "어디선가 나타난 기묘한 상점입니다.");
     Sleep(1000);
     s_log_add_message(false, "진열된 물건들에서 희미한 온기와 슬픔이 느껴집니다.");
 }
 
-void log_infinite_mode_start(void)
+void Log::log_infinite_mode_start(void)
 {
-    log_buffer_clear();
+    logg.log_buffer_clear();
     s_log_add_message(true, "[ ??? 장: 끝나지 않는 속죄 ]");
     Sleep(3000);
-    log_buffer_clear();
+    logg.log_buffer_clear();
 
     // 멸망한 세상에 대한 묘사
     s_log_add_message(false, "당신의 손으로 구원한 것은 공주가 아닌,");

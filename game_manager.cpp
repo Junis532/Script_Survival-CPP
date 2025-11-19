@@ -106,7 +106,7 @@ void GameManager::Run() {
         cleaner.UI_cleaner_all_display();
 
         if (g_context.game_mode == MODE_STATE_NORMAL) {
-            story.story_play("PROLOGUE", log_prologue);
+            story.story_play("PROLOGUE", Log::log_prologue);
 
             free(player_name);
             if (!monster_init(&g_context.monster, g_context.currentStage)) {
@@ -117,7 +117,7 @@ void GameManager::Run() {
             
         else if (g_context.game_mode == MODE_STATE_INFINITY)
         {
-            story.story_play("INFINITY", log_infinite_mode_start);
+            story.story_play("INFINITY", Log::log_infinite_mode_start);
 
             free(player_name);
             if (!monster_init(&g_context.monster, 13)) {
@@ -128,7 +128,7 @@ void GameManager::Run() {
 
         // 계승 정보(파일)이 있을 때 장착 중 이었던 장비 코인 계승
         if (player_load_legacy_data(&g_context.player)) {
-            log_legacy();
+            logg.log_legacy();
             remove("data/legacy.dat");
         }
 
@@ -161,7 +161,7 @@ void GameManager::Run() {
 	}
 
     if (g_context.game_mode == MODE_STATE_NORMAL && g_context.currentStage == 13) {
-        story.story_play("CHAPTER4", log_chapter_4);
+        story.story_play("CHAPTER4", Log::log_chapter_4);
         save_clear_status(true);
     }
 
@@ -302,8 +302,8 @@ static void state_battle(bool* is_game_over) {
             if (g_context.game_mode != GAME_MODE_INFINITY) // 무한 모드에선 아이템 드랍 필요 없음
                 monster_item_drop(&g_context.player, g_context.currentStage);
             handle_next_stage(is_game_over); 
-            if (g_context.currentStage == 4 && g_context.game_mode == GAME_MODE_NORMAL) story.story_play("CHAPTER2", log_chapter_2);
-            else if (g_context.currentStage == 8 && g_context.game_mode == GAME_MODE_NORMAL) story.story_play("CHAPTER3", log_chapter_3);
+            if (g_context.currentStage == 4 && g_context.game_mode == GAME_MODE_NORMAL) story.story_play("CHAPTER2", Log::log_chapter_2);
+            else if (g_context.currentStage == 8 && g_context.game_mode == GAME_MODE_NORMAL) story.story_play("CHAPTER3", Log::log_chapter_3);
             if (g_context.game_mode != GAME_MODE_INFINITY)
                 g_context.ui_main_state = UI_STATE_SELECT_HEAL_OR_STORE; // 다음 단계 넘어가기 전 회복 또는 상점 선택 창
         }
@@ -349,8 +349,8 @@ static void state_battle(bool* is_game_over) {
             if (g_context.game_mode != GAME_MODE_INFINITY) // 무한 모드에선 아이템 드랍 필요 없음
                 monster_item_drop(&g_context.player, g_context.currentStage);
             handle_next_stage(is_game_over);
-            if (g_context.currentStage == 4 && g_context.game_mode == GAME_MODE_NORMAL) story.story_play("CHAPTER2", log_chapter_2);
-            else if (g_context.currentStage == 8 && g_context.game_mode == GAME_MODE_NORMAL) story.story_play("CHAPTER3", log_chapter_3);
+            if (g_context.currentStage == 4 && g_context.game_mode == GAME_MODE_NORMAL) story.story_play("CHAPTER2", Log::log_chapter_2);
+            else if (g_context.currentStage == 8 && g_context.game_mode == GAME_MODE_NORMAL) story.story_play("CHAPTER3", Log::log_chapter_3);
             if (g_context.game_mode != GAME_MODE_INFINITY)
                 g_context.ui_main_state = UI_STATE_SELECT_HEAL_OR_STORE; // 다음 단계 넘어가기 전 회복 또는 상점 선택 창
             return;
@@ -435,7 +435,7 @@ static void state_setting_menu() {
 
 static void handle_next_stage(bool* is_game_over) {
     g_context.currentStage++;
-    log_buffer_clear();
+    logg.log_buffer_clear();
 
     if (g_context.game_mode == GAME_MODE_INFINITY) {
         g_context.ui_main_state = UI_STATE_INFINITE_UPGRADE;

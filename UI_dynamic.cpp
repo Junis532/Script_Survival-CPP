@@ -19,7 +19,11 @@ Dynamic dynamic;
 
 Dynamic::Dynamic()
 {
-    // 생성자 내용
+
+}
+Dynamic::~Dynamic()
+{
+
 }
 
 static void s_print_diff_stat(int diff_stat, int x, int y)
