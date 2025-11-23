@@ -43,6 +43,10 @@ private:
     static GameManager* instance; // 싱글톤 인스턴스
     GameManager();                // private 생성자
 
+    // 복사 금지
+    GameManager(const GameManager&) = delete;
+    GameManager& operator=(const GameManager&) = delete;
+
 public:
     ~GameManager() {}
 

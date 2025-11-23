@@ -2,7 +2,6 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include "field.h"
 #include "utils.h"
-
 #include "log.h"
 
 static int player_evasion = 0;
@@ -14,7 +13,12 @@ static int monster_add_attack = 100;
 static bool is_add_attack_player = true;
 static int sum_attack = 0;
 
-void field_effect_on(player_t* player, monster_t* monster, int type)
+Field field;
+
+Field::Field() {}
+Field::~Field() {}
+
+void Field::field_effect_on(player_t* player, monster_t* monster, int type)
 {
 	logg.log_field_effect_on();
 
@@ -85,7 +89,7 @@ void field_effect_on(player_t* player, monster_t* monster, int type)
 	}
 }
 
-void field_effect_off(player_t* player, monster_t* monster, int type)
+void Field::field_effect_off(player_t* player, monster_t* monster, int type)
 {
 	if (type == 0) { // 행동서열 바꾸기
 		return;

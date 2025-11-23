@@ -84,8 +84,8 @@ void player_init(player_t* player, char* name, hero_t choice_hero)
 	player->armor_index = -1;
 	player->weapon_rarity = RARITY_NORMAL;
 	player->armor_rarity = RARITY_NORMAL;
-	use_weapon(RARITY_NORMAL, 0, player);
-	use_armor(RARITY_NORMAL, 0, player);
+	item.use_weapon(RARITY_NORMAL, 0, player);
+	item.use_armor(RARITY_NORMAL, 0, player);
 
 	player->run = false;
 }
@@ -227,11 +227,11 @@ bool player_load_legacy_data(player_t* player)
 
 	player->coin = data.coin;
 
-	get_item(data.weapon_rarity, data.weapon_index, 0);
-	get_item(data.armor_rarity, data.armor_index, 1);
+	inventory.get_item(data.weapon_rarity, data.weapon_index, 0);
+	inventory.get_item(data.armor_rarity, data.armor_index, 1);
 
-	use_weapon(data.weapon_rarity, data.weapon_index, player);
-	use_armor(data.armor_rarity, data.armor_index, player);
+	item.use_weapon(data.weapon_rarity, data.weapon_index, player);
+	item.use_armor(data.armor_rarity, data.armor_index, player);
 
 	return true;
 }

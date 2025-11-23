@@ -17,7 +17,7 @@ static double s_monster_tmep_evasion_rate;
 
 static bool s_check_evasion(double defender_evasion_rate)
 {
-    return (((double)genrand_int32() / UPPER_MASK) < defender_evasion_rate);
+    return (((double)mt.genrand_int32() / UPPER_MASK) < defender_evasion_rate);
 }
 
 static void s_apply_damage(int attacker_attack, double damage_increase, double attacker_def_penetration, double defender_defence_rate, int* out_final_damage)
@@ -54,7 +54,7 @@ static void s_battle_logic(player_t* player, monster_t* monster, bool is_use_ski
             attack_power *= 2.0;
         }
 
-        bool is_critical = ((double)genrand_int32() / UPPER_MASK) < get_player_crit_chance(player);
+        bool is_critical = ((double)mt.genrand_int32() / UPPER_MASK) < get_player_crit_chance(player);
 
         if (is_critical) {
             attack_power *= get_player_crit_damage(player);
@@ -151,8 +151,8 @@ battle_result_t monster_turn_process(monster_t* monster, player_t* player, bool 
     }
 
     if (skill_turn == true) {
-        int type = genrand_int32() % 3;
-        monster_skill(monster, type);
+        int type = mt.genrand_int32() % 3;
+        monsters.monster_skill(monster, type);
         if (type == 1) dynamic.UI_dynamic_monster_info(monster, current_stage);
         Sleep(1000);
     }
@@ -161,7 +161,7 @@ battle_result_t monster_turn_process(monster_t* monster, player_t* player, bool 
         logg.log_fianl_monster_use_skill(monster);
         utils.utils_sound_play(TEXT("SFX/SoundEffect/roar.wav"));
         for (int i = 0; i < 10; i++) {      
-            final_monster_skill(monster, player, 300);
+            monsters.final_monster_skill(monster, player, 300);
             dynamic.UI_dynamic_player_info(player);
             Sleep(300);
         }

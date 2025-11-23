@@ -11,10 +11,8 @@
 
 Save save;
 
-Save::Save()
-{
-
-}
+Save::Save() {}
+Save::~Save() {}
 
 void Save::load_save_slot_info(save_slot_info_t* slots)
 {

@@ -12,11 +12,10 @@ class Save
 {
 public:
 	Save();
+	~Save();
 
 	void load_save_slot_info(save_slot_info_t* slots);
-
 	void save_slot(int slot, const game_context_t* contextr);
-
 	bool load_slot(int slot, game_context_t* context);
 
 };

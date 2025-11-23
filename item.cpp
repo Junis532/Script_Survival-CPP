@@ -3,6 +3,11 @@
 #include "item.h"
 #include "player.h"
 
+Item item;
+
+Item::Item() {}
+Item::~Item() {}
+
 const int rarity_item_counts[RARITY_COUNT] = {
     NORMAL_ITEM_COUNT,
     RARE_ITEM_COUNT,
@@ -198,7 +203,7 @@ static void s_read_armors_csv(const char* filename, equipment_t items[], int max
 }
 
 // scv 파일을 불러와서 equipment_t 구조체 배열에 저장
-void item_init(void)
+void Item::item_init(void)
 {
     s_read_weapons_csv("data/weapons.csv", temp_weapons, EQUIPMENTS_COUNT);
     s_read_armors_csv("data/armors.csv", temp_armors, EQUIPMENTS_COUNT);
@@ -228,7 +233,7 @@ void item_init(void)
     }
 }
 
-void use_weapon(equipment_rarity_t next_rarity, int next_index, player_t* player)
+void Item::use_weapon(equipment_rarity_t next_rarity, int next_index, player_t* player)
 {
     if (weapon_inventory[next_rarity][next_index].count == 0) return;
 
@@ -257,7 +262,7 @@ void use_weapon(equipment_rarity_t next_rarity, int next_index, player_t* player
     set_player_break_extra_damage(player, weapons[next_rarity][next_index].break_extra_damage_bonus, 1);
 }
 
-void use_armor(equipment_rarity_t next_rarity, int next_index, player_t* player)
+void Item::use_armor(equipment_rarity_t next_rarity, int next_index, player_t* player)
 {
     if (armor_inventory[next_rarity][next_index].count == 0) return;
 
@@ -286,7 +291,7 @@ void use_armor(equipment_rarity_t next_rarity, int next_index, player_t* player)
     set_player_defense_rate(player, armors[next_rarity][next_index].defence_bonus, 1);
 }
 
-bool use_heal_item(int item_index, player_t* player)
+bool Item::use_heal_item(int item_index, player_t* player)
 {
     if (item_index < 0 || item_index >= HEAL_ITEM_COUNT || heal_item_inventory[item_index] <= 0) {
         return false; // 아이템이 없으면 실패
@@ -297,7 +302,7 @@ bool use_heal_item(int item_index, player_t* player)
 
     // 스탯 랜덤 증가 아이템
     if (item->hp_bonus == -1) {
-        int stat_choice = genrand_int32() % 3; // 0: 공격력, 1: 최대체력, 2: 속도 (beta)
+        int stat_choice = mt.genrand_int32() % 3; // 0: 공격력, 1: 최대체력, 2: 속도 (beta)
         switch (stat_choice) {
         case 0:
             set_player_attack(player, 10, 0);
@@ -318,7 +323,7 @@ bool use_heal_item(int item_index, player_t* player)
     return true;
 }
 
-void apply_set_effects(player_t* player, int selected_index)
+void Item::apply_set_effects(player_t* player, int selected_index)
 {
 	player->set_effect_id = set_effects[selected_index].id; // 세트 효과 적용
 
@@ -352,7 +357,7 @@ void apply_set_effects(player_t* player, int selected_index)
     }
 }
 
-void remove_set_effects(player_t* player)
+void Item::remove_set_effects(player_t* player)
 {
     switch (player->set_effect_id) {
     case SET_EFFECT_NONE:

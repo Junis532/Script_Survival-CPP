@@ -9,6 +9,7 @@ class Cleaner
 {
 public:
 	Cleaner();
+	~Cleaner();
 
 	void UI_cleaner_all_display(void);
 

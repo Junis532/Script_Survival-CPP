@@ -22,6 +22,11 @@
 #define UNIQUE_BASE      0.001   // 기본 0.1%
 #define UNIQUE_MAX       0.10    // 최대 10%
 
+Monster monsters;
+
+Monster::Monster() {}
+Monster::~Monster() {}
+
 // 내부 스탯 저장소
 static monster_t stats_pool[MAX_STATS];
 static int       stats_count = 0;
@@ -33,7 +38,7 @@ static inline int curved_money_drop(int stage, double exponent)
     int max = (stage + 1) * DROP_STEP;
 
     // 2) 0.0~1.0 균일 랜덤
-    double u = genrand_real1();
+    double u = mt.genrand_real1();
 
     // 3) 곡선 변형: ease‑out 예) exponent=0.5
     double v = pow(u, exponent);
@@ -56,11 +61,11 @@ static inline void try_drop_equipment(player_t* player,
                                 int rarity,
                                 int item_count)
 {
-    if (genrand_real1() >= threshold)
+    if (mt.genrand_real1() >= threshold)
         return;
 
-    int equipment_type = (int)(genrand_int32() & 1); // 0=weapon, 1=armor
-    int idx = genrand_int32() % item_count;
+    int equipment_type = (int)(mt.genrand_int32() & 1); // 0=weapon, 1=armor
+    int idx = mt.genrand_int32() % item_count;
 
     if (equipment_type == 0) {
         weapon_inventory[rarity][idx].is_was_having = TRUE;
@@ -150,7 +155,7 @@ static void load_stats_csv(void) {
 }
 
 // change.log 에서 monster_index 블록을 와이드로 읽어 m->image[] 에 저장
-bool load_image_log(monster_t* m, int monster_index) {
+bool Monster:: load_image_log(monster_t* m, int monster_index) {
     // UTF-8 → wchar 로 직접 읽기
     FILE* fp = _wfopen(L"data/monster_image.log", L"r, ccs=UTF-8");
     if (!fp) { fwprintf(stderr, L"log 파일 열기 실패\n"); return false; }
@@ -218,7 +223,7 @@ bool load_image_log(monster_t* m, int monster_index) {
     return false;
 }
 
-bool monster_init(monster_t* m, int monster_index) {
+bool Monster::monster_init(monster_t* m, int monster_index) {
     // 1) stats 한 번만 로드
     load_stats_csv();
     if (monster_index < 0 || monster_index >= stats_count) {
@@ -233,7 +238,7 @@ bool monster_init(monster_t* m, int monster_index) {
     m->used_skill = false;
 }
 
-void monster_skill(monster_t* monster, int type) {
+void Monster::monster_skill(monster_t* monster, int type) {
 
     if (type == 0) {
         monster->attack = (int)(monster->attack * 1.2);
@@ -250,7 +255,7 @@ void monster_skill(monster_t* monster, int type) {
     utils.utils_set_color(COLOR_DEFAULT_TEXT);
 }
 
-void final_monster_skill(monster_t* monster, player_t* player, int damage)
+void Monster::final_monster_skill(monster_t* monster, player_t* player, int damage)
 {
     set_player_hp(player, -damage);
     utils.utils_set_color(COLOR_RED);
@@ -258,7 +263,7 @@ void final_monster_skill(monster_t* monster, player_t* player, int damage)
     utils.utils_set_color(COLOR_DEFAULT_TEXT);
 }
 
-void monster_item_drop(player_t* player, int index)
+void Monster::monster_item_drop(player_t* player, int index)
 {
     //if (index < 0 || index >= MAX_STAGE) return;
 

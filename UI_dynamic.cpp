@@ -17,14 +17,10 @@ using namespace std;
 
 Dynamic dynamic;
 
-Dynamic::Dynamic()
-{
+Dynamic::Dynamic() {}
 
-}
-Dynamic::~Dynamic()
-{
+Dynamic::~Dynamic() {}
 
-}
 
 static void s_print_diff_stat(int diff_stat, int x, int y)
 {

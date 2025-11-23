@@ -9,14 +9,18 @@
 #include "story.h"
 #include "utils.h"
 
-void UI_control_init(UI_state_t* ui_main_state, title_state_t* ui_title_state, player_action_state_t* player_action_state)
+UIControl uiControl;
+UIControl::UIControl() {}
+UIControl::~UIControl() {}
+
+void UIControl::UI_control_init(UI_state_t* ui_main_state, title_state_t* ui_title_state, player_action_state_t* player_action_state)
 {
     *ui_main_state = UI_STATE_TITLE;
     *ui_title_state = TITLE_STATE_START;
     *player_action_state = PLAYER_ACTION_ATTACK;
 }
 
-void UI_control_title(UI_state_t* ui_main_state, title_state_t* ui_title_state, int menu_key)
+void UIControl::UI_control_title(UI_state_t* ui_main_state, title_state_t* ui_title_state, int menu_key)
 {
     if (menu_key == ENTER) {
         if (*ui_title_state == TITLE_STATE_START) *ui_main_state = UI_STATE_SELECT_GAME_MODE;
@@ -32,7 +36,7 @@ void UI_control_title(UI_state_t* ui_main_state, title_state_t* ui_title_state, 
 }
 
 
-void UI_control_setting(UI_state_t* ui_main_state, setting_state_t* ui_setting_state, bool is_come_esc_menu, int* global_volume, int key)
+void UIControl::UI_control_setting(UI_state_t* ui_main_state, setting_state_t* ui_setting_state, bool is_come_esc_menu, int* global_volume, int key)
 {
     switch (key) {
     case UP:
@@ -79,7 +83,7 @@ void UI_control_setting(UI_state_t* ui_main_state, setting_state_t* ui_setting_s
 
 
 // 모드 선택 화면 ↑↓ + 엔터 처리
-void UI_control_game_mode(UI_state_t* ui_main_state, game_mode_state_t* ui_mode_state,
+void UIControl::UI_control_game_mode(UI_state_t* ui_main_state, game_mode_state_t* ui_mode_state,
     game_mode_state_t* game_mode, int key, bool is_infinite_unlocked
 )
 {
@@ -106,7 +110,7 @@ void UI_control_game_mode(UI_state_t* ui_main_state, game_mode_state_t* ui_mode_
 }
 
 
-void UI_control_select_new_or_load_game(UI_state_t* ui_main_state, new_or_load_game_t* new_or_load_game, int key)
+void UIControl::UI_control_select_new_or_load_game(UI_state_t* ui_main_state, new_or_load_game_t* new_or_load_game, int key)
 {
     if (key == ENTER) {
         if (*new_or_load_game == NEW_GAME) {
@@ -125,7 +129,7 @@ void UI_control_select_new_or_load_game(UI_state_t* ui_main_state, new_or_load_g
 }
 
 
-void UI_control_select_heal_or_store(UI_state_t* ui_main_state, heal_or_store_t* heal_or_store_state, player_t* player, int key)
+void UIControl::UI_control_select_heal_or_store(UI_state_t* ui_main_state, heal_or_store_t* heal_or_store_state, player_t* player, int key)
 {
     if (key == ENTER) {
         if (*heal_or_store_state == HEAL_OR_STORE_HEAL) {
@@ -170,7 +174,7 @@ void UI_control_select_heal_or_store(UI_state_t* ui_main_state, heal_or_store_t*
 }
 
 
-void UI_control_load_menu(UI_state_t* ui_main_state, save_load_num_t* ui_save_load_num, int key, game_context_t* context)
+void UIControl::UI_control_load_menu(UI_state_t* ui_main_state, save_load_num_t* ui_save_load_num, int key, game_context_t* context)
 {
     if (key == ENTER) {
         if (*ui_main_state == UI_STATE_SAVE) {
@@ -195,7 +199,7 @@ void UI_control_load_menu(UI_state_t* ui_main_state, save_load_num_t* ui_save_lo
     }
 }
 
-void UI_control_save_load_menu(UI_state_t* ui_main_state, save_load_num_t* ui_save_load_num, int key, game_context_t* context)
+void UIControl::UI_control_save_load_menu(UI_state_t* ui_main_state, save_load_num_t* ui_save_load_num, int key, game_context_t* context)
 {
     if (key == ENTER) {
         if (*ui_main_state == UI_STATE_SAVE) {
@@ -221,7 +225,7 @@ void UI_control_save_load_menu(UI_state_t* ui_main_state, save_load_num_t* ui_sa
 }
 
 
-void UI_control_hero_select(UI_state_t* ui_main_state, hero_t* choice_hero, int key)
+void UIControl::UI_control_hero_select(UI_state_t* ui_main_state, hero_t* choice_hero, int key)
 {
     int current_hero = (int)*choice_hero;
 
@@ -238,7 +242,7 @@ void UI_control_hero_select(UI_state_t* ui_main_state, hero_t* choice_hero, int 
     *choice_hero = (hero_t)current_hero;
 }
 
-void UI_control_generate_upgrade_choices(player_t* player, upgrade_type_t out_choices[])
+void UIControl::UI_control_generate_upgrade_choices(player_t* player, upgrade_type_t out_choices[])
 {
     upgrade_type_t possible[UPGRADE_MAX];
     int count = 0;
@@ -252,7 +256,7 @@ void UI_control_generate_upgrade_choices(player_t* player, upgrade_type_t out_ch
 
     // Fisher-Yates shuffle
     for (int i = count - 1; i > 0; i--) {
-        int j = genrand_int32() % (i + 1);
+        int j = mt.genrand_int32() % (i + 1);
         upgrade_type_t temp = possible[i];
         possible[i] = possible[j];
         possible[j] = temp;
@@ -264,7 +268,7 @@ void UI_control_generate_upgrade_choices(player_t* player, upgrade_type_t out_ch
 }
 
 // 선택한 업그레이드를 플레이어에게 적용하는 함수
-void UI_control_handle_upgrade_selection(UI_state_t* ui_main_state, player_t* player,
+void UIControl::UI_control_handle_upgrade_selection(UI_state_t* ui_main_state, player_t* player,
     const upgrade_type_t choices[], int* selection, int key)
 {
     if (key == LEFT) {
@@ -291,7 +295,7 @@ void UI_control_handle_upgrade_selection(UI_state_t* ui_main_state, player_t* pl
     }
 }
 
-player_action_state_t UI_control_player_action(player_action_state_t* player_action_state, int menu_key)
+player_action_state_t UIControl::UI_control_player_action(player_action_state_t* player_action_state, int menu_key)
 {
     if (menu_key == ENTER) {
         return *player_action_state; // return player_action_t
@@ -305,7 +309,7 @@ player_action_state_t UI_control_player_action(player_action_state_t* player_act
     return PLAYER_ACTION_NONE;
 }
 
-void UI_control_esc_menu(UI_state_t* ui_main_state, esc_menu_state_t* ui_esc_menu_state, int menu_key, int gamemode)
+void UIControl::UI_control_esc_menu(UI_state_t* ui_main_state, esc_menu_state_t* ui_esc_menu_state, int menu_key, int gamemode)
 {
     if (gamemode == GAME_MODE_NORMAL) {
         if (menu_key == ENTER) {
@@ -371,7 +375,7 @@ void UI_control_esc_menu(UI_state_t* ui_main_state, esc_menu_state_t* ui_esc_men
 }
 
 // 무기 장착 여부 반환 (0 변경 없음, 1 무기 변경, 2 방어구 변경)
-int UI_control_inventory(UI_state_t* ui_main_state, player_t* player, int menu_key)
+int UIControl::UI_control_inventory(UI_state_t* ui_main_state, player_t* player, int menu_key)
 {
     inventory_state_t current_state = get_inventory_state();
     focus_level_t focus_level = get_inventory_focus_level();
@@ -411,12 +415,12 @@ int UI_control_inventory(UI_state_t* ui_main_state, player_t* player, int menu_k
             if (current_state == INVENTORY_STATE_WEAPON) {
                 bool is_same_item = (current_rarity == player->weapon_rarity && selected_index == player->weapon_index);
                 if (!is_same_item) {
-                    use_weapon(current_rarity, selected_index, player);
+                    item.use_weapon(current_rarity, selected_index, player);
                     if (player->weapon_index == player->armor_index && player->weapon_rarity == RARITY_UNIQUE && player->armor_rarity == RARITY_UNIQUE) {
-                        apply_set_effects(player, selected_index);
+                        item.apply_set_effects(player, selected_index);
                     }
                     else {
-                        remove_set_effects(player);
+                        item.remove_set_effects(player);
                     }
                     return 1; // 무기 변경
                 }
@@ -424,18 +428,18 @@ int UI_control_inventory(UI_state_t* ui_main_state, player_t* player, int menu_k
             else if (current_state == INVENTORY_STATE_ARMOR) {
                 bool is_same_item = (current_rarity == player->armor_rarity && selected_index == player->armor_index);
                 if (!is_same_item) {
-                    use_armor(current_rarity, selected_index, player);
+                    item.use_armor(current_rarity, selected_index, player);
                     if (player->weapon_index == player->armor_index && player->weapon_rarity == RARITY_UNIQUE && player->armor_rarity == RARITY_UNIQUE) {
-                        apply_set_effects(player, selected_index);
+                        item.apply_set_effects(player, selected_index);
                     }
                     else {
-                        remove_set_effects(player);
+                        item.remove_set_effects(player);
                     }
                     return 2; // 방어구 변경
                 }
             }
             else if (current_state == INVENTORY_STATE_HEAL_ITEM) {
-                if (use_heal_item(selected_index, player)) {
+                if (item.use_heal_item(selected_index, player)) {
                     return 3; // 회복 아이템 사용
                 }
             }
@@ -501,18 +505,18 @@ int UI_control_inventory(UI_state_t* ui_main_state, player_t* player, int menu_k
         }
     }
 
-    set_inventory_state(current_state);
-    set_inventory_focus_level(focus_level);
-    set_inventory_rarity_type(current_rarity);
-    set_inventory_selected_index(selected_index);
-    set_inventory_weapon_page(weapon_page);
-    set_inventory_armor_page(armor_page);
+    inventory.set_inventory_state(current_state);
+    inventory.set_inventory_focus_level(focus_level);
+    inventory.set_inventory_rarity_type(current_rarity);
+    inventory.set_inventory_selected_index(selected_index);
+    inventory.set_inventory_weapon_page(weapon_page);
+    inventory.set_inventory_armor_page(armor_page);
 
     return 0;
 }
 
 
-void UI_control_store(UI_state_t* ui_main_state, player_t* player, int menu_key)
+void UIControl::UI_control_store(UI_state_t* ui_main_state, player_t* player, int menu_key)
 {
     store_state_t current_state = get_store_state();
     focus_level_t focus_level = get_store_focus_level();
@@ -592,7 +596,7 @@ void UI_control_store(UI_state_t* ui_main_state, player_t* player, int menu_key)
                 if (current_state == STORE_STATE_WEAPON) {
                     if (player->coin >= weapons[current_rarity][selected_index].buy_price) {
                         player->coin -= weapons[current_rarity][selected_index].buy_price;
-                        get_item(current_rarity, selected_index, ITEM_TYPE_WEAPON);
+                        inventory.get_item(current_rarity, selected_index, ITEM_TYPE_WEAPON);
                         set_store_buy_sell_successful_state(STORE_BUY_SUCCESS);
                     }
                     else { set_store_buy_sell_successful_state(STORE_BUY_FAIL); }
@@ -600,7 +604,7 @@ void UI_control_store(UI_state_t* ui_main_state, player_t* player, int menu_key)
                 else if (current_state == STORE_STATE_ARMOR) {
                     if (player->coin >= armors[current_rarity][selected_index].buy_price) {
                         player->coin -= armors[current_rarity][selected_index].buy_price;
-                        get_item(current_rarity, selected_index, ITEM_TYPE_ARMOR);
+                        inventory.get_item(current_rarity, selected_index, ITEM_TYPE_ARMOR);
                         set_store_buy_sell_successful_state(STORE_BUY_SUCCESS);
                     }
                     else { set_store_buy_sell_successful_state(STORE_BUY_FAIL); }
@@ -608,7 +612,7 @@ void UI_control_store(UI_state_t* ui_main_state, player_t* player, int menu_key)
                 else if (current_state == STORE_STATE_HEAL_ITEM) {
                     if (player->coin >= heal_items[selected_index].buy_price) {
                         player->coin -= heal_items[selected_index].buy_price;
-                        get_item(current_rarity, selected_index, ITEM_TYPE_HEAL_ITEM);
+                        inventory.get_item(current_rarity, selected_index, ITEM_TYPE_HEAL_ITEM);
                         set_store_buy_sell_successful_state(STORE_BUY_SUCCESS);
                     }
                     else { set_store_buy_sell_successful_state(STORE_BUY_FAIL); }
@@ -618,17 +622,17 @@ void UI_control_store(UI_state_t* ui_main_state, player_t* player, int menu_key)
                 utils.utils_sound_play(TEXT("SFX/SoundEffect/store_sell.wav"));
                 if (current_state == STORE_STATE_WEAPON && weapon_inventory[current_rarity][selected_index].count > 0) {
                     player->coin += weapons[current_rarity][selected_index].sell_price;
-                    sell_item(current_rarity, selected_index, ITEM_TYPE_WEAPON);
+                    inventory.sell_item(current_rarity, selected_index, ITEM_TYPE_WEAPON);
                     set_store_buy_sell_successful_state(STORE_SELL_SUCCESS);
                 }
                 else if (current_state == STORE_STATE_ARMOR && armor_inventory[current_rarity][selected_index].count > 0) {
                     player->coin += armors[current_rarity][selected_index].sell_price;
-                    sell_item(current_rarity, selected_index, ITEM_TYPE_ARMOR);
+                    inventory.sell_item(current_rarity, selected_index, ITEM_TYPE_ARMOR);
                     set_store_buy_sell_successful_state(STORE_SELL_SUCCESS);
                 }
                 else if (current_state == STORE_STATE_HEAL_ITEM && heal_item_inventory[selected_index] > 0) {
                     player->coin += heal_items[selected_index].sell_price;
-                    sell_item(current_rarity, selected_index, ITEM_TYPE_HEAL_ITEM);
+                    inventory.sell_item(current_rarity, selected_index, ITEM_TYPE_HEAL_ITEM);
                     set_store_buy_sell_successful_state(STORE_SELL_SUCCESS);
                 }
                 else { set_store_buy_sell_successful_state(STORE_SELL_FAIL); }

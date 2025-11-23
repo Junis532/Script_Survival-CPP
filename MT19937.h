@@ -9,8 +9,20 @@
 #define UPPER_MASK 0x80000000UL /* most significant w-r bits */
 #define LOWER_MASK 0x7fffffffUL /* least significant r bits */
 
-void init_genrand(uint32_t s);
+class MT19937
+{
+public:
+	MT19937();
+	~MT19937();
 
-uint32_t genrand_int32(void);
+	void init_genrand(uint32_t s);
+	uint32_t genrand_int32(void);
+	double genrand_real1(void);
 
-double genrand_real1(void);
+private:
+	uint32_t mt[N];
+	int mti;
+
+};
+
+extern MT19937 mt;

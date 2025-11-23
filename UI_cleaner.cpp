@@ -7,10 +7,9 @@ using namespace std;
 
 Cleaner cleaner;
 
-Cleaner::Cleaner()
-{
+Cleaner::Cleaner() {}
+Cleaner::~Cleaner() {}
 
-}
 
 void Cleaner::UI_cleaner_all_display(void)
 {

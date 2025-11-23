@@ -19,7 +19,7 @@ int main(void)
     }
     uint32_t seed = (uint32_t)(ts.tv_nsec ^ ts.tv_sec);
 
-    init_genrand(seed);
+    mt.init_genrand(seed);
 
     HANDLE hOut = GetStdHandle(STD_OUTPUT_HANDLE);
     SMALL_RECT windowSize = { 0, 0, 176, 30 };
