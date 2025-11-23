@@ -25,10 +25,10 @@ Dynamic::~Dynamic() {}
 static void s_print_diff_stat(int diff_stat, int x, int y)
 {
     utils.utils_gotoxy(x, y);  // 호출
-    printf("MAX HP : ");
+    cout << ("MAX HP : ");
     if (diff_stat > 0) utils.utils_set_color(COLOR_STAT_UP);
     else utils.utils_set_color(COLOR_STAT_DOWN);
-    printf("%+d", diff_stat);
+    cout << ("%+d", diff_stat);
     utils.utils_set_color(COLOR_DEFAULT_TEXT);
 }
 
@@ -65,12 +65,12 @@ static void s_print_stat_bonus(
         if (selected_attack != 0 || current_attack != 0) {
             utils.utils_gotoxy(79, ++y);
             int stat_diff = selected_attack - current_attack;
-            printf("공격력 %+d", selected_attack);
+            cout << ("공격력 %+d", selected_attack);
             if (stat_diff != 0) {
                 utils.utils_gotoxy(diff_x, diff_y++);
-                printf("ATK    : ");
+                cout << ("ATK    : ");
                 utils.utils_set_color(stat_diff > 0 ? COLOR_STAT_UP : COLOR_STAT_DOWN);
-                printf("%+d", stat_diff);
+                cout << ("%+d", stat_diff);
                 utils.utils_set_color(COLOR_DEFAULT_TEXT);
             }
         }
@@ -81,12 +81,12 @@ static void s_print_stat_bonus(
         if (selected_crit_chance != 0.0 || current_crit_chance != 0.0) {
             utils.utils_gotoxy(79, ++y);
             double stat_diff = selected_crit_chance - current_crit_chance;
-            printf("치명타 확률 %+.2f%%", selected_crit_chance * 100);
+            cout << ("치명타 확률 %+.2f%%", selected_crit_chance * 100);
             if (stat_diff != 0.0) {
                 utils.utils_gotoxy(diff_x, diff_y++);
-                printf("CRIT CH : ");
+                cout << ("CRIT CH : ");
                 utils.utils_set_color(stat_diff > 0 ? COLOR_STAT_UP : COLOR_STAT_DOWN);
-                printf("%+.2f%%", stat_diff * 100);
+                cout << ("%+.2f%%", stat_diff * 100);
                 utils.utils_set_color(COLOR_DEFAULT_TEXT);
             }
         }
@@ -97,12 +97,12 @@ static void s_print_stat_bonus(
         if (selected_crit_dmg != 0.0 || current_crit_dmg != 0.0) {
             utils.utils_gotoxy(79, ++y);
             double stat_diff = selected_crit_dmg - current_crit_dmg;
-            printf("치명타 피해 %+.2f%%", selected_crit_dmg * 100);
+            cout << ("치명타 피해 %+.2f%%", selected_crit_dmg * 100);
             if (stat_diff != 0.0) {
                 utils.utils_gotoxy(diff_x, diff_y++);
-                printf("CRIT DMG: ");
+                cout << ("CRIT DMG: ");
                 utils.utils_set_color(stat_diff > 0 ? COLOR_STAT_UP : COLOR_STAT_DOWN);
-                printf("%+.2f%%", stat_diff * 100);
+                cout << ("%+.2f%%", stat_diff * 100);
                 utils.utils_set_color(COLOR_DEFAULT_TEXT);
             }
         }
@@ -113,12 +113,12 @@ static void s_print_stat_bonus(
         if (selected_break_extra != 0 || current_break_extra != 0) {
             utils.utils_gotoxy(79, ++y);
             int stat_diff = selected_break_extra - current_break_extra;
-            printf("격파 추가 피해 %+d", selected_break_extra);
+            cout << ("격파 추가 피해 %+d", selected_break_extra);
             if (stat_diff != 0) {
                 utils.utils_gotoxy(diff_x, diff_y++);
-                printf("BRK DMG : ");
+                cout << ("BRK DMG : ");
                 utils.utils_set_color(stat_diff > 0 ? COLOR_STAT_UP : COLOR_STAT_DOWN);
-                printf("%+d", stat_diff);
+                cout << ("%+d", stat_diff);
                 utils.utils_set_color(COLOR_DEFAULT_TEXT);
             }
         }
@@ -130,12 +130,12 @@ static void s_print_stat_bonus(
         if (selected_hp != 0 || current_hp != 0) {
             utils.utils_gotoxy(79, ++y);
             int stat_diff = selected_hp - current_hp;
-            printf("최대 체력 %+d", selected_hp);
+            cout << ("최대 체력 %+d", selected_hp);
             if (stat_diff != 0) {
                 utils.utils_gotoxy(diff_x, diff_y++);
-                printf("MAX HP : ");
+                cout << ("MAX HP : ");
                 utils.utils_set_color(stat_diff > 0 ? COLOR_STAT_UP : COLOR_STAT_DOWN);
-                printf("%+d", stat_diff);
+                cout << ("%+d", stat_diff);
                 utils.utils_set_color(COLOR_DEFAULT_TEXT);
             }
         }
@@ -146,12 +146,12 @@ static void s_print_stat_bonus(
         if (selected_speed != 0 || current_speed != 0) {
             utils.utils_gotoxy(79, ++y);
             int stat_diff = selected_speed - current_speed;
-            printf("속도 %+d", selected_speed);
+            cout << ("속도 %+d", selected_speed);
             if (stat_diff != 0) {
                 utils.utils_gotoxy(diff_x, diff_y++);
-                printf("SPD    : ");
+                cout << ("SPD    : ");
                 utils.utils_set_color(stat_diff > 0 ? COLOR_STAT_UP : COLOR_STAT_DOWN);
-                printf("%+d", stat_diff);
+                cout << ("%+d", stat_diff);
                 utils.utils_set_color(COLOR_DEFAULT_TEXT);
             }
         }
@@ -162,12 +162,12 @@ static void s_print_stat_bonus(
         if (selected_evasion != 0.0 || current_evasion != 0.0) {
             utils.utils_gotoxy(79, ++y);
             double stat_diff = selected_evasion - current_evasion;
-            printf("회피율 %+.2f%%", selected_evasion * 100);
+            cout << ("회피율 %+.2f%%", selected_evasion * 100);
             if (stat_diff != 0.0) {
                 utils.utils_gotoxy(diff_x, diff_y++);
-                printf("EVA    : ");
+                cout << ("EVA    : ");
                 utils.utils_set_color(stat_diff > 0 ? COLOR_STAT_UP : COLOR_STAT_DOWN);
-                printf("%+.2f%%", stat_diff * 100);
+                cout << ("%+.2f%%", stat_diff * 100);
                 utils.utils_set_color(COLOR_DEFAULT_TEXT);
             }
         }
@@ -178,12 +178,12 @@ static void s_print_stat_bonus(
         if (selected_defence != 0.0 || current_defence != 0.0) {
             utils.utils_gotoxy(79, ++y);
             double stat_diff = selected_defence - current_defence;
-            printf("방어율 %+.2f%%", selected_defence * 100);
+            cout << ("방어율 %+.2f%%", selected_defence * 100);
             if (stat_diff != 0.0) {
                 utils.utils_gotoxy(diff_x, diff_y++);
-                printf("DEF    : ");
+                cout << ("DEF    : ");
                 utils.utils_set_color(stat_diff > 0 ? COLOR_STAT_UP : COLOR_STAT_DOWN);
-                printf("%+.2f%%", stat_diff * 100);
+                cout << ("%+.2f%%", stat_diff * 100);
                 utils.utils_set_color(COLOR_DEFAULT_TEXT);
             }
         }
@@ -221,10 +221,10 @@ static void s_print_inventory_item_page(
             utils.utils_gotoxy(79, 6);
 
             if (!inventory[current_rarity][i].is_was_having) {
-                printf("획득하지 않은 아이템입니다.");
+                cout << ("획득하지 않은 아이템입니다.");
             }
             else {
-                printf("%s", current_equipment_list[current_rarity][i].description);
+                cout << ("%s", current_equipment_list[current_rarity][i].description);
                 s_print_stat_bonus(current_rarity, current_equipment_list, player, i, 7, type);
 
                 if (current_rarity == RARITY_UNIQUE) {
@@ -238,9 +238,9 @@ static void s_print_inventory_item_page(
                         utils.utils_set_color(COLOR_DEFAULT);
                     }
                     utils.utils_gotoxy(79, 14);
-                    printf("%s 세트 효과", set_effects[selected_item_index].name);
+                    cout << ("%s 세트 효과", set_effects[selected_item_index].name);
                     utils.utils_gotoxy(79, 15);
-                    printf("%s", set_effects[selected_item_index].description);
+                    cout << ("%s", set_effects[selected_item_index].description);
 
                     
                     utils.utils_set_color(COLOR_DEFAULT_TEXT);
@@ -253,20 +253,20 @@ static void s_print_inventory_item_page(
 
         // 아이템 리스트 출력
         utils.utils_gotoxy(x, y);
-        printf("* ");
+        cout << ("* ");
         if (inventory[current_rarity][i].is_was_having) {
-            printf("%s (%d)", current_equipment_list[current_rarity][i].name,
+            cout << ("%s (%d)", current_equipment_list[current_rarity][i].name,
                 inventory[current_rarity][i].count);
         }
         else {
-            printf("미획득");
+            cout << ("미획득");
         }
     }
 
     // 페이지 정보 출력
     utils.utils_set_color(COLOR_DEFAULT_TEXT);
     utils.utils_gotoxy(35, 17);
-    printf("%d / %d", page + 1, total_pages);
+    cout << ("%d / %d", page + 1, total_pages);
 }
 
 static void s_print_heal_item_list(player_t* player, focus_level_t focus_level, int selected_item_index)
@@ -282,7 +282,7 @@ static void s_print_heal_item_list(player_t* player, focus_level_t focus_level, 
             cleaner.UI_cleaner_inventory_item_description();
             utils.utils_gotoxy(79, 6);
             utils.utils_set_color(COLOR_DEFAULT_TEXT);
-            printf("%s", heal_items[i].description);
+            cout << ("%s", heal_items[i].description);
 
             utils.utils_set_color(COLOR_SELECT_MENU);
         }
@@ -291,7 +291,7 @@ static void s_print_heal_item_list(player_t* player, focus_level_t focus_level, 
         }
 
         utils.utils_gotoxy(x, y);
-        printf("* %s (%d)", heal_items[i].name, heal_item_inventory[i]);
+        cout << ("* %s (%d)", heal_items[i].name, heal_item_inventory[i]);
     }
 
     utils.utils_set_color(COLOR_DEFAULT_TEXT);
@@ -312,80 +312,80 @@ static void s_print_option(player_t* player)
     int x = 10, y = 6;
     utils.utils_gotoxy(x, y++);
     if (bonus_attack != 0) {
-        printf("공격력: %d (%+d)", player->_base_attack, bonus_attack);
+        cout << ("공격력: %d (%+d)", player->_base_attack, bonus_attack);
     }
     else {
-        printf("공격력: %d", player->_base_attack);
+        cout << ("공격력: %d", player->_base_attack);
     }
 
     utils.utils_gotoxy(x, y++);
     if (bonus_max_hp != 0) {
-        printf("최대 체력: %d (%+d)", player->_base_max_hp, bonus_max_hp);
+        cout << ("최대 체력: %d (%+d)", player->_base_max_hp, bonus_max_hp);
     }
     else {
-        printf("최대 체력: %d", player->_base_max_hp);
+        cout << ("최대 체력: %d", player->_base_max_hp);
     }
 
     y++;
 
     utils.utils_gotoxy(x, y++);
     if (bonus_speed != 0) {
-        printf("스피드: %d (%+d)", player->_base_speed, bonus_speed);
+        cout << ("스피드: %d (%+d)", player->_base_speed, bonus_speed);
     }
     else {
-        printf("스피드: %d", player->_base_speed);
+        cout << ("스피드: %d", player->_base_speed);
     }
 
     utils.utils_gotoxy(x, y++);
     if (bonus_evasion_rate != 0.0f) {
-        printf("회피율: %.1f%% (%+.1f%%)", player->_base_evasion_rate * 100.f, bonus_evasion_rate * 100.f);
+        cout << ("회피율: %.1f%% (%+.1f%%)", player->_base_evasion_rate * 100.f, bonus_evasion_rate * 100.f);
     }
     else {
-        printf("회피율: %.1f%%", player->_base_evasion_rate * 100.f);
+        cout << ("회피율: %.1f%%", player->_base_evasion_rate * 100.f);
     }
 
     utils.utils_gotoxy(x, y++);
     if (bonus_defense_rate != 0.0f) {
-        printf("방어율: %.1f%% (%+.1f%%)", player->_base_defense_rate * 100.f, bonus_defense_rate * 100.f);
+        cout << ("방어율: %.1f%% (%+.1f%%)", player->_base_defense_rate * 100.f, bonus_defense_rate * 100.f);
     }
     else {
-        printf("방어율: %.1f%%", player->_base_defense_rate * 100.f);
+        cout << ("방어율: %.1f%%", player->_base_defense_rate * 100.f);
     }
 
     y++;
 
     utils.utils_gotoxy(x, y++);
     if (bonus_crit_chance != 0.0f) {
-        printf("치명타 확률: %.1f%% (%+.1f%%)", player->_base_crit_chance * 100.f, bonus_crit_chance * 100.f);
+        cout << ("치명타 확률: %.1f%% (%+.1f%%)", player->_base_crit_chance * 100.f, bonus_crit_chance * 100.f);
     }
     else {
-        printf("치명타 확률: %.1f%%", player->_base_crit_chance * 100.f);
+        cout << ("치명타 확률: %.1f%%", player->_base_crit_chance * 100.f);
     }
 
     utils.utils_gotoxy(x, y++);
     if (bonus_crit_damage != 0.0f) {
-        printf("치명타 피해량: %.1f%% (%+.1f%%)", player->_base_crit_damage * 100.f, bonus_crit_damage * 100.f);
+        cout << ("치명타 피해량: %.1f%% (%+.1f%%)", player->_base_crit_damage * 100.f, bonus_crit_damage * 100.f);
     }
     else {
-        printf("치명타 피해량: %.1f%%", player->_base_crit_damage * 100.f);
+        cout << ("치명타 피해량: %.1f%%", player->_base_crit_damage * 100.f);
     }
 
     y++;
 
     utils.utils_gotoxy(x, y++);
     if (bonus_break_damage != 0) {
-        printf("강인도 피해량: %d (%+d)", player->_base_break_damage, bonus_break_damage);
+        cout << ("강인도 피해량: %d (%+d)", player->_base_break_damage, bonus_break_damage);
     }
     else {
-        printf("강인도 피해량: %d", player->_base_break_damage);
+        cout << ("강인도 피해량: %d", player->_base_break_damage);
     }
 
     utils.utils_gotoxy(x, y++);
     if (bonus_break_extra_damage != 0) {
-        printf("격파 추가 피해량: %d (%+d)", player->_base_break_extra_damage, bonus_break_extra_damage);
+        cout << ("격파 추가 피해량: %d (%+d)", player->_base_break_extra_damage, bonus_break_extra_damage);
     }
     else {
-        printf("격파 추가 피해량: %d", player->_base_break_extra_damage);
+        cout << ("격파 추가 피해량: %d", player->_base_break_extra_damage);
     }
 }
 
@@ -419,12 +419,12 @@ static void s_print_store_item_page(
             cleaner.UI_cleaner_inventory_item_description();
             utils.utils_gotoxy(79, 6);
             utils.utils_set_color(COLOR_DEFAULT_TEXT);
-            printf("%s", current_equipment_list[current_rarity][i].description);
+            cout << ("%s", current_equipment_list[current_rarity][i].description);
             if (current_rarity == RARITY_UNIQUE) {
                 utils.utils_gotoxy(79, 14);
-                printf("%s 세트 효과", set_effects[selected_item_index].name);
+                cout << ("%s 세트 효과", set_effects[selected_item_index].name);
                 utils.utils_gotoxy(79, 15);
-                printf("%s", set_effects[selected_item_index].description);
+                cout << ("%s", set_effects[selected_item_index].description);
             }
             s_print_stat_bonus(current_rarity, current_equipment_list, player, i, 7, type);
 
@@ -433,7 +433,7 @@ static void s_print_store_item_page(
                     buy_sell_state == (j == 0 ? STORE_STATE_BUY : STORE_STATE_SELL));
                 utils.utils_set_color(sel ? COLOR_SELECT_MENU : COLOR_DEFAULT);
                 utils.utils_gotoxy(buy_sell_menu[j].x, buy_sell_menu[j].y);
-                printf("%s", buy_sell_menu[j].text);
+                cout << ("%s", buy_sell_menu[j].text);
 
                 char price_buf[32];
                 int price = (j == 0)
@@ -445,7 +445,7 @@ static void s_print_store_item_page(
                 int price_len = (int)strlen(price_buf);
                 int offset = (text_len - price_len) / 2;
                 utils.utils_gotoxy(buy_sell_menu[j].x + offset, buy_sell_menu[j].y + 2);
-                printf("%s", price_buf);
+                cout << ("%s", price_buf);
             }
             utils.utils_set_color(COLOR_SELECT_MENU);
         }
@@ -455,7 +455,7 @@ static void s_print_store_item_page(
 
         // 아이템 리스트 출력
         utils.utils_gotoxy(x, y);
-        printf("* %s (%d)",
+        cout << ("* %s (%d)",
             current_equipment_list[current_rarity][i].name,
             inventory[current_rarity][i].count);
     }
@@ -463,7 +463,7 @@ static void s_print_store_item_page(
     // 페이지 정보
     utils.utils_set_color(COLOR_DEFAULT_TEXT);
     utils.utils_gotoxy(35, 17);
-    printf("%d / %d", page + 1, total_pages);
+    cout << ("%d / %d", page + 1, total_pages);
 
     // 플레이어 코인 중앙정렬
     int coin_start = 111;
@@ -473,7 +473,7 @@ static void s_print_store_item_page(
     int coin_len = (int)strlen(coin_buf);
     int coin_offset = coin_start + ((coin_end - coin_start + 1) - coin_len) / 2;
     utils.utils_gotoxy(coin_offset, 23);
-    printf("%s", coin_buf);
+    cout << ("%s", coin_buf);
 
     utils.utils_set_color(COLOR_DEFAULT_TEXT);
 }
@@ -493,7 +493,7 @@ static void s_print_store_heal_item_page(
             cleaner.UI_cleaner_inventory_item_description();
             utils.utils_gotoxy(79, 6);
             utils.utils_set_color(COLOR_DEFAULT_TEXT);
-            printf("%s", heal_items[i].description);
+            cout << ("%s", heal_items[i].description);
 
             for (int j = 0; j < 2; j++) {
                 utils.utils_gotoxy(buy_sell_menu[j].x, buy_sell_menu[j].y);
@@ -503,14 +503,14 @@ static void s_print_store_heal_item_page(
                 else {
                     utils.utils_set_color(COLOR_DEFAULT);
                 }
-                printf("%s", buy_sell_menu[j].text);
+                cout << ("%s", buy_sell_menu[j].text);
 
                 char price_buf[32];
                 int price = (j == 0) ? heal_items[i].buy_price : heal_items[i].sell_price;
                 snprintf(price_buf, sizeof(price_buf), "%d C", price);
                 int offset = (int)(strlen(buy_sell_menu[j].text) - strlen(price_buf)) / 2;
                 utils.utils_gotoxy(buy_sell_menu[j].x + offset, buy_sell_menu[j].y + 2);
-                printf("%s", price_buf);
+                cout << ("%s", price_buf);
             }
             utils.utils_set_color(COLOR_SELECT_MENU);
         }
@@ -526,7 +526,7 @@ static void s_print_store_heal_item_page(
         }
 
         utils.utils_gotoxy(x, y);
-        printf("* %s (%d개)", heal_items[i].name, heal_item_inventory[i]);
+        cout << ("* %s (%d개)", heal_items[i].name, heal_item_inventory[i]);
     }
 
     utils.utils_set_color(COLOR_DEFAULT_TEXT);
@@ -537,7 +537,7 @@ static void s_print_store_heal_item_page(
     int len = (int)strlen(coin_buf);
     int offset = coin_start + ((coin_end - coin_start + 1) - len) / 2;
     utils.utils_gotoxy(offset, 23);
-    printf("%s", coin_buf);
+    cout << ("%s", coin_buf);
 }
 
 static void s_print_sub_menu_box(const menu_list_t menus[], focus_level_t focus_level, equipment_rarity_t rarity)
@@ -555,7 +555,7 @@ static void s_print_sub_menu_box(const menu_list_t menus[], focus_level_t focus_
             utils.utils_set_color(COLOR_DEFAULT);
         }
         utils.utils_gotoxy(menus[i].x, menus[i].y);
-        printf("%s", menus[i].text);
+        cout << ("%s", menus[i].text);
     }
 
     utils.utils_set_color(COLOR_DEFAULT_TEXT);
@@ -575,12 +575,12 @@ static void s_confirm_player_name_selection(int title_state)
         utils.utils_gotoxy(mx, 20 + i * 2);
         if (title_state == i) {
             utils.utils_set_color(COLOR_SELECT_MENU);
-            printf("%s", menu[i]);
+            cout << ("%s", menu[i]);
             utils.utils_set_color(COLOR_DEFAULT);
         }
         else
         {
-            printf("%s", menu[i]);
+            cout << ("%s", menu[i]);
         }
     }
     utils.utils_set_color(COLOR_DEFAULT_TEXT);
@@ -609,7 +609,7 @@ void Dynamic::UI_dynamic_player_name_input(void)
     const char* prompt = "플레이어 이름을 입력하세요 (영어 7자, 한글 3자)";
     int px = (WIDTH - (int)strlen(prompt)) / 2;
     utils.utils_gotoxy(px, start_y - 2);
-    printf("%s", prompt);
+    cout << ("%s", prompt);
 
     utils.utils_gotoxy(start_x + 1, start_y + 1);
 
@@ -639,15 +639,15 @@ bool Dynamic::UI_dynamic_confirm_player_name(const char* name)
     const char* prompt_header = "입력하신 모험가님의 이름";
     int px = (WIDTH - (int)strlen(prompt_header)) / 2;
     utils.utils_gotoxy(px, start_y - 2);
-    printf("%s", prompt_header);
+    cout << ("%s", prompt_header);
 
     utils.utils_gotoxy(start_x + 1, start_y + 1);
-    printf("%s", name);
+    cout << ("%s", name);
 
     const char* prompt_confirm = "이 이름으로 시작하시겠습니까?";
     int pcx = (WIDTH - (int)strlen(prompt_confirm)) / 2;
     utils.utils_gotoxy(pcx, start_y + 3);
-    printf("%s", prompt_confirm);
+    cout << ("%s", prompt_confirm);
 
     int state = 0; // 0: Y, 1: N
     s_confirm_player_name_selection(state);
@@ -727,12 +727,12 @@ void Dynamic::UI_dynamic_title_selection(int ui_title_state)
 
         if (ui_title_state == i) {
             utils.utils_set_color(COLOR_SELECT_MENU);
-            printf("%s", menu[i]);
+            cout << ("%s", menu[i]);
             utils.utils_set_color(COLOR_DEFAULT);
         }
         else
         {
-            printf("%s", menu[i]);
+            cout << ("%s", menu[i]);
         }
     }
 
@@ -755,11 +755,11 @@ void Dynamic::UI_dynamic_setting_menu(setting_state_t selected, int* global_volu
 
         if (selected == i) {
             utils.utils_set_color(COLOR_SELECT_MENU);
-            printf("%s", options[i]);
+            cout << ("%s", options[i]);
         }
         else {
             utils.utils_set_color(COLOR_DEFAULT);
-            printf("%s", options[i]);
+            cout << ("%s", options[i]);
         }
         utils.utils_set_color(COLOR_DEFAULT);
     }
@@ -775,7 +775,7 @@ void Dynamic::UI_dynamic_setting_menu(setting_state_t selected, int* global_volu
     else
         utils.utils_set_color(COLOR_DEFAULT);
 
-    printf("%3d%%", *global_volume);
+    cout << ("%3d%%", *global_volume);
 
     utils.utils_set_color(COLOR_DEFAULT_TEXT);
 }
@@ -799,12 +799,12 @@ void Dynamic::UI_dynamin_esc_menu(esc_menu_state_t* selected, int gamemode)
 
         if (*selected == i) {
             utils.utils_set_color(COLOR_SELECT_MENU);
-            printf("%s", options[i]);
+            cout << ("%s", options[i]);
             utils.utils_set_color(COLOR_DEFAULT);
         }
         else
         {
-            printf("%s", options[i]);
+            cout << ("%s", options[i]);
         }
     }
 
@@ -834,13 +834,13 @@ void Dynamic::UI_dynamic_save_load_menu(save_load_num_t* selected)
 
         // 슬롯 제목
         char title[32];
-        snprintf(title, sizeof(title), "저장 슬롯 %d", i + 1);
+        cout << (title, sizeof(title), "저장 슬롯 %d", i + 1);
         utils.utils_gotoxy(start_x + (box_width - (int)strlen(title)) / 2, content_y);
-        printf("%s", title);
+        cout << ("%s", title);
 
         // 저장이 안 되어 있으면 색은 회색, 있으면 기본 흰색
         utils.utils_gotoxy(start_x + (box_width - (int)strlen(slots[i].timestamp)) / 2, content_y + 2);
-        printf("%s", slots[i].timestamp);
+        cout << ("%s", slots[i].timestamp);
     }
 }
 
@@ -865,12 +865,12 @@ void Dynamic::UI_dynamic_select_game_mode(game_mode_state_t selected, bool is_in
         else {
             utils.utils_set_color(COLOR_DEFAULT);
         }
-        printf("%s", modes[i]); // 텍스트 출력
+        cout << ("%s", modes[i]); // 텍스트 출력
 
         // 잠겼을 때 안내 문구 추가
         if (i == MODE_STATE_INFINITY && !is_infinite_unlocked) {
             utils.utils_gotoxy(mx + (int)strlen(modes[i]) + 2, 15);
-            printf("(일반 모드 클리어 시 해금)");
+            cout << ("(일반 모드 클리어 시 해금)");
         }
     }
 
@@ -891,12 +891,12 @@ void Dynamic::UI_dynamic_select_new_or_load_game(new_or_load_game_t* selected)
 
         if (*selected == i) {
             utils.utils_set_color(COLOR_SELECT_MENU);
-            printf("%s", modes[i]);
+            cout << ("%s", modes[i]);
             utils.utils_set_color(COLOR_DEFAULT);
         }
         else
         {
-            printf("%s", modes[i]);
+            cout << ("%s", modes[i]);
         }
     }
 
@@ -926,10 +926,10 @@ void Dynamic::UI_dynamic_hero_select(hero_t selected_hero)
 
         // 박스 안에 영웅 이름과 설명 그리기
         utils.utils_gotoxy(start_x + (box_width - (int)strlen(hero_names[i])) / 2, content_y);
-        printf("%s", hero_names[i]);
+        cout << ("%s", hero_names[i]);
 
         utils.utils_gotoxy(start_x + (box_width - (int)strlen(hero_descs[i])) / 2, content_y + 3);
-        printf("%s", hero_descs[i]);
+        cout << ("%s", hero_descs[i]);
     }
     utils.utils_set_color(COLOR_DEFAULT_TEXT);
 }
@@ -953,7 +953,7 @@ void Dynamic::UI_dynamic_infinite_upgrade(player_t* player, const upgrade_type_t
         // [추가] 박스 내부를 먼저 깨끗하게 정리 (잔상 제거)
         for (int y_clean = start_y + 1; y_clean < start_y + box_height - 1; y_clean++) {
             utils.utils_gotoxy(start_x + 1, y_clean);
-            printf("%*s", box_width - 2, "");
+            cout << ("%*s", box_width - 2, "");
         }
 
         if (current_choice == UPGRADE_NONE) continue;
@@ -967,7 +967,8 @@ void Dynamic::UI_dynamic_infinite_upgrade(player_t* player, const upgrade_type_t
 
         // 제목 출력
         utils.utils_gotoxy(start_x + (box_width - (int)strlen(titles[current_choice])) / 2, start_y + 3);
-        printf("%s", titles[current_choice]);
+        /*printf("%s", titles[current_choice]);*/
+        cout << ("%s", titles[current_choice]);
 
         // 내용 계산
         switch (current_choice) {
@@ -983,7 +984,8 @@ void Dynamic::UI_dynamic_infinite_upgrade(player_t* player, const upgrade_type_t
 
         // 내용 출력
         utils.utils_gotoxy(start_x + (box_width - (int)strlen(buffer)) / 2, start_y + 7);
-        printf("%s", buffer);
+ /*       printf("%s", buffer);*/
+        cout << ("%s", buffer);
     }
     utils.utils_set_color(COLOR_DEFAULT_TEXT);
 }
@@ -1005,12 +1007,14 @@ void Dynamic::UI_dynamic_player_action_selection(int player_action_state)
 
         if (player_action_state == i) {
             utils.utils_set_color(COLOR_SELECT_MENU);
-            printf("%s", menu[i]);
+     /*       printf("%s", menu[i]);*/
+            cout << ("%s", menu[i]);
             utils.utils_set_color(COLOR_DEFAULT);
         }
         else
         {
-            printf("%s", menu[i]);
+            /*printf("%s", menu[i]);*/
+            cout << ("%s", menu[i]);
         }
         y++;
     }
@@ -1039,11 +1043,13 @@ static void s_UI_dynamic_monster_info_internal(monster_t* monster, int body_colo
             utils.utils_gotoxy(start_point + i, 2);
             if (i < current_hp_blocks) {
                 utils.utils_set_color(hp_color);
-                printf("▒");
+          /*      printf("▒");*/
+                cout << ("▒");
             }
             else {
                 utils.utils_set_color(COLOR_DARKGRAY);
-                printf("_");
+    /*            printf("_");*/
+                cout << ("_");
             }
         }
     }
@@ -1060,11 +1066,13 @@ static void s_UI_dynamic_monster_info_internal(monster_t* monster, int body_colo
             utils.utils_gotoxy(start_point + i, 1);
             if (i < current_toughness_blocks) {
                 utils.utils_set_color(toughness_color);
-                printf("▒");
+                /*printf("▒");*/
+                cout << ("▒");
             }
             else {
                 utils.utils_set_color(COLOR_DARKGRAY);
-                printf("_");
+              /*  printf("_");*/
+                cout << ("_");
             }
         }
     }
