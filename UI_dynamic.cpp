@@ -967,7 +967,6 @@ void Dynamic::UI_dynamic_infinite_upgrade(player_t* player, const upgrade_type_t
 
         // 제목 출력
         utils.utils_gotoxy(start_x + (box_width - (int)strlen(titles[current_choice])) / 2, start_y + 3);
-        /*printf("%s", titles[current_choice]);*/
         cout << ("%s", titles[current_choice]);
 
         // 내용 계산
@@ -1007,13 +1006,11 @@ void Dynamic::UI_dynamic_player_action_selection(int player_action_state)
 
         if (player_action_state == i) {
             utils.utils_set_color(COLOR_SELECT_MENU);
-     /*       printf("%s", menu[i]);*/
             cout << ("%s", menu[i]);
             utils.utils_set_color(COLOR_DEFAULT);
         }
         else
         {
-            /*printf("%s", menu[i]);*/
             cout << ("%s", menu[i]);
         }
         y++;
@@ -1043,12 +1040,10 @@ static void s_UI_dynamic_monster_info_internal(monster_t* monster, int body_colo
             utils.utils_gotoxy(start_point + i, 2);
             if (i < current_hp_blocks) {
                 utils.utils_set_color(hp_color);
-          /*      printf("▒");*/
                 cout << ("▒");
             }
             else {
                 utils.utils_set_color(COLOR_DARKGRAY);
-    /*            printf("_");*/
                 cout << ("_");
             }
         }
@@ -1066,12 +1061,10 @@ static void s_UI_dynamic_monster_info_internal(monster_t* monster, int body_colo
             utils.utils_gotoxy(start_point + i, 1);
             if (i < current_toughness_blocks) {
                 utils.utils_set_color(toughness_color);
-                /*printf("▒");*/
                 cout << ("▒");
             }
             else {
                 utils.utils_set_color(COLOR_DARKGRAY);
-              /*  printf("_");*/
                 cout << ("_");
             }
         }

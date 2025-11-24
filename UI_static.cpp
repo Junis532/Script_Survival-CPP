@@ -88,11 +88,11 @@ void UIStatic::UI_static_hide_title(void)
 void UIStatic::UI_static_setting_menu(void) {
 	system("cls");
 	UI_static_main_box(COLOR_WHITE);
-	utils.utils_gotoxy(70, 8);  printf("설정 메뉴");
-	utils.utils_gotoxy(69, 10);  printf("사운드 켜기");
-	utils.utils_gotoxy(69, 12);  printf("사운드 끄기");
-	utils.utils_gotoxy(69, 14); printf("사운드 조절       %%");
-	utils.utils_gotoxy(69, 16); printf("뒤로가기");
+	utils.utils_gotoxy(70, 8);  cout << ("설정 메뉴");
+	utils.utils_gotoxy(69, 10);  cout << ("사운드 켜기");
+	utils.utils_gotoxy(69, 12);  cout << ("사운드 끄기");
+	utils.utils_gotoxy(69, 14); cout << ("사운드 조절       %%");
+	utils.utils_gotoxy(69, 16); cout << ("뒤로가기");
 }
 
 void UIStatic::UI_static_select_game_mode(void)
@@ -101,11 +101,11 @@ void UIStatic::UI_static_select_game_mode(void)
 	UI_static_main_box(COLOR_WHITE);
 
 	utils.utils_gotoxy(65, 10);
-	printf("게임 모드를 선택하세요");
+	cout << ("게임 모드를 선택하세요");
 	utils.utils_gotoxy(70, 13);
-	printf("일반 모드");
+	cout << ("일반 모드");
 	utils.utils_gotoxy(70, 15);
-	printf("무한 모드");
+	cout << ("무한 모드");
 }
 
 void UIStatic::UI_static_hero_select_box(void)
@@ -116,7 +116,7 @@ void UIStatic::UI_static_hero_select_box(void)
 	const char* title = "=== 영웅을 선택하세요 ===";
 	utils.utils_gotoxy((WIDTH - (int)strlen(title)) / 2, 4);
 	utils.utils_set_color(COLOR_TITLE);
-	printf("%s", title);
+	cout << ("%s", title);
 	utils.utils_set_color(COLOR_DEFAULT_TEXT);
 
 	// 3개의 선택지를 위한 박스 틀 그리기
@@ -149,7 +149,7 @@ void UIStatic::UI_static_save_load_box(void)
 	const char* title = "=== 저장하기 ===";
 	utils.utils_gotoxy((WIDTH - (int)strlen(title)) / 2, 4);
 	utils.utils_set_color(COLOR_TITLE);
-	printf("%s", title);
+	cout << ("%s", title);
 	utils.utils_set_color(COLOR_DEFAULT_TEXT);
 
 	// 3개의 선택지를 위한 박스 틀 그리기
@@ -182,11 +182,11 @@ void UIStatic::UI_static_infinite_upgrade_box(void)
 	const char* title = "=== 능력 강화 ===";
 	utils.utils_gotoxy((WIDTH - (int)strlen(title)) / 2, 3);
 	utils.utils_set_color(COLOR_TITLE);
-	printf("%s", title);
+	cout << ("%s", title);
 
 	utils.utils_gotoxy((WIDTH - (int)strlen("강화할 능력을 선택하세요 (좌/우 화살표로 선택, Enter로 확정)")) / 2, 5);
 	utils.utils_set_color(COLOR_DEFAULT_TEXT);
-	printf("강화할 능력을 선택하세요 (좌/우 화살표로 선택, Enter로 확정)");
+	cout << ("강화할 능력을 선택하세요 (좌/우 화살표로 선택, Enter로 확정)");
 
 	// 3개의 선택지를 위한 박스 틀 그리기 (영웅 선택과 동일한 스타일)
 	int box_width = 38;
@@ -217,12 +217,12 @@ void UIStatic::UI_static_battle_box(void)
 
 	for (int y = 19; y < 27; y++) {
 		if (y == 20) continue; // 20행은 비워둠
-		utils.utils_gotoxy(37, y); printf("|");
-		utils.utils_gotoxy(111, y); printf("|");
+		utils.utils_gotoxy(37, y); cout << ("|");
+		utils.utils_gotoxy(111, y); cout << ("|");
 	}
 
-	utils.utils_gotoxy(14, 19); printf("플레이어 행동");
-	utils.utils_gotoxy(124, 19); printf("플레이어 스텟");
+	utils.utils_gotoxy(14, 19); cout << ("플레이어 행동");
+	utils.utils_gotoxy(124, 19); cout << ("플레이어 스텟");
 }
 
 void UIStatic::UI_static_select_heal_or_store_box(void)
@@ -232,7 +232,7 @@ void UIStatic::UI_static_select_heal_or_store_box(void)
 	const char* title = "=== 선택하세요. ===";
 	utils.utils_gotoxy((WIDTH - (int)strlen(title)) / 2, 4);
 	utils.utils_set_color(COLOR_TITLE);
-	printf("%s", title);
+	cout << ("%s", title);
 	utils.utils_set_color(COLOR_DEFAULT_TEXT);
 
 	// 3개의 선택지를 위한 박스 틀 그리기
@@ -287,10 +287,10 @@ void UIStatic::UI_static_inventory_box(void)
 		utils.utils_gotoxy(111, y); putchar('|');
 	}
 
-	utils.utils_gotoxy(12, 19); printf("착용 중인 무기");
-	utils.utils_gotoxy(49, 19); printf("착용 중인 방어구");
-	utils.utils_gotoxy(85, 19); printf("착용시 능력치 변화");
-	utils.utils_gotoxy(123, 19); printf(" 플레이어 스텟");
+	utils.utils_gotoxy(12, 19); cout << ("착용 중인 무기");
+	utils.utils_gotoxy(49, 19); cout << ("착용 중인 방어구");
+	utils.utils_gotoxy(85, 19); cout << ("착용시 능력치 변화");
+	utils.utils_gotoxy(123, 19); cout << (" 플레이어 스텟");
 }
 
 void UIStatic::UI_static_shop_box(void)
@@ -321,8 +321,8 @@ void UIStatic::UI_static_shop_box(void)
 		utils.utils_gotoxy(111, y); putchar('|');
 	}
 
-	utils.utils_gotoxy(18, 19); printf("구매");
-	utils.utils_gotoxy(55, 19); printf("판매");
-	utils.utils_gotoxy(85, 19); printf("착용시 능력치 변화");
-	utils.utils_gotoxy(128, 19); printf("코인");
+	utils.utils_gotoxy(18, 19); cout << ("구매");
+	utils.utils_gotoxy(55, 19); cout << ("판매");
+	utils.utils_gotoxy(85, 19); cout << ("착용시 능력치 변화");
+	utils.utils_gotoxy(128, 19); cout << ("코인");
 }
