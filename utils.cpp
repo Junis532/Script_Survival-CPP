@@ -9,8 +9,6 @@
 #include <cstdlib>
 #include <cstring>
 
-using namespace std;
-
 //#include <imm.h>
 //#pragma comment(lib, "imm32.lib") 
 
